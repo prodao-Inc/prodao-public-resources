@@ -1,0 +1,1573 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport"
+        content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover" />
+    <meta name="color-scheme" content="light dark" />
+    <title data-i18n="page-title">PRODAO Wallet Privacy Policy</title>
+    <style>
+        :root {
+            --bg-page:
+                linear-gradient(180deg,
+                    rgba(216, 230, 255, 0.7) 0%,
+                    rgba(255, 241, 230, 0.7) 100%),
+                #F3F6FB;
+            --bg-card: #ffffff;
+            --text-primary: #0f172a;
+            --text-secondary: #475569;
+            --text-dim: #94a3b8;
+            --border-card: rgba(15, 23, 42, 0.07);
+            --radius-xl: 1.25rem;
+            --radius-lg: 0.75rem;
+            --radius-md: 0.5rem;
+            --shadow-card: 0 24px 48px -12px rgba(15, 23, 42, 0.12), 0 2px 4px rgba(15, 23, 42, 0.06);
+            --shadow-card-hover: 0 30px 64px -10px rgba(15, 23, 42, 0.16), 0 3px 6px rgba(15, 23, 42, 0.08);
+            --accent-bg: rgba(99, 102, 241, 0.08);
+            --accent-border: rgba(99, 102, 241, 0.3);
+            --accent-text: #4f46e5;
+            --font-body: system-ui, -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            --control-height: 34px;
+            --control-font-size: 0.85rem;
+        }
+
+        html,
+        body {
+            width: 100%;
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg-page:
+                    linear-gradient(180deg,
+                        rgba(124, 80, 255, 0.03) 0%,
+                        rgba(32, 112, 255, 0.03) 40%,
+                        rgba(254, 114, 19, 0.03) 100%),
+                    #0A0811;
+                --bg-card: rgba(15, 23, 42, 0.6);
+                --text-primary: #f8fafc;
+                --text-secondary: #94a3b8;
+                --text-dim: #475569;
+                --border-card: rgba(148, 163, 184, 0.12);
+                --shadow-card: 0 24px 48px -12px rgba(0, 0, 0, 0.8), 0 2px 4px rgba(0, 0, 0, 0.6);
+                --shadow-card-hover: 0 30px 64px -10px rgba(0, 0, 0, 0.85), 0 3px 6px rgba(0, 0, 0, 0.7);
+                --accent-bg: rgba(99, 102, 241, 0.12);
+                --accent-border: rgba(129, 140, 248, 0.4);
+                --accent-text: #818cf8;
+            }
+
+            .section-title {
+                background-color: #211A1D;
+                border: 1px solid #2C2325;
+                box-shadow: 0 0 4px 0 rgba(255, 255, 255, 0.05);
+            }
+        }
+
+        .bg-dark {
+            background:
+                linear-gradient(135deg,
+                    rgba(124, 80, 255, 0.4) 0%,
+                    rgba(32, 112, 255, 0.03) 40%,
+                    rgba(254, 114, 19, 0.03) 100%),
+                #0A0811;
+        }
+
+        .bg-light {
+            background:
+                linear-gradient(135deg,
+                    rgba(216, 230, 255, 0.7) 0%,
+                    rgba(255, 241, 230, 0.7) 100%),
+                #F3F6FB;
+        }
+
+        body {
+            margin: 0;
+            padding: 2rem 0 4rem;
+            background: var(--bg-page);
+            color: var(--text-primary);
+            font-family: var(--font-body);
+            -webkit-font-smoothing: antialiased;
+            text-rendering: optimizeLegibility;
+            line-height: 1.55;
+            font-size: clamp(14px, 0.18vw + 13px, 16px);
+            display: flex;
+            justify-content: center;
+            transition: background 0.8s ease, color 0.8s ease;
+            overflow-x: hidden;
+        }
+
+        .page-shell {
+            width: 100%;
+            max-width: 100%;
+            display: grid;
+            gap: 1rem;
+            padding: 0 1rem;
+            box-sizing: border-box;
+        }
+
+        .privacy-hero {
+            background: transparent;
+            box-shadow: none;
+            border: 1px solid transparent;
+            border-radius: var(--radius-xl);
+            padding: 0 clamp(1.5rem, 1vw + 1rem, 2rem) clamp(1.5rem, 1vw + 1rem, 2rem);
+            position: relative;
+        }
+
+        .privacy-hero::after {
+            content: "";
+            position: absolute;
+            right: -20%;
+            top: -20%;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle at 30% 30%, rgba(99, 102, 241, 0.18) 0%, rgba(0, 0, 0, 0) 70%);
+            filter: blur(40px);
+            opacity: 0.4;
+            pointer-events: none;
+        }
+
+        .policy-meta {
+            display: flex;
+            flex-wrap: wrap;
+            row-gap: .5rem;
+            column-gap: 1rem;
+            font-size: .8rem;
+            color: var(--text-secondary);
+            opacity: 0.7;
+        }
+
+        .badge-soft {
+            background-color: var(--accent-bg);
+            border: 1px solid var(--accent-border);
+            color: var(--accent-text);
+            border-radius: 99px;
+            font-size: .7rem;
+            font-weight: 500;
+            line-height: 1;
+            padding: .4rem .6rem;
+            display: inline-flex;
+            align-items: center;
+            gap: .4rem;
+        }
+
+        .title-wrap {
+            display: grid;
+            gap: .75rem;
+            margin-bottom: 1rem;
+        }
+
+        h1.page-title {
+            margin: 0;
+            font-size: clamp(1.25rem, 0.4vw + 1rem, 1.5rem);
+            font-weight: 600;
+            letter-spacing: -0.04em;
+            color: var(--text-primary);
+            line-height: 1.2;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: baseline;
+            gap: .75rem;
+        }
+
+        p.lead {
+            margin: 0;
+            max-width: 60ch;
+            color: var(--text-secondary);
+            font-size: clamp(.9rem, 0.2vw + .8rem, 1rem);
+            line-height: 1.5;
+        }
+
+        .section-card {
+            background: var(--bg-page);
+            box-shadow: var(--shadow-card);
+            border: 1px solid var(--border-card);
+            border-radius: 30px;
+            padding: 6px;
+            display: grid;
+            gap: .75rem;
+            scroll-margin-top: 5rem;
+            transition: background 0.8s ease, border-color 0.8s ease, box-shadow 0.8s ease;
+        }
+
+        .section-card.collapsible {
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+            overflow: hidden;
+        }
+
+        .section-card.collapsible.expanded {
+            border: 2px solid rgba(254, 114, 19, 0.6);
+        }
+
+        .section-card:hover {
+            box-shadow: var(--shadow-card-hover);
+        }
+
+        .section-heading {
+            width: calc(100% - 12px);
+        }
+
+        .section-title {
+            font-size: clamp(1rem, 0.2vw + .9rem, 1.1rem);
+            font-weight: 600;
+            color: var(--text-primary);
+            line-height: 1.3;
+            letter-spacing: -0.03em;
+            display: flex;
+            align-items: center;
+            gap: 0;
+            margin: 0;
+            padding: 6px 10px 6px 0;
+            position: relative;
+            width: 100%;
+            border-radius: 999px;
+            transition: background-color 0.8s ease, border-color 0.8s ease, color 0.8s ease;
+        }
+
+        .section-card.collapsible .section-title {
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .section-card.collapsible .section-title::after {
+            content: "";
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            width: 0.65rem;
+            height: 0.65rem;
+            border-right: 2px solid var(--text-secondary);
+            border-bottom: 2px solid var(--text-secondary);
+            transform: translateY(-60%) rotate(45deg);
+            transition: transform .2s ease, border-color .2s ease;
+            pointer-events: none;
+        }
+
+        .section-card.collapsible.expanded .section-title::after {
+            transform: translateY(-30%) rotate(225deg);
+            border-color: var(--accent-text);
+        }
+
+        .section-card.collapsible .section-title:focus-visible {
+            outline: 2px solid var(--accent-text);
+            outline-offset: 4px;
+        }
+
+        [data-theme="light"] .section-title {
+            background-color: #F1F6FF;
+            border: 1px solid #C9D8E6;
+        }
+
+        .section-title .section-index {
+            font-size: .7rem;
+            font-weight: 600;
+            line-height: 1.2;
+            color: var(--accent-text);
+            background-color: var(--accent-bg);
+            border: 1px solid var(--accent-border);
+            border-radius: 99px;
+            width: 32px;
+            height: 32px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            margin: 0 12px 0 6px;
+        }
+
+        .section-title-text {
+            flex: 0 0 auto;
+        }
+
+        .section-body {
+            font-size: .9rem;
+            line-height: 1.6;
+            color: var(--text-secondary);
+            max-width: 70ch;
+            padding: 0 15px;
+        }
+
+        [data-theme="dark"] .section-body {
+            color: #D9D5D0;
+        }
+
+        [data-theme="light"] .section-body {
+            color: #2E323B;
+        }
+
+        .section-card.collapsible .section-body {
+            height: 0;
+            opacity: 0;
+            overflow: hidden;
+            pointer-events: none;
+            margin-top: 0;
+            padding: 0 15px;
+            transition: height .35s ease, opacity .25s ease, margin-top .25s ease;
+        }
+
+        .section-card.collapsible.expanded .section-body {
+            margin-top: .75rem;
+            opacity: 1;
+            pointer-events: auto;
+            padding: 0 15px 10px;
+            margin-bottom: 10px;
+        }
+
+        .section-body p {
+            margin: 0 0 .75rem;
+        }
+
+        .section-body p:last-child {
+            margin-bottom: 0;
+        }
+
+        .bullet-list {
+            margin: .5rem 0 .75rem;
+            padding-left: 1rem;
+            color: var(--text-secondary);
+            font-size: .9rem;
+        }
+
+        .bullet-list li {
+            margin-bottom: .5rem;
+        }
+
+        .contact-card {
+            background:
+                linear-gradient(135deg,
+                    rgba(124, 80, 255, 0.03) 0%,
+                    rgba(32, 112, 255, 0.03) 40%,
+                    rgba(254, 114, 19, 0.03) 100%),
+                #0A0811;
+            border: 2px solid rgba(254, 114, 19, 0.6);
+            border-radius: var(--radius-md);
+            padding: .75rem 1rem;
+            font-size: .8rem;
+            line-height: 1.5;
+            color: var(--text-primary);
+            display: inline-block;
+        }
+        [data-theme="light"] .contact-card {
+            background:
+                linear-gradient(135deg,
+                    rgba(216, 230, 255, 0.7) 0%,
+                    rgba(255, 241, 230, 0.7) 100%),
+                #F3F6FB;
+            border: 2px solid rgba(254, 114, 19, 0.6);
+        }
+
+        .footer-note {
+            margin-top: 3rem;
+            text-align: center;
+            font-size: .7rem;
+            color: var(--text-dim);
+            line-height: 1.5;
+        }
+
+        a.inline-link {
+            color: var(--accent-text);
+            text-decoration: none;
+            border-bottom: 1px solid var(--accent-border);
+            padding-bottom: 1px;
+        }
+
+        a.inline-link:hover,
+        a.inline-link:focus {
+            border-bottom-color: var(--accent-text);
+        }
+
+        .page-shell>.privacy-hero {
+            padding-bottom: clamp(1.25rem, 1vw + 1rem, 1.75rem) !important;
+        }
+
+        .top-btns {
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            gap: .75rem;
+            flex-wrap: wrap;
+            margin-bottom: 1.5rem;
+        }
+
+        .lang-switcher {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-card);
+            border-radius: 99px;
+            box-shadow: var(--shadow-card);
+            transition: background-color 0.8s ease, border-color 0.8s ease, box-shadow 0.8s ease;
+        }
+
+        .lang-dropdown {
+            position: relative;
+        }
+
+        .lang-btn {
+            background-color: transparent;
+            border: none;
+            color: var(--text-primary);
+            padding: 0.5rem calc(2.5rem + 10px) 0.5rem calc(0.75rem + 10px);
+            cursor: pointer;
+            font-size: var(--control-font-size);
+            font-weight: 500;
+            font-family: var(--font-body);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            min-width: 120px;
+            transition: color 0.2s ease;
+            line-height: 1;
+            white-space: nowrap;
+            min-height: var(--control-height);
+            width: auto;
+        }
+
+        .lang-btn:hover {
+            color: var(--accent-text);
+        }
+
+        .lang-btn::after {
+            content: "▼";
+            position: absolute;
+            right: 0.75rem;
+            font-size: 0.6rem;
+            color: var(--text-secondary);
+            transition: transform 0.2s ease;
+        }
+
+        .lang-dropdown.open .lang-btn::after {
+            transform: rotate(180deg);
+        }
+
+        .lang-menu {
+            position: absolute;
+            top: calc(100% + 0.5rem);
+            right: 0;
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-card);
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-card);
+            min-width: 160px;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
+            backdrop-filter: blur(6px);
+            z-index: 150;
+        }
+
+        [data-theme="dark"] .lang-menu {
+            background-color: #211A1D;
+        }
+
+        .lang-dropdown.open .lang-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .lang-option {
+            display: block;
+            width: 100%;
+            padding: 0.6rem 0.75rem;
+            border: none;
+            background: transparent;
+            color: var(--text-primary);
+            font-size: 0.85rem;
+            font-family: var(--font-body);
+            text-align: left;
+            cursor: pointer;
+            transition: background-color 0.15s ease;
+            border-bottom: 1px solid var(--border-card);
+        }
+
+        .lang-option:last-child {
+            border-bottom: none;
+        }
+
+        .lang-option:hover {
+            background-color: var(--accent-bg);
+            color: var(--accent-text);
+        }
+
+        .lang-option.active {
+            background-color: var(--accent-bg);
+            color: var(--accent-text);
+            font-weight: 600;
+        }
+
+        .theme-toggle-btn {
+            height: auto;
+            padding: 0.5rem calc(0.75rem + 10px);
+            border-radius: 99px;
+            border: 1px solid var(--border-card);
+            background-color: var(--bg-card);
+            color: var(--text-primary);
+            font-weight: 600;
+            font-size: var(--control-font-size);
+            line-height: 1;
+            cursor: pointer;
+            box-shadow: var(--shadow-card);
+            transition: background-color 0.8s ease, color 0.8s ease, border-color 0.8s ease, box-shadow 0.8s ease, transform .2s ease;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: var(--control-height);
+            white-space: nowrap;
+            width: auto;
+        }
+
+        [data-theme="dark"] .theme-toggle-btn {
+            background-color: #F1F6FF;
+            color: #0f172a;
+            border-color: #C9D8E6;
+        }
+
+        [data-theme="light"] .theme-toggle-btn {
+            background-color: #211A1D;
+            color: #f8fafc;
+            border-color: #2C2325;
+        }
+
+        .theme-toggle-btn:focus-visible {
+            outline: 2px solid var(--accent-text);
+            outline-offset: 4px;
+        }
+
+
+        @media (max-width: 640px) {
+            .top-btns {
+                justify-content: flex-end;
+            }
+
+            .lang-btn {
+                padding: 0.4rem 2rem 0.4rem 0.6rem;
+                font-size: 0.8rem;
+                min-width: 100px;
+            }
+
+            .lang-menu {
+                min-width: 140px;
+            }
+        }
+
+        :root[data-theme="light"] {
+            --bg-page:
+                linear-gradient(135deg,
+                    rgba(216, 230, 255, 0.7) 0%,
+                    rgba(255, 241, 230, 0.7) 100%),
+                #F3F6FB;
+            --bg-card: #ffffff;
+            --text-primary: #0f172a;
+            --text-secondary: #475569;
+            --text-dim: #94a3b8;
+            --border-card: rgba(15, 23, 42, 0.07);
+            --shadow-card: 0 24px 48px -12px rgba(15, 23, 42, 0.12), 0 2px 4px rgba(15, 23, 42, 0.06);
+            --shadow-card-hover: 0 30px 64px -10px rgba(15, 23, 42, 0.16), 0 3px 6px rgba(15, 23, 42, 0.08);
+            --accent-bg: rgba(99, 102, 241, 0.08);
+            --accent-border: rgba(99, 102, 241, 0.3);
+            --accent-text: #4f46e5;
+        }
+
+        :root[data-theme="dark"] {
+            --bg-page:
+                linear-gradient(135deg,
+                    rgba(124, 80, 255, 0.03) 0%,
+                    rgba(32, 112, 255, 0.03) 40%,
+                    rgba(254, 114, 19, 0.03) 100%),
+                #0A0811;
+            --bg-card: rgba(15, 23, 42, 0.6);
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+            --text-dim: #475569;
+            --border-card: rgba(148, 163, 184, 0.12);
+            --shadow-card: 0 24px 48px -12px rgba(0, 0, 0, 0.8), 0 2px 4px rgba(0, 0, 0, 0.6);
+            --shadow-card-hover: 0 30px 64px -10px rgba(0, 0, 0, 0.85), 0 3px 6px rgba(0, 0, 0, 0.7);
+            --accent-bg: rgba(99, 102, 241, 0.12);
+            --accent-border: rgba(129, 140, 248, 0.4);
+            --accent-text: #818cf8;
+        }
+    </style>
+</head>
+
+<body>
+    <main class="page-shell">
+        <div class="top-btns">
+            <button class="theme-toggle-btn" type="button" aria-pressed="false">다크 모드</button>
+            <div class="lang-switcher">
+                <div class="lang-dropdown">
+                    <button class="lang-btn" aria-label="Select language" aria-haspopup="true" aria-expanded="false">
+                        <span class="current-lang">English</span>
+                    </button>
+                    <div class="lang-menu" role="menu">
+                        <button class="lang-option active" data-lang="en" role="menuitem">English</button>
+                        <button class="lang-option" data-lang="th" role="menuitem">ไทย (Thai)</button>
+                        <button class="lang-option" data-lang="hi" role="menuitem">हिन्दी (Hindi)</button>
+                        <button class="lang-option" data-lang="ru" role="menuitem">Русский (Russian)</button>
+                        <button class="lang-option" data-lang="zh-CN" role="menuitem">简体中文 (Chinese Simplified)</button>
+                        <button class="lang-option" data-lang="zh-TW" role="menuitem">繁體中文 (Chinese Traditional)</button>
+                        <button class="lang-option" data-lang="ko" role="menuitem">한국어 (Korean)</button>
+                        <button class="lang-option" data-lang="ja" role="menuitem">日本語 (Japanese)</button>
+                        <!-- Add more languages here in the future -->
+                        <!-- <button class="lang-option" data-lang="es" role="menuitem">Español (Spanish)</button> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <header class="privacy-hero" role="banner">
+            <div class="title-wrap">
+                <h1 class="page-title">
+                    <span data-i18n="title">PRODAO Wallet Privacy Policy</span>
+                    <span class="badge-soft" data-i18n="badge">Non-Custodial · Self-Sovereign</span>
+                </h1>
+                <p class="lead" data-i18n="intro">PRODAO Wallet ("the Service") is a non-custodial decentralized wallet.
+                    We do not collect, store, or control any personal information or digital assets on behalf of users.
+                    All keys, transaction data, and identifiers are managed directly by you, on your own device and on
+                    the public blockchain.</p>
+            </div>
+            <div class="policy-meta" aria-label="policy metadata">
+                <div><strong data-i18n="effective-date">Effective Date:</strong>&nbsp;<span data-i18n="date">November 2,
+                        2025</span></div>
+                <div><strong data-i18n="last-updated">Last Updated:</strong>&nbsp;<span data-i18n="date">November 2,
+                        2025</span></div>
+                <div><strong data-i18n="contact-label">Contact:</strong>&nbsp;<span>prodao.club@gmail.com</span></div>
+            </div>
+        </header>
+        <section class="section-card collapsible" id="section-1" aria-labelledby="section-1-title">
+            <div class="section-heading">
+
+                <h2 class="section-title" id="section-1-title">
+
+                    <span class="section-index">1</span>
+
+                    <span class="section-title-text" data-i18n="s1-title">Overview</span>
+
+                </h2>
+
+            </div>
+            <div class="section-body" data-i18n-html="s1-content">
+                <p>PRODAO Wallet ("the Service") is a non-custodial decentralized wallet that does not collect, store,
+                    or control any user personal information or assets. All keys, transaction data, and identifiers are
+                    managed entirely by the user on their own device or the public blockchain network.</p>
+            </div>
+        </section>
+
+        <section class="section-card collapsible" id="section-2" aria-labelledby="section-2-title">
+            <div class="section-heading">
+
+                <h2 class="section-title" id="section-2-title">
+
+                    <span class="section-index">2</span>
+
+                    <span class="section-title-text" data-i18n="s2-title">Information We Collect</span>
+
+                </h2>
+
+            </div>
+            <div class="section-body" data-i18n-html="s2-content">
+                <p>The Service does <strong>not</strong> collect, store, or process any personally identifiable
+                    information (PII). No name, email, phone number, identity document, government ID, or similar
+                    personal identifier is requested or retained.</p>
+                <p>However, limited non-personal technical data may be processed automatically for performance and
+                    security:</p>
+                <ul class="bullet-list">
+                    <li><strong>Device metadata</strong> (OS version, app version, language settings).</li>
+                    <li><strong>Network metadata</strong> (IP address, region, connectivity status).</li>
+                    <li><strong>Blockchain transaction records</strong> (public on-chain data only).</li>
+                </ul>
+                <p>These technical data points are not linked to any identifiable individual and are used solely for
+                    service stability and security auditing.</p>
+            </div>
+        </section>
+
+        <section class="section-card collapsible" id="section-3" aria-labelledby="section-3-title">
+            <div class="section-heading">
+
+                <h2 class="section-title" id="section-3-title">
+
+                    <span class="section-index">3</span>
+
+                    <span class="section-title-text" data-i18n="s3-title">Purpose of Use</span>
+
+                </h2>
+
+            </div>
+            <div class="section-body" data-i18n-html="s3-content">
+                <p>The limited technical data described above are used only for:</p>
+                <ul class="bullet-list">
+                    <li>Service performance monitoring and debugging.</li>
+                    <li>Security and abuse prevention (including fraud, money laundering, and sanctions evasion
+                        monitoring).</li>
+                    <li>Transaction verification within the blockchain network (e.g. swap, send, receive flows).</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section-card collapsible" id="section-4" aria-labelledby="section-4-title">
+            <div class="section-heading">
+
+                <h2 class="section-title" id="section-4-title">
+
+                    <span class="section-index">4</span>
+
+                    <span class="section-title-text" data-i18n="s4-title">Data Storage & Retention</span>
+
+                </h2>
+
+            </div>
+            <div class="section-body" data-i18n-html="s4-content">
+                <p>No personal information is stored on any centralized server. All transaction and key-related data
+                    remain solely on the user's device and/or the blockchain network.</p>
+                <p>Private keys are generated, encrypted, and stored locally on the user's device. They are never
+                    transmitted to, synchronized with, or backed up on PRODAO Wallet's servers.</p>
+                <p>Temporary operational logs (if generated) are kept only for security, diagnostics, or abuse
+                    prevention, and are deleted once no longer necessary for those purposes.</p>
+            </div>
+        </section>
+
+        <section class="section-card collapsible" id="section-5" aria-labelledby="section-5-title">
+            <div class="section-heading">
+
+                <h2 class="section-title" id="section-5-title">
+
+                    <span class="section-index">5</span>
+
+                    <span class="section-title-text" data-i18n="s5-title">Third-Party Disclosure</span>
+
+                </h2>
+
+            </div>
+            <div class="section-body" data-i18n-html="s5-content">
+                <p>PRODAO Wallet does not sell, rent, or trade personal information to third parties, and does not
+                    disclose personal information because it does not collect such data in the first place.</p>
+                <p>In rare cases, anonymized and aggregated technical statistics (for example, crash frequency or
+                    general performance analytics) may be used internally to improve service quality. These statistics
+                    cannot be used to identify an individual.</p>
+                <p>We may disclose information if required by applicable law, regulation, legal process, or governmental
+                    request related to fraud prevention, investigation, or enforcement.</p>
+            </div>
+        </section>
+        
+        <section class="section-card collapsible" id="section-6" aria-labelledby="section-6-title">
+            <div class="section-heading">
+
+                <h2 class="section-title" id="section-6-title">
+
+                    <span class="section-index">6</span>
+
+                    <span class="section-title-text" data-i18n="s6-title">International Data Transfer</span>
+
+                </h2>
+
+            </div>
+            <div class="section-body" data-i18n-html="s6-content">
+                <p>Because PRODAO Wallet does not process or store personal information on centralized servers, there is
+                    no "international transfer of personal data" in the conventional regulatory sense.</p>
+                <p>By design, blockchain networks operate on globally distributed public ledgers. Public on-chain
+                    transaction data may be replicated worldwide across independent nodes. Such on-chain data generally
+                    do not constitute personally identifiable information.</p>
+            </div>
+        </section>
+        <section class="section-card collapsible" id="section-7" aria-labelledby="section-7-title">
+            <div class="section-heading">
+
+                <h2 class="section-title" id="section-7-title">
+
+                    <span class="section-index">7</span>
+
+                    <span class="section-title-text" data-i18n="s7-title">Security Measures</span>
+
+                </h2>
+
+            </div>
+            <div class="section-body" data-i18n-html="s7-content">
+                <p>We apply industry-standard security measures intended to protect the Service, including:</p>
+                <ul class="bullet-list">
+                    <li>End-to-end encryption for data transmissions (for example, ECDH-based secure channels or
+                        equivalent cryptographic protections).</li>
+                    <li>Local-only private key management. Private keys and seed phrases are generated, encrypted, and
+                        stored exclusively on your device.</li>
+                    <li>No key escrow. We do not retain recovery copies of your private keys. You are solely responsible
+                        for backup and safekeeping of your keys and seed.</li>
+                </ul>
+                <p><strong>Important:</strong> Loss of your private key or seed phrase may result in permanent loss of
+                    access to your assets. Because PRODAO Wallet is non-custodial, we cannot restore or reissue your
+                    private key.</p>
+            </div>
+        </section>
+        <section class="section-card collapsible" id="section-8" aria-labelledby="section-8-title">
+            <div class="section-heading">
+
+                <h2 class="section-title" id="section-8-title">
+
+                    <span class="section-index">8</span>
+
+                    <span class="section-title-text" data-i18n="s8-title">Children's Privacy</span>
+
+                </h2>
+
+            </div>
+            <div class="section-body">
+                <p data-i18n="s8-content">PRODAO Wallet is not directed to children under the age of 13, and we do not
+                    knowingly collect any data from children under 13 years old.</p>
+            </div>
+        </section>
+        <section class="section-card collapsible" id="section-9" aria-labelledby="section-9-title">
+            <div class="section-heading">
+
+                <h2 class="section-title" id="section-9-title">
+
+                    <span class="section-index">9</span>
+
+                    <span class="section-title-text" data-i18n="s9-title">Contact</span>
+
+                </h2>
+
+            </div>
+            <div class="section-body">
+                <p data-i18n="s9-intro">For any privacy-related questions, requests, or concerns, please contact our
+                    Data Protection Lead:</p>
+                <div class="contact-card" role="note">
+                    <div><strong data-i18n="s9-email">Email:</strong> <a class="inline-link"
+                            href="mailto:prodao.club@gmail.com">prodao.club@gmail.com</a></div>
+                    <div><strong data-i18n="s9-lead">Data Protection Lead:</strong> Dohyun Kook</div>
+                </div>
+            </div>
+        </section>
+        <section class="section-card collapsible" id="section-10" aria-labelledby="section-10-title">
+            <div class="section-heading">
+
+                <h2 class="section-title" id="section-10-title">
+
+                    <span class="section-index">10</span>
+
+                    <span class="section-title-text" data-i18n="s10-title">Policy Changes</span>
+
+                </h2>
+
+            </div>
+            <div class="section-body" data-i18n-html="s10-content">
+                <p>This Privacy Policy may be updated from time to time to reflect changes in technology, applicable
+                    law, or service functionality.</p>
+                <p>We will notify users through in-app or website announcements before any material changes take effect.
+                    By continuing to access or use the Service after such notice, you acknowledge and agree to the
+                    updated Privacy Policy.</p>
+            </div>
+        </section>
+        <footer class="footer-note" data-i18n="footer">PRODAO Wallet is a non-custodial wallet. You control your keys.
+            We do not recover lost keys or seed phrases.</footer>
+    </main>
+    <script>
+        // English default texts
+        const defaultEnglish = {
+            title: "PRODAO Wallet Privacy Policy",
+            badge: "Non-Custodial · Self-Sovereign",
+            intro: "PRODAO Wallet (\"the Service\") is a non-custodial decentralized wallet. We do not collect, store, or control any personal information or digital assets on behalf of users. All keys, transaction data, and identifiers are managed directly by you, on your own device and on the public blockchain.",
+            "effective-date": "Effective Date:",
+            "last-updated": "Last Updated:",
+            "contact-label": "Contact:",
+            date: "November 2, 2025",
+            "nav-title": "Jump to section",
+            "nav-hint": "Tap to scroll",
+            "nav-1": "1. Overview",
+            "nav-2": "2. Information We Collect",
+            "nav-3": "3. Purpose of Use",
+            "nav-4": "4. Data Storage & Retention",
+            "nav-5": "5. Third-Party Disclosure",
+            "nav-6": "6. International Data Transfer",
+            "nav-7": "7. Security Measures",
+            "nav-8": "8. Children's Privacy",
+            "nav-9": "9. Contact",
+            "nav-10": "10. Policy Changes",
+            "s1-title": "Overview",
+            "s1-content": "<p>PRODAO Wallet (\"the Service\") is a non-custodial decentralized wallet that does not collect, store, or control any user personal information or assets. All keys, transaction data, and identifiers are managed entirely by the user on their own device or the public blockchain network.</p>",
+            "s2-title": "Information We Collect",
+            "s2-content": '<p>The Service does <strong>not</strong> collect, store, or process any personally identifiable information (PII). No name, email, phone number, identity document, government ID, or similar personal identifier is requested or retained.</p><p>However, limited non-personal technical data may be processed automatically for performance and security:</p><ul class="bullet-list"><li><strong>Device metadata</strong> (OS version, app version, language settings).</li><li><strong>Network metadata</strong> (IP address, region, connectivity status).</li><li><strong>Blockchain transaction records</strong> (public on-chain data only).</li></ul><p>These technical data points are not linked to any identifiable individual and are used solely for service stability and security auditing.</p>',
+            "s3-title": "Purpose of Use",
+            "s3-content": '<p>The limited technical data described above are used only for:</p><ul class="bullet-list"><li>Service performance monitoring and debugging.</li><li>Security and abuse prevention (including fraud, money laundering, and sanctions evasion monitoring).</li><li>Transaction verification within the blockchain network (e.g. swap, send, receive flows).</li></ul>',
+            "s4-title": "Data Storage & Retention",
+            "s4-content": "<p>No personal information is stored on any centralized server. All transaction and key-related data remain solely on the user's device and/or the blockchain network.</p><p>Private keys are generated, encrypted, and stored locally on the user's device. They are never transmitted to, synchronized with, or backed up on PRODAO Wallet's servers.</p><p>Temporary operational logs (if generated) are kept only for security, diagnostics, or abuse prevention, and are deleted once no longer necessary for those purposes.</p>",
+            "s5-title": "Third-Party Disclosure",
+            "s5-content": "<p>PRODAO Wallet does not sell, rent, or trade personal information to third parties, and does not disclose personal information because it does not collect such data in the first place.</p><p>In rare cases, anonymized and aggregated technical statistics (for example, crash frequency or general performance analytics) may be used internally to improve service quality. These statistics cannot be used to identify an individual.</p><p>We may disclose information if required by applicable law, regulation, legal process, or governmental request related to fraud prevention, investigation, or enforcement.</p>",
+            "s6-title": "International Data Transfer",
+            "s6-content": "<p>Because PRODAO Wallet does not process or store personal information on centralized servers, there is no \"international transfer of personal data\" in the conventional regulatory sense.</p><p>By design, blockchain networks operate on globally distributed public ledgers. Public on-chain transaction data may be replicated worldwide across independent nodes. Such on-chain data generally do not constitute personally identifiable information.</p>",
+            "s7-title": "Security Measures",
+            "s7-content": '<p>We apply industry-standard security measures intended to protect the Service, including:</p><ul class="bullet-list"><li>End-to-end encryption for data transmissions (for example, ECDH-based secure channels or equivalent cryptographic protections).</li><li>Local-only private key management. Private keys and seed phrases are generated, encrypted, and stored exclusively on your device.</li><li>No key escrow. We do not retain recovery copies of your private keys. You are solely responsible for backup and safekeeping of your keys and seed.</li></ul><p><strong>Important:</strong> Loss of your private key or seed phrase may result in permanent loss of access to your assets. Because PRODAO Wallet is non-custodial, we cannot restore or reissue your private key.</p>',
+            "s8-title": "Children's Privacy",
+            "s8-content": "PRODAO Wallet is not directed to children under the age of 13, and we do not knowingly collect any data from children under 13 years old.",
+            "s9-title": "Contact",
+            "s9-intro": "For any privacy-related questions, requests, or concerns, please contact our Data Protection Lead:",
+            "s9-email": "Email:",
+            "s9-lead": "Data Protection Lead:",
+            "s10-title": "Policy Changes",
+            "s10-content": "<p>This Privacy Policy may be updated from time to time to reflect changes in technology, applicable law, or service functionality.</p><p>We will notify users through in-app or website announcements before any material changes take effect. By continuing to access or use the Service after such notice, you acknowledge and agree to the updated Privacy Policy.</p>",
+            footer: "PRODAO Wallet is a non-custodial wallet. You control your keys. We do not recover lost keys or seed phrases."
+        };
+
+        function getDefaultEnglishText(key) {
+            return defaultEnglish[key] || null;
+        }
+
+        function getDefaultEnglishHtml(key) {
+            return defaultEnglish[key] || null;
+        }
+
+        // Only Korean translations - English is the default in HTML
+        const translations = {
+            ko: {
+                langName: "한국어",
+                title: "PRODAO 지갑 개인정보 처리방침",
+                badge: "비수탁형 · 자기주권",
+                intro: "PRODAO 지갑(\"본 서비스\")은 비수탁형 탈중앙화 지갑입니다. 당사는 사용자를 대신하여 개인정보나 디지털 자산을 수집, 저장 또는 통제하지 않습니다. 모든 키, 거래 데이터 및 식별자는 귀하의 기기와 퍼블릭 블록체인에서 귀하가 직접 관리합니다.",
+                "effective-date": "시행일:",
+                "last-updated": "최종 수정일:",
+                "contact-label": "문의:",
+                date: "2025년 11월 2일",
+                "nav-title": "섹션으로 이동",
+                "nav-hint": "탭하여 스크롤",
+                "nav-1": "1. 개요",
+                "nav-2": "2. 수집하는 정보",
+                "nav-3": "3. 이용 목적",
+                "nav-4": "4. 데이터 저장 및 보유",
+                "nav-5": "5. 제3자 제공",
+                "nav-6": "6. 국외 데이터 전송",
+                "nav-7": "7. 보안 조치",
+                "nav-8": "8. 아동 개인정보 보호",
+                "nav-9": "9. 연락처",
+                "nav-10": "10. 정책 변경",
+                "s1-title": "개요",
+                "s1-content": "<p>PRODAO 지갑(\"본 서비스\")은 사용자의 개인정보나 자산을 수집, 저장 또는 통제하지 않는 비수탁형 탈중앙화 지갑입니다. 모든 키, 거래 데이터 및 식별자는 사용자의 기기 또는 퍼블릭 블록체인 네트워크에서 사용자가 직접 관리합니다.</p>",
+                "s2-title": "수집하는 정보",
+                "s2-content": '<p>본 서비스는 개인 식별 정보(PII)를 수집, 저장 또는 처리하지 <strong>않습니다</strong>. 이름, 이메일, 전화번호, 신분증, 정부 발급 ID 또는 이와 유사한 개인 식별자는 요청하거나 보유하지 않습니다.</p><p>다만, 제한적인 비개인 기술 데이터는 성능 및 보안을 위해 자동으로 처리될 수 있습니다:</p><ul class="bullet-list"><li><strong>기기 메타데이터</strong> (OS 버전, 앱 버전, 언어 설정).</li><li><strong>네트워크 메타데이터</strong> (IP 주소, 지역, 연결 상태).</li><li><strong>블록체인 거래 기록</strong> (퍼블릭 온체인 데이터만).</li></ul><p>이러한 기술 데이터는 식별 가능한 개인과 연결되지 않으며, 서비스 안정성 및 보안 감사 목적으로만 사용됩니다.</p>',
+                "s3-title": "이용 목적",
+                "s3-content": '<p>위에서 설명한 제한적인 기술 데이터는 다음 용도로만 사용됩니다:</p><ul class="bullet-list"><li>서비스 성능 모니터링 및 디버깅.</li><li>보안 및 악용 방지 (사기, 자금 세탁, 제재 회피 모니터링 포함).</li><li>블록체인 네트워크 내 거래 검증 (예: 스왑, 전송, 수신 흐름).</li></ul>',
+                "s4-title": "데이터 저장 및 보유",
+                "s4-content": "<p>개인정보는 중앙 서버에 저장되지 않습니다. 모든 거래 및 키 관련 데이터는 사용자의 기기 및/또는 블록체인 네트워크에만 남습니다.</p><p>개인키는 사용자 기기에서 로컬로 생성, 암호화 및 저장됩니다. PRODAO 지갑의 서버로 전송, 동기화 또는 백업되지 않습니다.</p><p>임시 운영 로그(생성되는 경우)는 보안, 진단 또는 악용 방지를 위해서만 보관되며, 해당 목적에 더 이상 필요하지 않으면 삭제됩니다.</p>",
+                "s5-title": "제3자 제공",
+                "s5-content": "<p>PRODAO 지갑은 개인정보를 제3자에게 판매, 임대 또는 거래하지 않으며, 애초에 그러한 데이터를 수집하지 않기 때문에 개인정보를 공개하지 않습니다.</p><p>드문 경우지만, 익명화되고 집계된 기술 통계(예: 충돌 빈도 또는 일반 성능 분석)를 서비스 품질 개선을 위해 내부적으로 사용할 수 있습니다. 이러한 통계는 개인을 식별하는 데 사용될 수 없습니다.</p><p>사기 방지, 조사 또는 집행과 관련된 해당 법률, 규정, 법적 절차 또는 정부 요청에 의해 요구되는 경우 정보를 공개할 수 있습니다.</p>",
+                "s6-title": "국외 데이터 전송",
+                "s6-content": "<p>PRODAO 지갑은 중앙 서버에서 개인정보를 처리하거나 저장하지 않기 때문에, 기존 규제 의미의 \"개인 데이터의 국제 전송\"은 없습니다.</p><p>설계상 블록체인 네트워크는 전 세계적으로 분산된 퍼블릭 원장에서 작동합니다. 퍼블릭 온체인 거래 데이터는 독립적인 노드에서 전 세계적으로 복제될 수 있습니다. 이러한 온체인 데이터는 일반적으로 개인 식별 정보를 구성하지 않습니다.</p>",
+                "s7-title": "보안 조치",
+                "s7-content": '<p>당사는 다음을 포함하여 서비스를 보호하기 위한 업계 표준 보안 조치를 적용합니다:</p><ul class="bullet-list"><li>데이터 전송을 위한 종단 간 암호화 (예: ECDH 기반 보안 채널 또는 동등한 암호화 보호).</li><li>로컬 전용 개인키 관리. 개인키와 시드 문구는 귀하의 기기에서만 생성, 암호화 및 저장됩니다.</li><li>키 에스크로 없음. 당사는 개인키의 복구 사본을 보유하지 않습니다. 귀하는 키와 시드의 백업 및 보관에 대한 전적인 책임이 있습니다.</li></ul><p><strong>중요:</strong> 개인키 또는 시드 문구를 분실하면 자산에 대한 액세스 권한이 영구적으로 손실될 수 있습니다. PRODAO 지갑은 비수탁형이므로 개인키를 복원하거나 재발급할 수 없습니다.</p>',
+                "s8-title": "아동 개인정보 보호",
+                "s8-content": "PRODAO 지갑은 13세 미만 아동을 대상으로 하지 않으며, 13세 미만 아동의 데이터를 고의로 수집하지 않습니다.",
+                "s9-title": "연락처",
+                "s9-intro": "개인정보 보호 관련 질문, 요청 또는 우려 사항이 있으시면 당사의 데이터 보호 책임자에게 문의하십시오:",
+                "s9-email": "이메일:",
+                "s9-lead": "데이터 보호 책임자:",
+                "s10-title": "정책 변경",
+                "s10-content": "<p>본 개인정보 처리방침은 기술, 해당 법률 또는 서비스 기능의 변경을 반영하기 위해 수시로 업데이트될 수 있습니다.</p><p>중요한 변경 사항이 발생하기 전에 앱 내 또는 웹사이트 공지를 통해 사용자에게 알립니다. 해당 공지 후 계속해서 서비스에 액세스하거나 사용하면 업데이트된 개인정보 처리방침을 확인하고 동의하는 것으로 간주됩니다.</p>",
+                footer: "PRODAO 지갑은 비수탁형 지갑입니다. 귀하가 키를 관리합니다. 당사는 분실된 키나 시드 문구를 복구하지 않습니다."
+            },
+            ja: {
+                langName: "日本語",
+                title: "PRODAO Wallet プライバシーポリシー",
+                badge: "非カストディアル型・自己主権型",
+                intro: "PRODAO Wallet（「本サービス」）は非カストディアル型の分散型ウォレットです。当社はユーザーに代わって個人情報やデジタル資産を収集、保存、管理することはありません。すべての鍵、取引データ、識別子は、お客様のデバイスおよびパブリックブロックチェーン上でお客様が直接管理します。",
+                "effective-date": "発効日:",
+                "last-updated": "最終更新日:",
+                "contact-label": "お問い合わせ:",
+                date: "2025年11月2日",
+                "nav-title": "セクションへジャンプ",
+                "nav-hint": "タップしてスクロール",
+                "nav-1": "1. 概要",
+                "nav-2": "2. 収集する情報",
+                "nav-3": "3. 利用目的",
+                "nav-4": "4. データ保存と保持",
+                "nav-5": "5. 第三者への提供",
+                "nav-6": "6. 国際データ転送",
+                "nav-7": "7. セキュリティ対策",
+                "nav-8": "8. 児童のプライバシー",
+                "nav-9": "9. お問い合わせ",
+                "nav-10": "10. ポリシーの変更",
+                "s1-title": "概要",
+                "s1-content": "<p>PRODAO Wallet（「本サービス」）は、ユーザーの個人情報や資産を収集、保存、管理しない非カストディアル型分散型ウォレットです。すべての鍵、取引データ、識別子は、ユーザーが自身のデバイスまたはパブリックブロックチェーンネットワーク上で完全に管理します。</p>",
+                "s2-title": "収集する情報",
+                "s2-content": '<p>本サービスは個人識別情報（PII）を収集、保存、処理<strong>しません</strong>。氏名、メールアドレス、電話番号、身分証明書、政府発行ID、または類似の個人識別子を要求または保持することはありません。</p><p>ただし、パフォーマンスとセキュリティのために、限定的な非個人技術データが自動的に処理される場合があります：</p><ul class="bullet-list"><li><strong>デバイスメタデータ</strong>（OSバージョン、アプリバージョン、言語設定）</li><li><strong>ネットワークメタデータ</strong>（IPアドレス、地域、接続状態）</li><li><strong>ブロックチェーン取引記録</strong>（パブリックオンチェーンデータのみ）</li></ul><p>これらの技術データは識別可能な個人とリンクされておらず、サービスの安定性とセキュリティ監査の目的でのみ使用されます。</p>',
+                "s3-title": "利用目的",
+                "s3-content": '<p>上記の限定的な技術データは以下の目的でのみ使用されます：</p><ul class="bullet-list"><li>サービスパフォーマンスの監視とデバッグ</li><li>セキュリティと不正行為の防止（詐欺、マネーロンダリング、制裁回避の監視を含む）</li><li>ブロックチェーンネットワーク内での取引検証（スワップ、送信、受信フローなど）</li></ul>',
+                "s4-title": "データ保存と保持",
+                "s4-content": "<p>個人情報は集中サーバーに保存されません。すべての取引および鍵関連データは、ユーザーのデバイスおよび/またはブロックチェーンネットワーク上にのみ残ります。</p><p>秘密鍵はユーザーのデバイス上でローカルに生成、暗号化、保存されます。PRODAO Walletのサーバーに送信、同期、バックアップされることはありません。</p><p>一時的な運用ログ（生成された場合）は、セキュリティ、診断、または不正行為防止のためにのみ保持され、それらの目的に必要なくなった時点で削除されます。</p>",
+                "s5-title": "第三者への提供",
+                "s5-content": "<p>PRODAO Walletは第三者に個人情報を販売、レンタル、取引することはなく、そもそもそのようなデータを収集していないため個人情報を開示することはありません。</p><p>まれに、匿名化および集計された技術統計（クラッシュ頻度や一般的なパフォーマンス分析など）をサービス品質向上のために内部的に使用する場合があります。これらの統計は個人を識別するために使用することはできません。</p><p>詐欺防止、調査、または執行に関連する適用法、規制、法的手続き、または政府の要請により要求される場合、情報を開示することがあります。</p>",
+                "s6-title": "国際データ転送",
+                "s6-content": "<p>PRODAO Walletは集中サーバー上で個人情報を処理または保存しないため、従来の規制上の意味での「個人データの国際転送」はありません。</p><p>設計上、ブロックチェーンネットワークは世界中に分散されたパブリック台帳上で動作します。パブリックオンチェーン取引データは、独立したノード間で世界中に複製される場合があります。このようなオンチェーンデータは一般的に個人識別情報を構成しません。</p>",
+                "s7-title": "セキュリティ対策",
+                "s7-content": '<p>当社はサービスを保護するための業界標準のセキュリティ対策を適用しています：</p><ul class="bullet-list"><li>データ送信のためのエンドツーエンド暗号化（ECDH ベースのセキュアチャネルまたは同等の暗号化保護など）</li><li>ローカル専用の秘密鍵管理。秘密鍵とシードフレーズはお客様のデバイス上でのみ生成、暗号化、保存されます</li><li>鍵のエスクローなし。当社は秘密鍵の復旧コピーを保持しません。お客様は鍵とシードのバックアップと保管に対して単独で責任を負います</li></ul><p><strong>重要：</strong>秘密鍵またはシードフレーズを紛失すると、資産へのアクセス権が永久に失われる可能性があります。PRODAO Walletは非カストディアル型であるため、秘密鍵を復元または再発行することはできません。</p>',
+                "s8-title": "児童のプライバシー",
+                "s8-content": "PRODAO Walletは13歳未満の児童を対象としておらず、13歳未満の児童からデータを故意に収集することはありません。",
+                "s9-title": "お問い合わせ",
+                "s9-intro": "プライバシーに関するご質問、リクエスト、またはご懸念がある場合は、データ保護責任者までお問い合わせください：",
+                "s9-email": "メール:",
+                "s9-lead": "データ保護責任者:",
+                "s10-title": "ポリシーの変更",
+                "s10-content": "<p>本プライバシーポリシーは、技術、適用法、またはサービス機能の変更を反映するために随時更新される場合があります。</p><p>重要な変更が発効する前に、アプリ内またはウェブサイトのお知らせを通じてユーザーに通知します。そのような通知後も引き続きサービスにアクセスまたは使用する場合、更新されたプライバシーポリシーを承認し同意したものとみなされます。</p>",
+                footer: "PRODAO Walletは非カストディアル型ウォレットです。お客様が鍵を管理します。当社は紛失した鍵やシードフレーズを復旧しません。"
+            },
+            th: {
+                langName: "ไทย",
+                title: "นโยบายความเป็นส่วนตัวของ PRODAO Wallet",
+                badge: "ไม่เก็บรักษา · อธิปไตยตนเอง",
+                intro: "PRODAO Wallet (\"บริการ\") เป็นกระเป๋าเงินแบบกระจายอำนาจที่ไม่เก็บรักษา เราไม่เก็บรวบรวม จัดเก็บ หรือควบคุมข้อมูลส่วนบุคคลหรือสินทรัพย์ดิจิทัลในนามของผู้ใช้ คีย์ ข้อมูลธุรกรรม และตัวระบุทั้งหมดจะถูกจัดการโดยคุณโดยตรงบนอุปกรณ์ของคุณเองและบนบล็อกเชนสาธารณะ",
+                "effective-date": "วันที่มีผลบังคับใช้:",
+                "last-updated": "อัปเดตล่าสุด:",
+                "contact-label": "ติดต่อ:",
+                date: "2 พฤศจิกายน 2568",
+                "nav-title": "ข้ามไปยังส่วน",
+                "nav-hint": "แตะเพื่อเลื่อน",
+                "nav-1": "1. ภาพรวม",
+                "nav-2": "2. ข้อมูลที่เรารวบรวม",
+                "nav-3": "3. วัตถุประสงค์การใช้งาน",
+                "nav-4": "4. การจัดเก็บและเก็บรักษาข้อมูล",
+                "nav-5": "5. การเปิดเผยข้อมูลต่อบุคคลที่สาม",
+                "nav-6": "6. การถ่ายโอนข้อมูลระหว่างประเทศ",
+                "nav-7": "7. มาตรการรักษาความปลอดภัย",
+                "nav-8": "8. ความเป็นส่วนตัวของเด็ก",
+                "nav-9": "9. ติดต่อเรา",
+                "nav-10": "10. การเปลี่ยนแปลงนโยบาย",
+                "s1-title": "ภาพรวม",
+                "s1-content": "<p>PRODAO Wallet (\"บริการ\") เป็นกระเป๋าเงินแบบกระจายอำนาจที่ไม่เก็บรักษาซึ่งไม่เก็บรวบรวม จัดเก็บ หรือควบคุมข้อมูลส่วนบุคคลหรือสินทรัพย์ของผู้ใช้ คีย์ ข้อมูลธุรกรรม และตัวระบุทั้งหมดจะถูกจัดการโดยผู้ใช้โดยตรงบนอุปกรณ์ของตนเองหรือบนเครือข่ายบล็อกเชนสาธารณะ</p>",
+                "s2-title": "ข้อมูลที่เรารวบรวม",
+                "s2-content": '<p>บริการ<strong>ไม่</strong>เก็บรวบรวม จัดเก็บ หรือประมวลผลข้อมูลส่วนบุคคลที่สามารถระบุตัวตน (PII) ไม่มีการขอหรือเก็บรักษาชื่อ อีเมล หมายเลขโทรศัพท์ เอกสารประจำตัว บัตรประจำตัวที่ออกโดยรัฐบาล หรือตัวระบุส่วนบุคคลที่คล้ายกัน</p><p>อย่างไรก็ตาม ข้อมูลทางเทคนิคที่ไม่ใช่ข้อมูลส่วนบุคคลที่จำกัดอาจถูกประมวลผลโดยอัตโนมัติเพื่อประสิทธิภาพและความปลอดภัย:</p><ul class="bullet-list"><li><strong>ข้อมูลเมตาของอุปกรณ์</strong> (เวอร์ชัน OS เวอร์ชันแอป การตั้งค่าภาษา)</li><li><strong>ข้อมูลเมตาของเครือข่าย</strong> (ที่อยู่ IP ภูมิภาค สถานะการเชื่อมต่อ)</li><li><strong>บันทึกธุรกรรมบล็อกเชน</strong> (ข้อมูลออนเชนสาธารณะเท่านั้น)</li></ul><p>ข้อมูลทางเทคนิคเหล่านี้ไม่ได้เชื่อมโยงกับบุคคลที่สามารถระบุตัวตนได้ และใช้เพื่อความมั่นคงของบริการและการตรวจสอบความปลอดภัยเท่านั้น</p>',
+                "s3-title": "วัตถุประสงค์การใช้งาน",
+                "s3-content": '<p>ข้อมูลทางเทคนิคที่จำกัดที่อธิบายไว้ข้างต้นจะใช้เพื่อ:</p><ul class="bullet-list"><li>การตรวจสอบและแก้ไขข้อบกพร่องของประสิทธิภาพบริการ</li><li>การป้องกันความปลอดภัยและการละเมิด (รวมถึงการตรวจสอบการฉ้อโกง การฟอกเงิน และการหลีกเลี่ยงการคว่ำบาตร)</li><li>การตรวจสอบธุรกรรมภายในเครือข่ายบล็อกเชน (เช่น กระแสการแลกเปลี่ยน ส่ง รับ)</li></ul>',
+                "s4-title": "การจัดเก็บและเก็บรักษาข้อมูล",
+                "s4-content": "<p>ไม่มีข้อมูลส่วนบุคคลถูกจัดเก็บบนเซิร์ฟเวอร์รวม ข้อมูลธุรกรรมและข้อมูลที่เกี่ยวข้องกับคีย์ทั้งหมดจะอยู่บนอุปกรณ์ของผู้ใช้และ/หรือเครือข่ายบล็อกเชนเท่านั้น</p><p>คีย์ส่วนตัวจะถูกสร้าง เข้ารหัส และจัดเก็บในเครื่องบนอุปกรณ์ของผู้ใช้ จะไม่มีการส่ง ซิงค์ หรือสำรองข้อมูลไปยังเซิร์ฟเวอร์ของ PRODAO Wallet</p><p>บันทึกการดำเนินงานชั่วคราว (หากมีการสร้าง) จะถูกเก็บไว้เพื่อความปลอดภัย การวินิจฉัย หรือการป้องกันการละเมิดเท่านั้น และจะถูกลบเมื่อไม่จำเป็นต้องใช้สำหรับวัตถุประสงค์เหล่านั้นอีกต่อไป</p>",
+                "s5-title": "การเปิดเผยข้อมูลต่อบุคคลที่สาม",
+                "s5-content": "<p>PRODAO Wallet ไม่ขาย เช่า หรือแลกเปลี่ยนข้อมูลส่วนบุคคลกับบุคคลที่สาม และไม่เปิดเผยข้อมูลส่วนบุคคลเนื่องจากไม่เก็บรวบรวมข้อมูลดังกล่าวตั้งแต่แรก</p><p>ในกรณีที่หายาก สถิติทางเทคนิคที่ไม่เปิดเผยตัวตนและรวมกัน (เช่น ความถี่ของการขัดข้อง หรือการวิเคราะห์ประสิทธิภาพทั่วไป) อาจถูกใช้ภายในเพื่อปรับปรุงคุณภาพบริการ สถิติเหล่านี้ไม่สามารถใช้เพื่อระบุตัวบุคคลได้</p><p>เราอาจเปิดเผยข้อมูลหากกฎหมาย ระเบียบข้อบังคับ กระบวนการทางกฎหมาย หรือคำขอของรัฐบาลที่เกี่ยวข้องกับการป้องกันการฉ้อโกง การสอบสวน หรือการบังคับใช้กฎหมายกำหนดให้ต้องทำ</p>",
+                "s6-title": "การถ่ายโอนข้อมูลระหว่างประเทศ",
+                "s6-content": "<p>เนื่องจาก PRODAO Wallet ไม่ประมวลผลหรือจัดเก็บข้อมูลส่วนบุคคลบนเซิร์ฟเวอร์รวม จึงไม่มี \"การถ่ายโอนข้อมูลส่วนบุคคลระหว่างประเทศ\" ในความหมายตามกฎระเบียบทั่วไป</p><p>ตามการออกแบบ เครือข่ายบล็อกเชนทำงานบนบัญชีแยกประเภทสาธารณะที่กระจายทั่วโลก ข้อมูลธุรกรรมออนเชนสาธารณะอาจถูกจำลองทั่วโลกผ่านโหนดอิสระ ข้อมูลออนเชนดังกล่าวโดยทั่วไปไม่ถือเป็นข้อมูลส่วนบุคคลที่สามารถระบุตัวตน</p>",
+                "s7-title": "มาตรการรักษาความปลอดภัย",
+                "s7-content": '<p>เราใช้มาตรการรักษาความปลอดภัยตามมาตรฐานอุตสาหกรรมเพื่อปกป้องบริการ รวมถึง:</p><ul class="bullet-list"><li>การเข้ารหัสแบบ end-to-end สำหรับการส่งข้อมูล (เช่น ช่องทางที่ปลอดภัยตาม ECDH หรือการป้องกันการเข้ารหัสที่เทียบเท่า)</li><li>การจัดการคีย์ส่วนตัวในเครื่องเท่านั้น คีย์ส่วนตัวและวลีเมล็ดพันธุ์จะถูกสร้าง เข้ารหัส และจัดเก็บบนอุปกรณ์ของคุณเท่านั้น</li><li>ไม่มีการเก็บคีย์แบบ escrow เราไม่เก็บสำเนาการกู้คืนของคีย์ส่วนตัวของคุณ คุณมีความรับผิดชอบแต่เพียงผู้เดียวในการสำรองและรักษาคีย์และเมล็ดพันธุ์ของคุณ</li></ul><p><strong>สำคัญ:</strong> การสูญเสียคีย์ส่วนตัวหรือวลีเมล็ดพันธุ์ของคุณอาจส่งผลให้สูญเสียการเข้าถึงสินทรัพย์ของคุณอย่างถาวร เนื่องจาก PRODAO Wallet เป็นกระเป๋าเงินที่ไม่เก็บรักษา เราไม่สามารถกู้คืนหรือออกคีย์ส่วนตัวของคุณใหม่ได้</p>',
+                "s8-title": "ความเป็นส่วนตัวของเด็ก",
+                "s8-content": "PRODAO Wallet ไม่ได้มุ่งเป้าไปที่เด็กอายุต่ำกว่า 13 ปี และเราไม่เก็บรวบรวมข้อมูลจากเด็กอายุต่ำกว่า 13 ปีโดยรู้เท่าทัน",
+                "s9-title": "ติดต่อเรา",
+                "s9-intro": "หากมีคำถาม คำขอ หรือข้อกังวลเกี่ยวกับความเป็นส่วนตัว โปรดติดต่อผู้นำด้านการปกป้องข้อมูลของเรา:",
+                "s9-email": "อีเมล:",
+                "s9-lead": "ผู้นำด้านการปกป้องข้อมูล:",
+                "s10-title": "การเปลี่ยนแปลงนโยบาย",
+                "s10-content": "<p>นโยบายความเป็นส่วนตัวนี้อาจได้รับการอัปเดตเป็นครั้งคราวเพื่อสะท้อนการเปลี่ยนแปลงด้านเทคโนโลยี กฎหมายที่บังคับใช้ หรือฟังก์ชันการทำงานของบริการ</p><p>เราจะแจ้งให้ผู้ใช้ทราบผ่านการประกาศในแอปหรือเว็บไซต์ก่อนที่การเปลี่ยนแปลงสำคัญจะมีผลบังคับใช้ การเข้าถึงหรือใช้บริการต่อไปหลังจากการแจ้งเตือนดังกล่าว ถือว่าคุณรับทราบและยอมรับนโยบายความเป็นส่วนตัวที่อัปเดต</p>",
+                footer: "PRODAO Wallet เป็นกระเป๋าเงินที่ไม่เก็บรักษา คุณควบคุมคีย์ของคุณ เราไม่กู้คืนคีย์หรือวลีเมล็ดพันธุ์ที่สูญหาย"
+            },
+            hi: {
+                langName: "हिन्दी",
+                title: "PRODAO Wallet गोपनीयता नीति",
+                badge: "गैर-संरक्षक · स्व-संप्रभु",
+                intro: "PRODAO Wallet (\"सेवा\") एक गैर-संरक्षक विकेंद्रीकृत वॉलेट है। हम उपयोगकर्ताओं की ओर से किसी भी व्यक्तिगत जानकारी या डिजिटल संपत्ति को एकत्र, संग्रहीत या नियंत्रित नहीं करते हैं। सभी कुंजियाँ, लेनदेन डेटा और पहचानकर्ता आपके द्वारा सीधे आपके डिवाइस और सार्वजनिक ब्लॉकचेन पर प्रबंधित किए जाते हैं।",
+                "effective-date": "प्रभावी तिथि:",
+                "last-updated": "अंतिम अपडेट:",
+                "contact-label": "संपर्क:",
+                date: "2 नवंबर, 2025",
+                "nav-title": "अनुभाग पर जाएं",
+                "nav-hint": "स्क्रॉल करने के लिए टैप करें",
+                "nav-1": "1. अवलोकन",
+                "nav-2": "2. हम जो जानकारी एकत्र करते हैं",
+                "nav-3": "3. उपयोग का उद्देश्य",
+                "nav-4": "4. डेटा संग्रहण और प्रतिधारण",
+                "nav-5": "5. तीसरे पक्ष का प्रकटीकरण",
+                "nav-6": "6. अंतर्राष्ट्रीय डेटा स्थानांतरण",
+                "nav-7": "7. सुरक्षा उपाय",
+                "nav-8": "8. बच्चों की गोपनीयता",
+                "nav-9": "9. संपर्क करें",
+                "nav-10": "10. नीति परिवर्तन",
+                "s1-title": "अवलोकन",
+                "s1-content": "<p>PRODAO Wallet (\"सेवा\") एक गैर-संरक्षक विकेंद्रीकृत वॉलेट है जो किसी भी उपयोगकर्ता व्यक्तिगत जानकारी या संपत्ति को एकत्र, संग्रहीत या नियंत्रित नहीं करता है। सभी कुंजियाँ, लेनदेन डेटा और पहचानकर्ता पूरी तरह से उपयोगकर्ता द्वारा अपने स्वयं के डिवाइस या सार्वजनिक ब्लॉकचेन नेटवर्क पर प्रबंधित किए जाते हैं।</p>",
+                "s2-title": "हम जो जानकारी एकत्र करते हैं",
+                "s2-content": '<p>सेवा व्यक्तिगत रूप से पहचान योग्य जानकारी (PII) को एकत्र, संग्रहीत या प्रोसेस <strong>नहीं</strong> करती है। कोई नाम, ईमेल, फोन नंबर, पहचान दस्तावेज, सरकारी आईडी, या इसी तरह के व्यक्तिगत पहचानकर्ता का अनुरोध या बनाए नहीं रखा जाता है।</p><p>हालांकि, प्रदर्शन और सुरक्षा के लिए सीमित गैर-व्यक्तिगत तकनीकी डेटा स्वचालित रूप से प्रोसेस किया जा सकता है:</p><ul class="bullet-list"><li><strong>डिवाइस मेटाडेटा</strong> (OS संस्करण, ऐप संस्करण, भाषा सेटिंग्स)</li><li><strong>नेटवर्क मेटाडेटा</strong> (IP पता, क्षेत्र, कनेक्टिविटी स्थिति)</li><li><strong>ब्लॉकचेन लेनदेन रिकॉर्ड</strong> (केवल सार्वजनिक ऑन-चेन डेटा)</li></ul><p>ये तकनीकी डेटा बिंदु किसी पहचान योग्य व्यक्ति से जुड़े नहीं हैं और केवल सेवा स्थिरता और सुरक्षा ऑडिटिंग के लिए उपयोग किए जाते हैं।</p>',
+                "s3-title": "उपयोग का उद्देश्य",
+                "s3-content": '<p>ऊपर वर्णित सीमित तकनीकी डेटा का उपयोग केवल इसके लिए किया जाता है:</p><ul class="bullet-list"><li>सेवा प्रदर्शन निगरानी और डिबगिंग</li><li>सुरक्षा और दुरुपयोग रोकथाम (धोखाधड़ी, मनी लॉन्ड्रिंग और प्रतिबंध चोरी की निगरानी सहित)</li><li>ब्लॉकचेन नेटवर्क के भीतर लेनदेन सत्यापन (जैसे स्वैप, भेजें, प्राप्त करें प्रवाह)</li></ul>',
+                "s4-title": "डेटा संग्रहण और प्रतिधारण",
+                "s4-content": "<p>किसी भी केंद्रीकृत सर्वर पर कोई व्यक्तिगत जानकारी संग्रहीत नहीं है। सभी लेनदेन और कुंजी-संबंधित डेटा केवल उपयोगकर्ता के डिवाइस और/या ब्लॉकचेन नेटवर्क पर रहता है।</p><p>निजी कुंजियाँ उपयोगकर्ता के डिवाइस पर स्थानीय रूप से उत्पन्न, एन्क्रिप्ट और संग्रहीत की जाती हैं। वे कभी भी PRODAO Wallet के सर्वर पर प्रेषित, सिंक्रनाइज़ या बैकअप नहीं की जाती हैं।</p><p>अस्थायी संचालन लॉग (यदि उत्पन्न हो) केवल सुरक्षा, निदान या दुरुपयोग रोकथाम के लिए रखे जाते हैं, और उन उद्देश्यों के लिए आवश्यक न होने पर हटा दिए जाते हैं।</p>",
+                "s5-title": "तीसरे पक्ष का प्रकटीकरण",
+                "s5-content": "<p>PRODAO Wallet तीसरे पक्ष को व्यक्तिगत जानकारी बेचता, किराए पर नहीं देता या व्यापार नहीं करता है, और व्यक्तिगत जानकारी का खुलासा नहीं करता है क्योंकि यह पहली जगह में ऐसा डेटा एकत्र नहीं करता है।</p><p>दुर्लभ मामलों में, गुमनाम और एकत्रित तकनीकी आंकड़े (उदाहरण के लिए, क्रैश आवृत्ति या सामान्य प्रदर्शन विश्लेषण) सेवा गुणवत्ता में सुधार के लिए आंतरिक रूप से उपयोग किए जा सकते हैं। इन आंकड़ों का उपयोग किसी व्यक्ति की पहचान करने के लिए नहीं किया जा सकता है।</p><p>हम धोखाधड़ी रोकथाम, जांच या प्रवर्तन से संबंधित लागू कानून, विनियमन, कानूनी प्रक्रिया या सरकारी अनुरोध द्वारा आवश्यक होने पर जानकारी का खुलासा कर सकते हैं।</p>",
+                "s6-title": "अंतर्राष्ट्रीय डेटा स्थानांतरण",
+                "s6-content": "<p>क्योंकि PRODAO Wallet केंद्रीकृत सर्वर पर व्यक्तिगत जानकारी को प्रोसेस या संग्रहीत नहीं करता है, पारंपरिक नियामक अर्थ में कोई \"व्यक्तिगत डेटा का अंतर्राष्ट्रीय स्थानांतरण\" नहीं है।</p><p>डिज़ाइन के अनुसार, ब्लॉकचेन नेटवर्क वैश्विक रूप से वितरित सार्वजनिक लेजर पर संचालित होते हैं। सार्वजनिक ऑन-चेन लेनदेन डेटा स्वतंत्र नोड्स में विश्व भर में दोहराया जा सकता है। ऐसा ऑन-चेन डेटा आम तौर पर व्यक्तिगत रूप से पहचान योग्य जानकारी का गठन नहीं करता है।</p>",
+                "s7-title": "सुरक्षा उपाय",
+                "s7-content": '<p>हम सेवा की सुरक्षा के लिए उद्योग-मानक सुरक्षा उपायों को लागू करते हैं, जिनमें शामिल हैं:</p><ul class="bullet-list"><li>डेटा ट्रांसमिशन के लिए एंड-टू-एंड एन्क्रिप्शन (उदाहरण के लिए, ECDH-आधारित सुरक्षित चैनल या समकक्ष क्रिप्टोग्राफ़िक सुरक्षा)</li><li>केवल स्थानीय निजी कुंजी प्रबंधन। निजी कुंजियाँ और बीज वाक्यांश केवल आपके डिवाइस पर उत्पन्न, एन्क्रिप्ट और संग्रहीत किए जाते हैं</li><li>कोई कुंजी एस्क्रो नहीं। हम आपकी निजी कुंजियों की पुनर्प्राप्ति प्रतियाँ नहीं रखते हैं। आप अपनी कुंजियों और बीज की बैकअप और सुरक्षा के लिए पूरी तरह से जिम्मेदार हैं</li></ul><p><strong>महत्वपूर्ण:</strong> आपकी निजी कुंजी या बीज वाक्यांश का नुकसान आपकी संपत्ति तक पहुंच के स्थायी नुकसान का परिणाम हो सकता है। क्योंकि PRODAO Wallet गैर-संरक्षक है, हम आपकी निजी कुंजी को पुनर्स्थापित या पुनः जारी नहीं कर सकते हैं।</p>',
+                "s8-title": "बच्चों की गोपनीयता",
+                "s8-content": "PRODAO Wallet 13 वर्ष से कम आयु के बच्चों के लिए निर्देशित नहीं है, और हम जानबूझकर 13 वर्ष से कम आयु के बच्चों से कोई डेटा एकत्र नहीं करते हैं।",
+                "s9-title": "संपर्क करें",
+                "s9-intro": "किसी भी गोपनीयता-संबंधी प्रश्न, अनुरोध या चिंताओं के लिए, कृपया हमारे डेटा सुरक्षा प्रमुख से संपर्क करें:",
+                "s9-email": "ईमेल:",
+                "s9-lead": "डेटा सुरक्षा प्रमुख:",
+                "s10-title": "नीति परिवर्तन",
+                "s10-content": "<p>यह गोपनीयता नीति प्रौद्योगिकी, लागू कानून या सेवा कार्यक्षमता में परिवर्तनों को प्रतिबिंबित करने के लिए समय-समय पर अपडेट की जा सकती है।</p><p>हम किसी भी महत्वपूर्ण परिवर्तन के प्रभावी होने से पहले इन-ऐप या वेबसाइट घोषणाओं के माध्यम से उपयोगकर्ताओं को सूचित करेंगे। ऐसी सूचना के बाद सेवा तक पहुंचना या उपयोग करना जारी रखने से, आप अद्यतन गोपनीयता नीति को स्वीकार करते हैं और सहमत होते हैं।</p>",
+                footer: "PRODAO Wallet एक गैर-संरक्षक वॉलेट है। आप अपनी कुंजियों को नियंत्रित करते हैं। हम खोई हुई कुंजियों या बीज वाक्यांशों को पुनर्प्राप्त नहीं करते हैं।"
+            },
+            "zh-CN": {
+                langName: "简体中文",
+                title: "PRODAO钱包隐私政策",
+                badge: "非托管型·自主主权型",
+                intro: "PRODAO钱包（\"本服\"）是一款非托管型去中心化钱包。我们不代表用户收集、存储或控制任何个人信息或数字资产。所有密钥、交易数据和标识符均由您直接在您自己的设备和公共区块链上管理。",
+                "effective-date": "生效日期：",
+                "last-updated": "最后更新：",
+                "contact-label": "联系方式：",
+                date: "2025年11月2日",
+                "nav-title": "跳转到部分",
+                "nav-hint": "点击滚动",
+                "nav-1": "1. 概述",
+                "nav-2": "2. 我们收集的信息",
+                "nav-3": "3. 使用目的",
+                "nav-4": "4. 数据存储与保留",
+                "nav-5": "5. 第三方披露",
+                "nav-6": "6. 国际数据传输",
+                "nav-7": "7. 安全措施",
+                "nav-8": "8. 儿童隐私",
+                "nav-9": "9. 联系我们",
+                "nav-10": "10. 政策变更",
+                "s1-title": "概述",
+                "s1-content": "<p>PRODAO钱包（\"本服务\"）是一款非托管型去中心化钱包，不收集、存储或控制任何用户个人信息或资产。所有密钥、交易数据和标识符完全由用户在其自己的设备或公共区块链网络上管理。</p>",
+                "s2-title": "我们收集的信息",
+                "s2-content": '<p>本服务<strong>不</strong>收集、存储或处理任何个人身份信息（PII）。不会请求或保留姓名、电子邮件、电话号码、身份证件、政府颁发的身份证或类似的个人标识符。</p><p>但是，为了性能和安全，可能会自动处理有限的非个人技术数据：</p><ul class="bullet-list"><li><strong>设备元数据</strong>（操作系统版本、应用版本、语言设置）</li><li><strong>网络元数据</strong>（IP地址、地区、连接状态）</li><li><strong>区块链交易记录</strong>（仅限公共链上数据）</li></ul><p>这些技术数据点与任何可识别的个人无关，仅用于服务稳定性和安全审计。</p>',
+                "s3-title": "使用目的",
+                "s3-content": '<p>上述有限的技术数据仅用于：</p><ul class="bullet-list"><li>服务性能监控和调试</li><li>安全和滥用防护（包括欺诈、洗钱和制裁规避监控）</li><li>区块链网络内的交易验证（例如交换、发送、接收流程）</li></ul>',
+                "s4-title": "数据存储与保留",
+                "s4-content": "<p>没有个人信息存储在任何集中式服务器上。所有交易和密钥相关数据仅保留在用户的设备和/或区块链网络上。</p><p>私钥在用户设备上本地生成、加密和存储。它们永远不会传输到、同步到或备份到PRODAO钱包的服务器上。</p><p>临时操作日志（如果生成）仅为安全、诊断或滥用防护目的而保留，并在不再需要这些目的时删除。</p>",
+                "s5-title": "第三方披露",
+                "s5-content": "<p>PRODAO钱包不向第三方出售、出租或交易个人信息，也不披露个人信息，因为它首先不收集此类数据。</p><p>在极少数情况下，匿名和汇总的技术统计数据（例如崩溃频率或一般性能分析）可能会在内部使用以提高服务质量。这些统计数据不能用于识别个人。</p><p>如果适用法律、法规、法律程序或政府要求与欺诈防护、调查或执法相关，我们可能会披露信息。</p>",
+                "s6-title": "国际数据传输",
+                "s6-content": "<p>由于PRODAO钱包不在集中式服务器上处理或存储个人信息，因此在传统监管意义上不存在\"个人数据的国际传输\"。</p><p>根据设计，区块链网络在全球分布的公共账本上运行。公共链上交易数据可能会在独立节点之间在全球范围内复制。此类链上数据通常不构成个人身份信息。</p>",
+                "s7-title": "安全措施",
+                "s7-content": '<p>我们采用行业标准安全措施来保护服务，包括：</p><ul class="bullet-list"><li>数据传输的端到端加密（例如基于ECDH的安全通道或等效的加密保护）</li><li>仅本地私钥管理。私钥和助记词仅在您的设备上生成、加密和存储</li><li>无密钥托管。我们不保留您的私钥的恢复副本。您对密钥和助记词的备份和保管负全部责任</li></ul><p><strong>重要提示：</strong>丢失您的私钥或助记词可能导致永久失去对您资产的访问权限。由于PRODAO钱包是非托管型的，我们无法恢复或重新发放您的私钥。</p>',
+                "s8-title": "儿童隐私",
+                "s8-content": "PRODAO钱包不针对13岁以下的儿童，我们不会有意收集13岁以下儿童的任何数据。",
+                "s9-title": "联系我们",
+                "s9-intro": "如有任何隐私相关问题、请求或疑虑，请联系我们的数据保护负责人：",
+                "s9-email": "电子邮件：",
+                "s9-lead": "数据保护负责人：",
+                "s10-title": "政策变更",
+                "s10-content": "<p>本隐私政策可能会不时更新，以反映技术、适用法律或服务功能的变化。</p><p>我们将在任何重大更改生效之前通过应用内或网站公告通知用户。在此类通知后继续访问或使用服务，即表示您承认并同意更新的隐私政策。</p>",
+                footer: "PRODAO钱包是非托管型钱包。您控制您的密钥。我们不恢复丢失的密钥或助记词。"
+            },
+            "zh-TW": {
+                langName: "繁體中文",
+                title: "PRODAO錢包隱私政策",
+                badge: "非託管型·自主主權型",
+                intro: "PRODAO錢包（「本服務」）是一款非託管型去中心化錢包。我們不代表使用者收集、儲存或控制任何個人資訊或數位資產。所有金鑰、交易數據和識別符均由您直接在您自己的裝置和公共區塊鏈上管理。",
+                "effective-date": "生效日期：",
+                "last-updated": "最後更新：",
+                "contact-label": "聯絡方式：",
+                date: "2025年11月2日",
+                "nav-title": "跳轉到部分",
+                "nav-hint": "點擊捲動",
+                "nav-1": "1. 概述",
+                "nav-2": "2. 我們收集的資訊",
+                "nav-3": "3. 使用目的",
+                "nav-4": "4. 資料儲存與保留",
+                "nav-5": "5. 第三方披露",
+                "nav-6": "6. 國際資料傳輸",
+                "nav-7": "7. 安全措施",
+                "nav-8": "8. 兒童隱私",
+                "nav-9": "9. 聯絡我們",
+                "nav-10": "10. 政策變更",
+                "s1-title": "概述",
+                "s1-content": "<p>PRODAO錢包（「本服務」）是一款非託管型去中心化錢包，不收集、儲存或控制任何使用者個人資訊或資產。所有金鑰、交易數據和識別符完全由使用者在其自己的裝置或公共區塊鏈網路上管理。</p>",
+                "s2-title": "我們收集的資訊",
+                "s2-content": '<p>本服務<strong>不</strong>收集、儲存或處理任何個人身份資訊（PII）。不會請求或保留姓名、電子郵件、電話號碼、身份證件、政府頒發的身份證或類似的個人識別符。</p><p>但是，為了效能和安全，可能會自動處理有限的非個人技術資料：</p><ul class="bullet-list"><li><strong>裝置中繼資料</strong>（作業系統版本、應用程式版本、語言設定）</li><li><strong>網路中繼資料</strong>（IP位址、地區、連線狀態）</li><li><strong>區塊鏈交易記錄</strong>（僅限公共鏈上資料）</li></ul><p>這些技術資料點與任何可識別的個人無關，僅用於服務穩定性和安全稽核。</p>',
+                "s3-title": "使用目的",
+                "s3-content": '<p>上述有限的技術資料僅用於：</p><ul class="bullet-list"><li>服務效能監控和除錯</li><li>安全和濫用防護（包括詐騙、洗錢和制裁規避監控）</li><li>區塊鏈網路內的交易驗證（例如交換、傳送、接收流程）</li></ul>',
+                "s4-title": "資料儲存與保留",
+                "s4-content": "<p>沒有個人資訊儲存在任何集中式伺服器上。所有交易和金鑰相關資料僅保留在使用者的裝置和/或區塊鏈網路上。</p><p>私鑰在使用者裝置上本地生成、加密和儲存。它們永遠不會傳輸到、同步到或備份到PRODAO錢包的伺服器上。</p><p>臨時操作日誌（如果生成）僅為安全、診斷或濫用防護目的而保留，並在不再需要這些目的時刪除。</p>",
+                "s5-title": "第三方披露",
+                "s5-content": "<p>PRODAO錢包不向第三方出售、出租或交易個人資訊，也不披露個人資訊，因為它首先不收集此類資料。</p><p>在極少數情況下，匿名和彙總的技術統計資料（例如當機頻率或一般效能分析）可能會在內部使用以提高服務品質。這些統計資料不能用於識別個人。</p><p>如果適用法律、法規、法律程序或政府要求與詐騙防護、調查或執法相關，我們可能會披露資訊。</p>",
+                "s6-title": "國際資料傳輸",
+                "s6-content": "<p>由於PRODAO錢包不在集中式伺服器上處理或儲存個人資訊，因此在傳統監管意義上不存在「個人資料的國際傳輸」。</p><p>根據設計，區塊鏈網路在全球分佈的公共帳本上執行。公共鏈上交易資料可能會在獨立節點之間在全球範圍內複製。此類鏈上資料通常不構成個人身份資訊。</p>",
+                "s7-title": "安全措施",
+                "s7-content": '<p>我們採用行業標準安全措施來保護服務，包括：</p><ul class="bullet-list"><li>資料傳輸的端到端加密（例如基於ECDH的安全通道或等效的加密保護）</li><li>僅本地私鑰管理。私鑰和助記詞僅在您的裝置上生成、加密和儲存</li><li>無金鑰託管。我們不保留您的私鑰的恢復副本。您對金鑰和助記詞的備份和保管負全部責任</li></ul><p><strong>重要提示：</strong>遺失您的私鑰或助記詞可能導致永久失去對您資產的存取權限。由於PRODAO錢包是非託管型的，我們無法恢復或重新發放您的私鑰。</p>',
+                "s8-title": "兒童隱私",
+                "s8-content": "PRODAO錢包不針對13歲以下的兒童，我們不會有意收集13歲以下兒童的任何資料。",
+                "s9-title": "聯絡我們",
+                "s9-intro": "如有任何隱私相關問題、請求或疑慮，請聯絡我們的資料保護負責人：",
+                "s9-email": "電子郵件：",
+                "s9-lead": "資料保護負責人：",
+                "s10-title": "政策變更",
+                "s10-content": "<p>本隱私政策可能會不時更新，以反映技術、適用法律或服務功能的變化。</p><p>我們將在任何重大更改生效之前透過應用程式內或網站公告通知使用者。在此類通知後繼續存取或使用服務，即表示您承認並同意更新的隱私政策。</p>",
+                footer: "PRODAO錢包是非託管型錢包。您控制您的金鑰。我們不恢復遺失的金鑰或助記詞。"
+            },
+            ru: {
+                langName: "Русский",
+                title: "Политика конфиденциальности PRODAO Wallet",
+                badge: "Без хранения · Самоуправляемый",
+                intro: "PRODAO Wallet («Сервис») — это децентрализованный кошелек без хранения средств. Мы не собираем, не храним и не контролируем личную информацию или цифровые активы от имени пользователей. Все ключи, данные транзакций и идентификаторы управляются непосредственно вами на вашем собственном устройстве и в публичном блокчейне.",
+                "effective-date": "Дата вступления в силу:",
+                "last-updated": "Последнее обновление:",
+                "contact-label": "Контакт:",
+                date: "2 ноября 2025 г.",
+                "nav-title": "Перейти к разделу",
+                "nav-hint": "Нажмите для прокрутки",
+                "nav-1": "1. Обзор",
+                "nav-2": "2. Информация, которую мы собираем",
+                "nav-3": "3. Цель использования",
+                "nav-4": "4. Хранение и удержание данных",
+                "nav-5": "5. Раскрытие третьим лицам",
+                "nav-6": "6. Международная передача данных",
+                "nav-7": "7. Меры безопасности",
+                "nav-8": "8. Конфиденциальность детей",
+                "nav-9": "9. Контакты",
+                "nav-10": "10. Изменения политики",
+                "s1-title": "Обзор",
+                "s1-content": "<p>PRODAO Wallet («Сервис») — это децентрализованный кошелек без хранения средств, который не собирает, не хранит и не контролирует личную информацию или активы пользователей. Все ключи, данные транзакций и идентификаторы полностью управляются пользователем на его собственном устройстве или в публичной блокчейн-сети.</p>",
+                "s2-title": "Информация, которую мы собираем",
+                "s2-content": '<p>Сервис <strong>не</strong> собирает, не хранит и не обрабатывает личную идентифицирующую информацию (PII). Имя, электронная почта, номер телефона, документ, удостоверяющий личность, удостоверение личности, выданное государством, или аналогичный личный идентификатор не запрашиваются и не сохраняются.</p><p>Однако ограниченные неличные технические данные могут обрабатываться автоматически для производительности и безопасности:</p><ul class="bullet-list"><li><strong>Метаданные устройства</strong> (версия ОС, версия приложения, языковые настройки)</li><li><strong>Сетевые метаданные</strong> (IP-адрес, регион, состояние подключения)</li><li><strong>Записи транзакций блокчейна</strong> (только публичные данные в блокчейне)</li></ul><p>Эти технические данные не связаны с идентифицируемым лицом и используются исключительно для стабильности сервиса и аудита безопасности.</p>',
+                "s3-title": "Цель использования",
+                "s3-content": '<p>Ограниченные технические данные, описанные выше, используются только для:</p><ul class="bullet-list"><li>Мониторинга производительности сервиса и отладки</li><li>Предотвращения безопасности и злоупотреблений (включая мониторинг мошенничества, отмывания денег и уклонения от санкций)</li><li>Проверки транзакций в сети блокчейна (например, потоки обмена, отправки, получения)</li></ul>',
+                "s4-title": "Хранение и удержание данных",
+                "s4-content": "<p>Никакая личная информация не хранится на централизованном сервере. Все данные о транзакциях и ключах остаются только на устройстве пользователя и/или в сети блокчейна.</p><p>Приватные ключи генерируются, шифруются и хранятся локально на устройстве пользователя. Они никогда не передаются, не синхронизируются и не резервируются на серверах PRODAO Wallet.</p><p>Временные операционные журналы (если создаются) сохраняются только для безопасности, диагностики или предотвращения злоупотреблений и удаляются, когда они больше не нужны для этих целей.</p>",
+                "s5-title": "Раскрытие третьим лицам",
+                "s5-content": "<p>PRODAO Wallet не продает, не сдает в аренду и не обменивает личную информацию третьим лицам и не раскрывает личную информацию, потому что в первую очередь не собирает такие данные.</p><p>В редких случаях анонимизированная и агрегированная техническая статистика (например, частота сбоев или общий анализ производительности) может использоваться внутренне для улучшения качества сервиса. Эта статистика не может быть использована для идентификации человека.</p><p>Мы можем раскрыть информацию, если это требуется применимым законодательством, постановлением, юридическим процессом или правительственным запросом, связанным с предотвращением мошенничества, расследованием или правоприменением.</p>",
+                "s6-title": "Международная передача данных",
+                "s6-content": "<p>Поскольку PRODAO Wallet не обрабатывает и не хранит личную информацию на централизованных серверах, в традиционном нормативном смысле не существует «международной передачи личных данных».</p><p>По дизайну, блокчейн-сети работают на глобально распределенных публичных реестрах. Данные публичных транзакций в блокчейне могут быть реплицированы по всему миру через независимые узлы. Такие данные в блокчейне обычно не составляют личную идентифицирующую информацию.</p>",
+                "s7-title": "Меры безопасности",
+                "s7-content": '<p>Мы применяем отраслевые стандартные меры безопасности для защиты Сервиса, включая:</p><ul class="bullet-list"><li>Сквозное шифрование для передачи данных (например, безопасные каналы на основе ECDH или эквивалентная криптографическая защита)</li><li>Управление приватными ключами только локально. Приватные ключи и seed-фразы генерируются, шифруются и хранятся исключительно на вашем устройстве</li><li>Без эскроу ключей. Мы не храним копии восстановления ваших приватных ключей. Вы несете единоличную ответственность за резервное копирование и хранение ваших ключей и seed-фраз</li></ul><p><strong>Важно:</strong> Потеря вашего приватного ключа или seed-фразы может привести к постоянной потере доступа к вашим активам. Поскольку PRODAO Wallet является кошельком без хранения средств, мы не можем восстановить или переиздать ваш приватный ключ.</p>',
+                "s8-title": "Конфиденциальность детей",
+                "s8-content": "PRODAO Wallet не предназначен для детей младше 13 лет, и мы сознательно не собираем данные от детей младше 13 лет.",
+                "s9-title": "Контакты",
+                "s9-intro": "По любым вопросам, запросам или проблемам, связанным с конфиденциальностью, свяжитесь с нашим руководителем по защите данных:",
+                "s9-email": "Электронная почта:",
+                "s9-lead": "Руководитель по защите данных:",
+                "s10-title": "Изменения политики",
+                "s10-content": "<p>Эта Политика конфиденциальности может обновляться время от времени для отражения изменений в технологиях, применимом законодательстве или функциональности сервиса.</p><p>Мы уведомим пользователей через объявления в приложении или на веб-сайте перед вступлением в силу любых существенных изменений. Продолжая доступ или использование Сервиса после такого уведомления, вы признаете и соглашаетесь с обновленной Политикой конфиденциальности.</p>",
+                footer: "PRODAO Wallet — это кошелек без хранения средств. Вы контролируете свои ключи. Мы не восстанавливаем потерянные ключи или seed-фразы."
+            }
+        };
+
+        // Language management
+        const dropdown = document.querySelector('.lang-dropdown');
+        const dropdownBtn = dropdown.querySelector('.lang-btn');
+        const currentLangSpan = dropdown.querySelector('.current-lang');
+        const langMenu = dropdown.querySelector('.lang-menu');
+        const langOptions = dropdown.querySelectorAll('.lang-option');
+        const themeToggleBtn = document.querySelector('.theme-toggle-btn');
+        const htmlElement = document.documentElement;
+        const THEME_STORAGE_KEY = 'preferred-color-mode';
+        const colorSchemeMedia = window.matchMedia('(prefers-color-scheme: dark)');
+
+        const measurementSpan = document.createElement('span');
+        measurementSpan.style.position = 'absolute';
+        measurementSpan.style.visibility = 'hidden';
+        measurementSpan.style.pointerEvents = 'none';
+        measurementSpan.style.whiteSpace = 'nowrap';
+        measurementSpan.style.left = '0';
+        measurementSpan.style.top = '0';
+        measurementSpan.style.zIndex = '-1';
+        document.body.appendChild(measurementSpan);
+
+        const themeToggleLabels = {
+            en: { dark: "Dark", light: "Light" },
+            ko: { dark: "어둡게", light: "밝게" },
+            th: { dark: "มืด", light: "สว่าง" },
+            hi: { dark: "गहरा", light: "हल्का" },
+            ru: { dark: "Тёмная", light: "Светлая" },
+            "zh-CN": { dark: "深色", light: "浅色" },
+            "zh-TW": { dark: "深色", light: "淺色" },
+            ja: { dark: "ダーク", light: "ライト" }
+        };
+
+        let activeLanguage = 'en';
+        let savedTheme = null;
+
+        const getThemeActionLabel = (lang, targetMode) => {
+            const labels = themeToggleLabels[lang] || themeToggleLabels.en;
+            return targetMode === 'dark' ? labels.dark : labels.light;
+        };
+
+        const getCurrentTheme = () => {
+            const systemTheme = colorSchemeMedia.matches ? 'dark' : 'light';
+            return htmlElement.getAttribute('data-theme') || savedTheme || systemTheme;
+        };
+
+        function setLanguage(lang) {
+            // For English, restore to default content
+            if (lang === 'en') {
+                // Restore all text content to English (read from data attributes or default values)
+                document.querySelectorAll('[data-i18n]').forEach(el => {
+                    const key = el.getAttribute('data-i18n');
+                    const defaultText = getDefaultEnglishText(key);
+                    if (defaultText) el.textContent = defaultText;
+                });
+
+                // Restore HTML content
+                document.querySelectorAll('[data-i18n-html]').forEach(el => {
+                    const key = el.getAttribute('data-i18n-html');
+                    const defaultHtml = getDefaultEnglishHtml(key);
+                    if (defaultHtml) el.innerHTML = defaultHtml;
+                });
+
+                currentLangSpan.textContent = 'English';
+                langOptions.forEach(opt => {
+                    opt.classList.toggle('active', opt.dataset.lang === 'en');
+                });
+                localStorage.setItem('preferred-language', 'en');
+                dropdown.classList.remove('open');
+                dropdownBtn.setAttribute('aria-expanded', 'false');
+                activeLanguage = 'en';
+                updateThemeToggleText(getCurrentTheme());
+                return;
+            }
+
+            const t = translations[lang];
+            if (!t) return;
+
+            // Update text content
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (t[key]) el.textContent = t[key];
+            });
+
+            // Update HTML content
+            document.querySelectorAll('[data-i18n-html]').forEach(el => {
+                const key = el.getAttribute('data-i18n-html');
+                if (t[key]) el.innerHTML = t[key];
+            });
+
+            // Update current language display
+            currentLangSpan.textContent = t.langName;
+
+            // Update active option
+            langOptions.forEach(opt => {
+                opt.classList.toggle('active', opt.dataset.lang === lang);
+            });
+
+            // Save preference
+            localStorage.setItem('preferred-language', lang);
+
+            // Close dropdown
+            dropdown.classList.remove('open');
+            dropdownBtn.setAttribute('aria-expanded', 'false');
+            activeLanguage = lang;
+            updateThemeToggleText(getCurrentTheme());
+        }
+
+        // Toggle dropdown
+        dropdownBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const isOpen = dropdown.classList.toggle('open');
+            dropdownBtn.setAttribute('aria-expanded', isOpen);
+        });
+
+        // Close dropdown when clicking outside
+        document.addEventListener('click', () => {
+            dropdown.classList.remove('open');
+            dropdownBtn.setAttribute('aria-expanded', 'false');
+        });
+
+        // Prevent dropdown close when clicking inside menu
+        langMenu.addEventListener('click', (e) => {
+            e.stopPropagation();
+        });
+
+        // Language selection
+        langOptions.forEach(option => {
+            option.addEventListener('click', () => {
+                setLanguage(option.dataset.lang);
+            });
+        });
+
+        const measureLabelWidth = (text) => {
+            if (!themeToggleBtn) return 0;
+            const style = window.getComputedStyle(themeToggleBtn);
+            measurementSpan.style.fontFamily = style.fontFamily;
+            measurementSpan.style.fontSize = style.fontSize;
+            measurementSpan.style.fontWeight = style.fontWeight;
+            measurementSpan.textContent = text;
+            return Math.ceil(measurementSpan.getBoundingClientRect().width);
+        };
+
+        const updateThemeToggleText = (theme) => {
+            if (!themeToggleBtn) return;
+            const labels = themeToggleLabels[activeLanguage] || themeToggleLabels.en;
+            const longestWidth = Math.max(measureLabelWidth(labels.dark), measureLabelWidth(labels.light));
+            const computedStyle = window.getComputedStyle(themeToggleBtn);
+            const horizontalPadding = parseFloat(computedStyle.paddingLeft) + parseFloat(computedStyle.paddingRight) +
+                parseFloat(computedStyle.borderLeftWidth) + parseFloat(computedStyle.borderRightWidth);
+            const availableWidth = Math.max(0, document.documentElement.clientWidth - 32);
+            const minWidth = Math.min(longestWidth + horizontalPadding, availableWidth);
+            themeToggleBtn.style.minWidth = `${Math.ceil(minWidth)}px`;
+
+            const nextMode = theme === 'dark' ? 'light' : 'dark';
+            themeToggleBtn.textContent = getThemeActionLabel(activeLanguage, nextMode);
+            themeToggleBtn.setAttribute('aria-pressed', theme === 'dark' ? 'true' : 'false');
+        };
+
+        const setThemeAttribute = (theme) => {
+            if (theme === 'light' || theme === 'dark') {
+                htmlElement.setAttribute('data-theme', theme);
+            } else {
+                htmlElement.removeAttribute('data-theme');
+            }
+        };
+
+        const getSystemTheme = () => (colorSchemeMedia.matches ? 'dark' : 'light');
+
+        savedTheme = localStorage.getItem(THEME_STORAGE_KEY);
+        if (savedTheme !== 'light' && savedTheme !== 'dark') {
+            savedTheme = null;
+        }
+
+        if (savedTheme) {
+            setThemeAttribute(savedTheme);
+            updateThemeToggleText(savedTheme);
+        } else {
+            updateThemeToggleText(getSystemTheme());
+        }
+
+        themeToggleBtn?.addEventListener('click', () => {
+            const currentTheme = htmlElement.getAttribute('data-theme') || savedTheme || getSystemTheme();
+            const nextTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            savedTheme = nextTheme;
+            setThemeAttribute(nextTheme);
+            localStorage.setItem(THEME_STORAGE_KEY, nextTheme);
+            updateThemeToggleText(nextTheme);
+        });
+
+        const handleSystemThemeChange = (event) => {
+            if (savedTheme) return;
+            updateThemeToggleText(event.matches ? 'dark' : 'light');
+        };
+
+        if (colorSchemeMedia.addEventListener) {
+            colorSchemeMedia.addEventListener('change', handleSystemThemeChange);
+        } else if (colorSchemeMedia.addListener) {
+            colorSchemeMedia.addListener(handleSystemThemeChange);
+        }
+
+        // Keyboard navigation
+        dropdownBtn.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                const isOpen = dropdown.classList.toggle('open');
+                dropdownBtn.setAttribute('aria-expanded', isOpen);
+            }
+        });
+
+        const initSectionAccordions = () => {
+            const sectionCards = document.querySelectorAll('.section-card.collapsible');
+            const partsMap = new Map();
+
+            const getParts = (card) => {
+                const cached = partsMap.get(card);
+                if (cached) return cached;
+                const trigger = card.querySelector('.section-title');
+                const body = card.querySelector('.section-body');
+                if (!trigger || !body) return null;
+                const parts = { trigger, body };
+                partsMap.set(card, parts);
+                return parts;
+            };
+
+            const expandCard = (card, parts) => {
+                if (card.classList.contains('expanded')) return;
+                const { trigger, body } = parts;
+
+                body.style.height = `${body.scrollHeight}px`;
+
+                const handleTransitionEnd = (event) => {
+                    if (event.propertyName !== 'height') return;
+                    body.style.height = 'auto';
+                    body.removeEventListener('transitionend', handleTransitionEnd);
+                };
+
+                body.addEventListener('transitionend', handleTransitionEnd);
+
+                card.classList.add('expanded');
+                trigger.setAttribute('aria-expanded', 'true');
+                body.setAttribute('aria-hidden', 'false');
+            };
+
+            const collapseCard = (card, parts) => {
+                if (!card.classList.contains('expanded')) return;
+                const { trigger, body } = parts;
+
+                body.style.height = `${body.scrollHeight}px`;
+                requestAnimationFrame(() => {
+                    body.style.height = '0px';
+                });
+
+                const handleTransitionEnd = (event) => {
+                    if (event.propertyName !== 'height') return;
+                    body.style.height = '';
+                    body.removeEventListener('transitionend', handleTransitionEnd);
+                };
+
+                body.addEventListener('transitionend', handleTransitionEnd);
+
+                card.classList.remove('expanded');
+                trigger.setAttribute('aria-expanded', 'false');
+                body.setAttribute('aria-hidden', 'true');
+            };
+
+            sectionCards.forEach((card) => {
+                const parts = getParts(card);
+                if (!parts) return;
+                const { trigger, body } = parts;
+
+                trigger.setAttribute('role', 'button');
+                trigger.setAttribute('tabindex', '0');
+                trigger.setAttribute('aria-expanded', 'false');
+                body.setAttribute('aria-hidden', 'true');
+
+                const toggleCard = () => {
+                    const willExpand = !card.classList.contains('expanded');
+
+                    if (willExpand) {
+                        sectionCards.forEach((other) => {
+                            if (other === card) return;
+                            const otherParts = getParts(other);
+                            if (!otherParts) return;
+                            collapseCard(other, otherParts);
+                        });
+                        expandCard(card, parts);
+                    } else {
+                        collapseCard(card, parts);
+                    }
+                };
+
+                trigger.addEventListener('click', toggleCard);
+                trigger.addEventListener('keydown', (event) => {
+                    if (event.key === 'Enter' || event.key === ' ') {
+                        event.preventDefault();
+                        toggleCard();
+                    }
+                });
+            });
+        };
+
+        // Initialize on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            initSectionAccordions();
+            const savedLang = localStorage.getItem('preferred-language');
+
+            if (savedLang) {
+                // If user has explicitly saved a preference, use it
+                if (savedLang !== 'en') {
+                    setLanguage(savedLang);
+                }
+            } else {
+                // No saved preference - detect browser language as initial default
+                const browserLang = navigator.language.toLowerCase();
+                if (browserLang.startsWith('ko')) {
+                    setLanguage('ko');
+                } else if (browserLang.startsWith('ja')) {
+                    setLanguage('ja');
+                } else if (browserLang.startsWith('th')) {
+                    setLanguage('th');
+                } else if (browserLang.startsWith('hi')) {
+                    setLanguage('hi');
+                } else if (browserLang === 'zh-cn' || browserLang.startsWith('zh-hans')) {
+                    setLanguage('zh-CN');
+                } else if (browserLang === 'zh-tw' || browserLang === 'zh-hk' || browserLang.startsWith('zh-hant')) {
+                    setLanguage('zh-TW');
+                } else if (browserLang.startsWith('ru')) {
+                    setLanguage('ru');
+                }
+                // For other languages or 'en', stay with English (HTML default)
+            }
+        });
+    </script>
+
+</html>

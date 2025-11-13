@@ -1,0 +1,1665 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,viewport-fit=cover" />
+    <meta name="color-scheme" content="light dark" />
+    <title data-i18n="page-title">PRODAO Wallet Terms of Service</title>
+    <style>
+        :root {
+            --bg-page:
+                linear-gradient(180deg,
+                    rgba(216, 230, 255, 0.7) 0%,
+                    rgba(255, 241, 230, 0.7) 100%),
+                #F3F6FB;
+            --bg-card: #ffffff;
+            --text-primary: #0f172a;
+            --text-secondary: #475569;
+            --text-dim: #94a3b8;
+            --border-card: rgba(15, 23, 42, 0.07);
+            --radius-xl: 1.25rem;
+            --radius-lg: 0.75rem;
+            --radius-md: 0.5rem;
+            --shadow-card: 0 24px 48px -12px rgba(15, 23, 42, 0.12), 0 2px 4px rgba(15, 23, 42, 0.06);
+            --shadow-card-hover: 0 30px 64px -10px rgba(15, 23, 42, 0.16), 0 3px 6px rgba(15, 23, 42, 0.08);
+            --accent-bg: rgba(99, 102, 241, 0.08);
+            --accent-border: rgba(99, 102, 241, 0.3);
+            --accent-text: #4f46e5;
+            --font-body: system-ui, -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            --control-height: 34px;
+            --control-font-size: 0.85rem;
+        }
+
+        html,
+        body {
+            width: 100%;
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg-page:
+                    linear-gradient(180deg,
+                        rgba(124, 80, 255, 0.03) 0%,
+                        rgba(32, 112, 255, 0.03) 40%,
+                        rgba(254, 114, 19, 0.03) 100%),
+                    #0A0811;
+                --bg-card: rgba(15, 23, 42, 0.6);
+                --text-primary: #f8fafc;
+                --text-secondary: #94a3b8;
+                --text-dim: #475569;
+                --border-card: rgba(148, 163, 184, 0.12);
+                --shadow-card: 0 24px 48px -12px rgba(0, 0, 0, 0.8), 0 2px 4px rgba(0, 0, 0, 0.6);
+                --shadow-card-hover: 0 30px 64px -10px rgba(0, 0, 0, 0.85), 0 3px 6px rgba(0, 0, 0, 0.7);
+                --accent-bg: rgba(99, 102, 241, 0.12);
+                --accent-border: rgba(129, 140, 248, 0.4);
+                --accent-text: #818cf8;
+            }
+
+            .section-title {
+                background-color: #211A1D;
+                border: 1px solid #2C2325;
+                box-shadow: 0 0 4px 0 rgba(255, 255, 255, 0.05);
+            }
+        }
+
+        .bg-dark {
+            background:
+                linear-gradient(135deg,
+                    rgba(124, 80, 255, 0.03) 0%,
+                    rgba(32, 112, 255, 0.03) 40%,
+                    rgba(254, 114, 19, 0.03) 100%),
+                #0A0811;
+        }
+
+        .bg-light {
+            background:
+                linear-gradient(135deg,
+                    rgba(216, 230, 255, 0.7) 0%,
+                    rgba(255, 241, 230, 0.7) 100%),
+                #F3F6FB;
+        }
+
+        body {
+            margin: 0;
+            padding: 2rem 0 4rem;
+            background: var(--bg-page);
+            color: var(--text-primary);
+            font-family: var(--font-body);
+            -webkit-font-smoothing: antialiased;
+            text-rendering: optimizeLegibility;
+            line-height: 1.55;
+            font-size: clamp(14px, 0.18vw + 13px, 16px);
+            display: flex;
+            justify-content: center;
+            transition: background 0.8s ease, color 0.8s ease;
+            overflow-x: hidden;
+        }
+
+        .page-shell {
+            width: 100%;
+            max-width: 100%;
+            display: grid;
+            gap: 1rem;
+            padding: 0 1rem;
+            box-sizing: border-box;
+        }
+
+        .terms-hero {
+            background: transparent;
+            box-shadow: none;
+            border: 1px solid transparent;
+            border-radius: var(--radius-xl);
+            padding: 0 clamp(1.5rem, 1vw + 1rem, 2rem) clamp(1.5rem, 1vw + 1rem, 2rem);
+            position: relative;
+        }
+
+        .terms-hero::after {
+            content: "";
+            position: absolute;
+            right: -20%;
+            top: -20%;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle at 30% 30%, rgba(99, 102, 241, 0.18) 0%, rgba(0, 0, 0, 0) 70%);
+            filter: blur(40px);
+            opacity: 0.4;
+            pointer-events: none;
+        }
+
+        .terms-meta {
+            display: flex;
+            flex-wrap: wrap;
+            row-gap: .5rem;
+            column-gap: 1rem;
+            font-size: .8rem;
+            color: var(--text-secondary);
+            opacity: 0.7;
+        }
+
+        .badge-soft {
+            background-color: var(--accent-bg);
+            border: 1px solid var(--accent-border);
+            color: var(--accent-text);
+            border-radius: 99px;
+            font-size: .7rem;
+            font-weight: 500;
+            line-height: 1;
+            padding: .4rem .6rem;
+            display: inline-flex;
+            align-items: center;
+            gap: .4rem;
+        }
+
+        .title-wrap {
+            display: grid;
+            gap: .75rem;
+            margin-bottom: 1rem;
+        }
+
+        h1.page-title {
+            margin: 0;
+            font-size: clamp(1.25rem, 0.4vw + 1rem, 1.5rem);
+            font-weight: 600;
+            letter-spacing: -0.04em;
+            color: var(--text-primary);
+            line-height: 1.2;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: baseline;
+            gap: .75rem;
+        }
+
+        p.lead {
+            margin: 0;
+            max-width: 60ch;
+            color: var(--text-secondary);
+            font-size: clamp(.9rem, 0.2vw + .8rem, 1rem);
+            line-height: 1.5;
+        }
+
+        .section-card {
+            background: var(--bg-page);
+            box-shadow: var(--shadow-card);
+            border: 1px solid var(--border-card);
+            border-radius: 30px;
+            padding: 6px;
+            display: grid;
+            gap: .75rem;
+            scroll-margin-top: 5rem;
+            transition: background 0.8s ease, border-color 0.8s ease, box-shadow 0.8s ease;
+        }
+
+        .section-card.collapsible {
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+            overflow: hidden;
+        }
+
+        .section-card.collapsible.expanded {
+            border: 2px solid rgba(254, 114, 19, 0.6);
+        }
+
+        .section-card:hover {
+            box-shadow: var(--shadow-card-hover);
+        }
+
+        .section-heading {
+            width: calc(100% - 12px);
+        }
+
+        .section-title {
+            font-size: clamp(1rem, 0.2vw + .9rem, 1.1rem);
+            font-weight: 600;
+            color: var(--text-primary);
+            line-height: 1.3;
+            letter-spacing: -0.03em;
+            display: flex;
+            align-items: center;
+            gap: 0;
+            margin: 0;
+            padding: 6px 10px 6px 0;
+            position: relative;
+            width: 100%;
+            border-radius: 999px;
+            transition: background-color 0.8s ease, border-color 0.8s ease, color 0.8s ease;
+        }
+
+        .section-card.collapsible .section-title {
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .section-card.collapsible .section-title::after {
+            content: "";
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            width: 0.65rem;
+            height: 0.65rem;
+            border-right: 2px solid var(--text-secondary);
+            border-bottom: 2px solid var(--text-secondary);
+            transform: translateY(-60%) rotate(45deg);
+            transition: transform .2s ease, border-color .2s ease;
+            pointer-events: none;
+        }
+
+        .section-card.collapsible.expanded .section-title::after {
+            transform: translateY(-30%) rotate(225deg);
+            border-color: var(--accent-text);
+        }
+
+        .section-card.collapsible .section-title:focus-visible {
+            outline: 2px solid var(--accent-text);
+            outline-offset: 4px;
+        }
+
+        [data-theme="light"] .section-title {
+            background-color: #F1F6FF;
+            border: 1px solid #C9D8E6;
+        }
+
+        .section-title .section-index {
+            font-size: .7rem;
+            font-weight: 600;
+            line-height: 1.2;
+            color: var(--accent-text);
+            background-color: var(--accent-bg);
+            border: 1px solid var(--accent-border);
+            border-radius: 99px;
+            width: 32px;
+            height: 32px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            margin: 0 12px 0 6px;
+        }
+
+        .section-title-text {
+            flex: 0 0 auto;
+        }
+
+        .section-body {
+            font-size: .9rem;
+            line-height: 1.6;
+            color: var(--text-secondary);
+            max-width: 70ch;
+            padding: 0 15px;
+        }
+
+        [data-theme="dark"] .section-body {
+            color: #D9D5D0;
+        }
+
+        [data-theme="light"] .section-body {
+            color: #2E323B;
+        }
+
+        .section-card.collapsible .section-body {
+            height: 0;
+            opacity: 0;
+            overflow: hidden;
+            pointer-events: none;
+            margin-top: 0;
+            padding: 0 15px;
+            transition: height .35s ease, opacity .25s ease, margin-top .25s ease;
+        }
+
+        .section-card.collapsible.expanded .section-body {
+            margin-top: .75rem;
+            opacity: 1;
+            pointer-events: auto;
+            padding: 0 15px 10px;
+            margin-bottom: 10px;
+        }
+
+        .section-body p {
+            margin: 0 0 .75rem;
+        }
+
+        .section-body p:last-child {
+            margin-bottom: 0;
+        }
+
+        .bullet-list {
+            margin: .5rem 0 .75rem;
+            padding-left: 1rem;
+            color: var(--text-secondary);
+            font-size: .9rem;
+        }
+
+        .bullet-list li {
+            margin-bottom: .5rem;
+        }
+
+        .contact-card {
+            background:
+                linear-gradient(135deg,
+                    rgba(124, 80, 255, 0.03) 0%,
+                    rgba(32, 112, 255, 0.03) 40%,
+                    rgba(254, 114, 19, 0.03) 100%),
+                #0A0811;
+            border: 2px solid rgba(254, 114, 19, 0.6);
+            border-radius: var(--radius-md);
+            padding: .75rem 1rem;
+            font-size: .8rem;
+            line-height: 1.5;
+            color: var(--text-primary);
+            display: inline-block;
+        }
+        [data-theme="light"] .contact-card {
+            background:
+                linear-gradient(135deg,
+                    rgba(216, 230, 255, 0.7) 0%,
+                    rgba(255, 241, 230, 0.7) 100%),
+                #F3F6FB;
+            border: 2px solid rgba(254, 114, 19, 0.6);
+        }
+
+        .footer-note {
+            margin-top: 3rem;
+            text-align: center;
+            font-size: .7rem;
+            color: var(--text-dim);
+            line-height: 1.5;
+        }
+
+        a.inline-link {
+            color: var(--accent-text);
+            text-decoration: none;
+            border-bottom: 1px solid var(--accent-border);
+            padding-bottom: 1px;
+        }
+
+        a.inline-link:hover,
+        a.inline-link:focus {
+            border-bottom-color: var(--accent-text);
+        }
+
+        .page-shell>.terms-hero {
+            padding-bottom: clamp(1.25rem, 1vw + 1rem, 1.75rem) !important;
+        }
+
+        .top-btns {
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            gap: .75rem;
+            flex-wrap: wrap;
+            margin-bottom: 1.5rem;
+        }
+
+        .lang-switcher {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-card);
+            border-radius: 99px;
+            box-shadow: var(--shadow-card);
+            transition: background-color 0.8s ease, border-color 0.8s ease, box-shadow 0.8s ease;
+        }
+
+        .lang-dropdown {
+            position: relative;
+        }
+
+        .lang-btn {
+            background-color: transparent;
+            border: none;
+            color: var(--text-primary);
+            padding: 0.5rem calc(2.5rem + 10px) 0.5rem calc(0.75rem + 10px);
+            cursor: pointer;
+            font-size: var(--control-font-size);
+            font-weight: 500;
+            font-family: var(--font-body);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            min-width: 120px;
+            transition: color 0.2s ease;
+            line-height: 1;
+            white-space: nowrap;
+            min-height: var(--control-height);
+            width: auto;
+        }
+
+        .lang-btn:hover {
+            color: var(--accent-text);
+        }
+
+        .lang-btn::after {
+            content: "▼";
+            position: absolute;
+            right: 0.75rem;
+            font-size: 0.6rem;
+            color: var(--text-secondary);
+            transition: transform 0.2s ease;
+        }
+
+        .lang-dropdown.open .lang-btn::after {
+            transform: rotate(180deg);
+        }
+
+        .lang-menu {
+            position: absolute;
+            top: calc(100% + 0.5rem);
+            right: 0;
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-card);
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-card);
+            min-width: 160px;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
+            backdrop-filter: blur(6px);
+            z-index: 150;
+        }
+
+        [data-theme="dark"] .lang-menu {
+            background-color: #211A1D;
+        }
+
+        .lang-dropdown.open .lang-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .lang-option {
+            display: block;
+            width: 100%;
+            padding: 0.6rem 0.75rem;
+            border: none;
+            background: transparent;
+            color: var(--text-primary);
+            font-size: 0.85rem;
+            font-family: var(--font-body);
+            text-align: left;
+            cursor: pointer;
+            transition: background-color 0.15s ease;
+            border-bottom: 1px solid var(--border-card);
+        }
+
+        .lang-option:last-child {
+            border-bottom: none;
+        }
+
+        .lang-option:hover {
+            background-color: var(--accent-bg);
+            color: var(--accent-text);
+        }
+
+        .lang-option.active {
+            background-color: var(--accent-bg);
+            color: var(--accent-text);
+            font-weight: 600;
+        }
+
+        .theme-toggle-btn {
+            height: auto;
+            padding: 0.5rem calc(0.75rem + 10px);
+            border-radius: 99px;
+            border: 1px solid var(--border-card);
+            background-color: var(--bg-card);
+            color: var(--text-primary);
+            font-weight: 600;
+            font-size: var(--control-font-size);
+            line-height: 1;
+            cursor: pointer;
+            box-shadow: var(--shadow-card);
+            transition: background-color 0.8s ease, color 0.8s ease, border-color 0.8s ease, box-shadow 0.8s ease, transform .2s ease;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: var(--control-height);
+            white-space: nowrap;
+            width: auto;
+        }
+
+        [data-theme="dark"] .theme-toggle-btn {
+            background-color: #F1F6FF;
+            color: #0f172a;
+            border-color: #C9D8E6;
+        }
+
+        [data-theme="light"] .theme-toggle-btn {
+            background-color: #211A1D;
+            color: #f8fafc;
+            border-color: #2C2325;
+        }
+
+        .theme-toggle-btn:focus-visible {
+            outline: 2px solid var(--accent-text);
+            outline-offset: 4px;
+        }
+
+
+        @media (max-width: 640px) {
+            .top-btns {
+                justify-content: flex-end;
+            }
+
+            .lang-btn {
+                padding: 0.4rem 2rem 0.4rem 0.6rem;
+                font-size: 0.8rem;
+                min-width: 100px;
+            }
+
+            .lang-menu {
+                min-width: 140px;
+            }
+        }
+
+        :root[data-theme="light"] {
+            --bg-page:
+                linear-gradient(135deg,
+                    rgba(216, 230, 255, 0.7) 0%,
+                    rgba(255, 241, 230, 0.7) 100%),
+                #F3F6FB;
+            --bg-card: #ffffff;
+            --text-primary: #0f172a;
+            --text-secondary: #475569;
+            --text-dim: #94a3b8;
+            --border-card: rgba(15, 23, 42, 0.07);
+            --shadow-card: 0 24px 48px -12px rgba(15, 23, 42, 0.12), 0 2px 4px rgba(15, 23, 42, 0.06);
+            --shadow-card-hover: 0 30px 64px -10px rgba(15, 23, 42, 0.16), 0 3px 6px rgba(15, 23, 42, 0.08);
+            --accent-bg: rgba(99, 102, 241, 0.08);
+            --accent-border: rgba(99, 102, 241, 0.3);
+            --accent-text: #4f46e5;
+        }
+
+        :root[data-theme="dark"] {
+            --bg-page:
+                linear-gradient(135deg,
+                    rgba(124, 80, 255, 0.03) 0%,
+                    rgba(32, 112, 255, 0.03) 40%,
+                    rgba(254, 114, 19, 0.03) 100%),
+                #0A0811;
+            --bg-card: rgba(15, 23, 42, 0.6);
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+            --text-dim: #475569;
+            --border-card: rgba(148, 163, 184, 0.12);
+            --shadow-card: 0 24px 48px -12px rgba(0, 0, 0, 0.8), 0 2px 4px rgba(0, 0, 0, 0.6);
+            --shadow-card-hover: 0 30px 64px -10px rgba(0, 0, 0, 0.85), 0 3px 6px rgba(0, 0, 0, 0.7);
+            --accent-bg: rgba(99, 102, 241, 0.12);
+            --accent-border: rgba(129, 140, 248, 0.4);
+            --accent-text: #818cf8;
+        }
+    </style>
+</head>
+
+<body>
+    <main class="page-shell">
+        <div class="top-btns">
+            <button class="theme-toggle-btn" type="button" aria-pressed="false">다크 모드</button>
+            <div class="lang-switcher">
+                <div class="lang-dropdown">
+                    <button class="lang-btn" aria-label="Select language" aria-haspopup="true" aria-expanded="false">
+                        <span class="current-lang">English</span>
+                    </button>
+                    <div class="lang-menu" role="menu">
+                        <button class="lang-option active" data-lang="en" role="menuitem">English</button>
+                        <button class="lang-option" data-lang="th" role="menuitem">ไทย (Thai)</button>
+                        <button class="lang-option" data-lang="hi" role="menuitem">हिन्दी (Hindi)</button>
+                        <button class="lang-option" data-lang="ru" role="menuitem">Русский (Russian)</button>
+                        <button class="lang-option" data-lang="zh-CN" role="menuitem">简体中文 (Chinese Simplified)</button>
+                        <button class="lang-option" data-lang="zh-TW" role="menuitem">繁體中文 (Chinese Traditional)</button>
+                        <button class="lang-option" data-lang="ko" role="menuitem">한국어 (Korean)</button>
+                        <button class="lang-option" data-lang="ja" role="menuitem">日本語 (Japanese)</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <header class="terms-hero" role="banner">
+            <div class="title-wrap">
+                <h1 class="page-title">
+                    <span data-i18n="title">PRODAO Wallet Terms of Service</span>
+                    <span class="badge-soft" data-i18n="badge">Non-Custodial · Self-Custody</span>
+                </h1>
+                <p class="lead" data-i18n="intro">These Terms of Service govern your use of PRODAO Wallet, a
+                    non-custodial decentralized wallet. By using the Service, you agree to manage your own private keys
+                    and digital assets. The Service provider does not control, store, or have access to your keys or
+                    assets.</p>
+            </div>
+            <div class="terms-meta" aria-label="terms metadata">
+                <div><strong data-i18n="last-updated">Last Updated:</strong>&nbsp;<span data-i18n="date">November 2,
+                        2025</span></div>
+                <div><strong data-i18n="contact-label">Contact:</strong>&nbsp;<span>prodao.club@gmail.com</span></div>
+            </div>
+        </header>
+
+        
+        <section class="section-card collapsible" id="section-1" aria-labelledby="section-1-title">
+            <div class="section-heading">
+
+                <h2 class="section-title" id="section-1-title">
+
+                    <span class="section-index">1</span>
+
+                    <span class="section-title-text" data-i18n="s1-title">Purpose</span>
+
+                </h2>
+
+            </div>
+            <div class="section-body" data-i18n-html="s1-content">
+                <p>These Terms of Service ("Terms") govern the relationship between the Service provider and users
+                    regarding the use of PRODAO Wallet ("the Service"), including rights, obligations, responsibilities,
+                    and conditions of use.</p>
+                <p>The Service is a self-custody electronic wallet that enables users to directly manage digital assets
+                    on the blockchain.</p>
+            </div>
+        </section>
+        <section class="section-card collapsible" id="section-2" aria-labelledby="section-2-title">
+            <div class="section-heading">
+
+                <h2 class="section-title" id="section-2-title">
+
+                    <span class="section-index">2</span>
+
+                    <span class="section-title-text" data-i18n="s2-title">Definitions</span>
+
+                </h2>
+
+            </div>
+            <div class="section-body" data-i18n-html="s2-content">
+                <ul class="bullet-list">
+                    <li><strong>"Service"</strong> refers to the software that enables users to create, hold, and use
+                        digital asset wallets and interact with blockchain networks.</li>
+                    <li><strong>"User"</strong> refers to any person who agrees to these Terms and uses the Service.
+                    </li>
+                    <li><strong>"Wallet"</strong> refers to the functionality that allows users to directly manage
+                        private keys, public keys, blockchain addresses, and sign and send transactions.</li>
+                    <li><strong>"Private Key"</strong> refers to the secret key that proves and exercises authority over
+                        digital assets and transactions.</li>
+                    <li><strong>"Network"</strong> refers to public blockchain networks and associated smart contracts
+                        and dApps.</li>
+                </ul>
+            </div>
+        </section>
+        <section class="section-card collapsible" id="section-3" aria-labelledby="section-3-title">
+            <div class="section-heading">
+
+                <h2 class="section-title" id="section-3-title">
+
+                    <span class="section-index">3</span>
+
+                    <span class="section-title-text" data-i18n="s3-title">Agreement Effectiveness and Changes</span>
+
+                </h2>
+
+            </div>
+            <div class="section-body" data-i18n-html="s3-content">
+                <p>These Terms become effective when a user installs or uses the Service, or clicks the consent button
+                    during use.</p>
+                <p>The Service provider may revise these Terms to reflect changes in applicable laws, technology, or
+                    service policies. Changes will be announced in advance and will be deemed accepted if the user
+                    continues to use the Service after notification.</p>
+                <p>If a user does not agree to the revised Terms, they must discontinue use of the Service and delete
+                    the app.</p>
+            </div>
+        </section>
+        <section class="section-card collapsible" id="section-4" aria-labelledby="section-4-title">
+            <div class="section-heading">
+
+                <h2 class="section-title" id="section-4-title">
+
+                    <span class="section-index">4</span>
+
+                    <span class="section-title-text" data-i18n="s4-title">Nature of the Service</span>
+
+                </h2>
+
+            </div>
+            <div class="section-body" data-i18n-html="s4-content">
+                <p>This Service is a <strong>non-custodial</strong> wallet. The Service provider does not have control
+                    over users' digital assets, private keys, recovery phrases (seed phrases), or transactions.</p>
+                <p>The Service provider does not hold, manage, or operate users' digital assets on their behalf, and is
+                    not a bank, virtual asset exchange, or custodian.</p>
+                <p>The Service is merely an interface (tool) to blockchain networks and does not operate or guarantee
+                    the networks themselves.</p>
+                <p>The Service does not guarantee the value of any digital asset, promise investment returns, or promise
+                    value equivalent to fiat currency.</p>
+            </div>
+        </section>
+        <section class="section-card collapsible" id="section-5" aria-labelledby="section-5-title">
+            <div class="section-heading">
+
+                <h2 class="section-title" id="section-5-title">
+
+                    <span class="section-index">5</span>
+
+                    <span class="section-title-text" data-i18n="s5-title">User Responsibilities</span>
+
+                </h2>
+
+            </div>
+            <div class="section-body" data-i18n-html="s5-content">
+                <ul class="bullet-list">
+                    <li>Users are responsible for generating, storing, and backing up their own private keys, passwords,
+                        and recovery phrases (seed phrases), and must not disclose them to third parties.</li>
+                    <li>All losses resulting from device loss, hacking, input errors (such as sending to wrong
+                        addresses), key/seed loss, etc., are entirely the user's responsibility.</li>
+                    <li>The Service provider cannot recover lost private keys or seed phrases and cannot restore wallet
+                        access or digital assets.</li>
+                    <li>Users must not use the Service for illegal activities (money laundering, sanctions evasion,
+                        fraud, hacking, phishing, etc.).</li>
+                    <li>Users must comply with applicable laws in their country or region of residence and must not use
+                        the Service for activities restricted by regulation.</li>
+                </ul>
+            </div>
+        </section>
+        <section class="section-card collapsible" id="section-6" aria-labelledby="section-6-title">
+            <div class="section-heading">
+
+                <h2 class="section-title" id="section-6-title">
+
+                    <span class="section-index">6</span>
+
+                    <span class="section-title-text" data-i18n="s6-title">Prohibited Activities</span>
+
+                </h2>
+
+            </div>
+            <div class="section-body" data-i18n-html="s6-content">
+                <p>Users must not engage in the following activities:</p>
+                <ul class="bullet-list">
+                    <li>Illegal activities using the Service or blockchain networks, including illegal fundraising, tax
+                        evasion, sanctions evasion, money laundering, etc.</li>
+                    <li>Unauthorized access to others' private keys, seed phrases, or digital assets</li>
+                    <li>Reverse engineering, hacking, or tampering with the Service's source code, security systems, or
+                        communication methods</li>
+                    <li>Using the Service's name to spread false information or solicit investments in a manner that
+                        causes confusion</li>
+                    <li>Automated scripts/bots/attacks that interfere with the normal operation of the Service</li>
+                </ul>
+            </div>
+        </section>
+        <section class="section-card collapsible" id="section-7" aria-labelledby="section-7-title">
+            <div class="section-heading">
+
+                <h2 class="section-title" id="section-7-title">
+
+                    <span class="section-index">7</span>
+
+                    <span class="section-title-text" data-i18n="s7-title">Service Provision and Changes</span>
+
+                </h2>
+
+            </div>
+            <div class="section-body" data-i18n-html="s7-content">
+                <p>The Service may include wallet creation, transaction signing, address management, asset viewing, and
+                    other blockchain network integration features.</p>
+                <p>Some or all of the Service may be changed or terminated without prior notice due to network policy
+                    changes, technical issues, or security reasons.</p>
+                <p>The Service does not guarantee continuous uninterrupted operation and may be temporarily restricted
+                    due to maintenance, updates, outages, network congestion, etc.</p>
+            </div>
+        </section>
+        <section class="section-card collapsible" id="section-8" aria-labelledby="section-8-title">
+            <div class="section-heading">
+
+                <h2 class="section-title" id="section-8-title">
+
+                    <span class="section-index">8</span>
+
+                    <span class="section-title-text" data-i18n="s8-title">Fees and Costs</span>
+
+                </h2>
+
+            </div>
+            <div class="section-body" data-i18n-html="s8-content">
+                <p>Transactions on blockchain networks (e.g., transfers, swaps) may incur network fees (gas fees, miner
+                    fees, etc.), which are borne directly by users.</p>
+                <p>When using third-party services (dApps, bridges, swap providers, etc.), separate fees or conditions
+                    imposed by those services may apply. Responsibility lies with those third parties.</p>
+                <p>The Service itself may introduce separate paid models for certain features (e.g., analytics,
+                    monitoring, advanced features), which will be announced in advance.</p>
+            </div>
+        </section>
+        <section class="section-card collapsible" id="section-9" aria-labelledby="section-9-title">
+            <div class="section-heading">
+
+                <h2 class="section-title" id="section-9-title">
+
+                    <span class="section-index">9</span>
+
+                    <span class="section-title-text" data-i18n="s9-title">Third-Party Services and Links</span>
+
+                </h2>
+
+            </div>
+            <div class="section-body" data-i18n-html="s9-content">
+                <p>The Service may enable interaction with external dApps, DeFi services, bridge services, or
+                    third-party contracts.</p>
+                <p>These third-party services are not directly operated by PRODAO Wallet, and we do not guarantee their
+                    stability, legality, safety, profitability, or continuity.</p>
+                <p>When using third-party services, users must verify and understand the terms, policies, fees, and
+                    risks of those services on their own.</p>
+                <p>PRODAO Wallet is not responsible for transactions, damages, or disputes that occur between users and
+                    third-party services.</p>
+            </div>
+        </section>
+        <section class="section-card collapsible" id="section-10" aria-labelledby="section-10-title">
+            <div class="section-heading">
+
+                <h2 class="section-title" id="section-10-title">
+
+                    <span class="section-index">10</span>
+
+                    <span class="section-title-text" data-i18n="s10-title">Disclaimer</span>
+
+                </h2>
+
+            </div>
+            <div class="section-body" data-i18n-html="s10-content">
+                <p>The Service provider is not responsible for any damages caused by user fault, including private key
+                    loss, phishing, malware infection, incorrect transfer addresses, inadequate device security, etc.
+                </p>
+                <p>The Service provider is not responsible for losses due to technical defects in blockchain networks,
+                    forks, network outages, smart contract errors, market volatility, lack of liquidity, etc.</p>
+                <p>Investment losses such as price fluctuations, value depreciation, listing/delisting, fraudulent
+                    tokens, rug pulls, etc., are entirely the user's responsibility.</p>
+                <p>The Service is provided "as is" to the extent possible, and the Service provider makes no express or
+                    implied warranties regarding the accuracy, availability, integrity, fitness for a particular
+                    purpose, or non-infringement of the Service.</p>
+                <p>The Service provider is not liable for indirect, incidental, special, punitive, or consequential
+                    damages (e.g., loss of profits, data loss, asset loss, etc.).</p>
+            </div>
+        </section>
+        <section class="section-card collapsible" id="section-11" aria-labelledby="section-11-title">
+            <div class="section-heading">
+
+                <h2 class="section-title" id="section-11-title">
+
+                    <span class="section-index">11</span>
+
+                    <span class="section-title-text" data-i18n="s11-title">Limitation of Liability</span>
+
+                </h2>
+
+            </div>
+            <div class="section-body" data-i18n-html="s11-content">
+                <p>To the maximum extent permitted by applicable law, the Service provider's total liability is limited
+                    to the amount directly paid by the user in the course of using the Service (if any).</p>
+                <p>As the Service is not a custodial service, there is no liability for damages to users' digital assets
+                    themselves.</p>
+            </div>
+        </section>
+        <section class="section-card collapsible" id="section-12" aria-labelledby="section-12-title">
+            <div class="section-heading">
+
+                <h2 class="section-title" id="section-12-title">
+
+                    <span class="section-index">12</span>
+
+                    <span class="section-title-text" data-i18n="s12-title">Contact</span>
+
+                </h2>
+
+            </div>
+            <div class="section-body">
+                <p data-i18n="s12-intro">For inquiries or reports regarding phishing, fraud, or security breaches,
+                    please contact:</p>
+                <div class="contact-card" role="note">
+                    <div><strong data-i18n="s12-email">Email:</strong> <a class="inline-link"
+                            href="mailto:prodao.club@gmail.com">prodao.club@gmail.com</a></div>
+                </div>
+                <p data-i18n="s12-note" style="margin-top: 0.75rem;">The Service provider may provide technical advice
+                    or guidance to the extent legally possible, but does not guarantee wallet recovery or asset return.
+                </p>
+            </div>
+        </section>
+        <footer class="footer-note" data-i18n="footer">PRODAO Wallet is a non-custodial wallet. You control your keys.
+            Keys cannot be recovered if lost.</footer>
+    </main>
+    <script>
+        // English default texts
+        const defaultEnglish = {
+            title: "PRODAO Wallet Terms of Service",
+            badge: "Non-Custodial · Self-Custody",
+            intro: "These Terms of Service govern your use of PRODAO Wallet, a non-custodial decentralized wallet. By using the Service, you agree to manage your own private keys and digital assets. The Service provider does not control, store, or have access to your keys or assets.",
+            "last-updated": "Last Updated:",
+            "contact-label": "Contact:",
+            date: "November 2, 2025",
+            "nav-title": "Jump to section",
+            "nav-hint": "Tap to scroll",
+            "nav-1": "1. Purpose",
+            "nav-2": "2. Definitions",
+            "nav-3": "3. Agreement Changes",
+            "nav-4": "4. Service Nature",
+            "nav-5": "5. User Responsibilities",
+            "nav-6": "6. Prohibited Activities",
+            "nav-7": "7. Service Provision",
+            "nav-8": "8. Fees and Costs",
+            "nav-9": "9. Third-Party Services",
+            "nav-10": "10. Disclaimer",
+            "nav-11": "11. Limitation of Liability",
+            "nav-12": "12. Contact",
+            "s1-title": "Purpose",
+            "s1-content": '<p>These Terms of Service ("Terms") govern the relationship between the Service provider and users regarding the use of PRODAO Wallet ("the Service"), including rights, obligations, responsibilities, and conditions of use.</p><p>The Service is a self-custody electronic wallet that enables users to directly manage digital assets on the blockchain.</p>',
+            "s2-title": "Definitions",
+            "s2-content": '<ul class="bullet-list"><li><strong>"Service"</strong> refers to the software that enables users to create, hold, and use digital asset wallets and interact with blockchain networks.</li><li><strong>"User"</strong> refers to any person who agrees to these Terms and uses the Service.</li><li><strong>"Wallet"</strong> refers to the functionality that allows users to directly manage private keys, public keys, blockchain addresses, and sign and send transactions.</li><li><strong>"Private Key"</strong> refers to the secret key that proves and exercises authority over digital assets and transactions.</li><li><strong>"Network"</strong> refers to public blockchain networks and associated smart contracts and dApps.</li></ul>',
+            "s3-title": "Agreement Effectiveness and Changes",
+            "s3-content": "<p>These Terms become effective when a user installs or uses the Service, or clicks the consent button during use.</p><p>The Service provider may revise these Terms to reflect changes in applicable laws, technology, or service policies. Changes will be announced in advance and will be deemed accepted if the user continues to use the Service after notification.</p><p>If a user does not agree to the revised Terms, they must discontinue use of the Service and delete the app.</p>",
+            "s4-title": "Nature of the Service",
+            "s4-content": "<p>This Service is a <strong>non-custodial</strong> wallet. The Service provider does not have control over users' digital assets, private keys, recovery phrases (seed phrases), or transactions.</p><p>The Service provider does not hold, manage, or operate users' digital assets on their behalf, and is not a bank, virtual asset exchange, or custodian.</p><p>The Service is merely an interface (tool) to blockchain networks and does not operate or guarantee the networks themselves.</p><p>The Service does not guarantee the value of any digital asset, promise investment returns, or promise value equivalent to fiat currency.</p>",
+            "s5-title": "User Responsibilities",
+            "s5-content": '<ul class="bullet-list"><li>Users are responsible for generating, storing, and backing up their own private keys, passwords, and recovery phrases (seed phrases), and must not disclose them to third parties.</li><li>All losses resulting from device loss, hacking, input errors (such as sending to wrong addresses), key/seed loss, etc., are entirely the user\'s responsibility.</li><li>The Service provider cannot recover lost private keys or seed phrases and cannot restore wallet access or digital assets.</li><li>Users must not use the Service for illegal activities (money laundering, sanctions evasion, fraud, hacking, phishing, etc.).</li><li>Users must comply with applicable laws in their country or region of residence and must not use the Service for activities restricted by regulation.</li></ul>',
+            "s6-title": "Prohibited Activities",
+            "s6-content": '<p>Users must not engage in the following activities:</p><ul class="bullet-list"><li>Illegal activities using the Service or blockchain networks, including illegal fundraising, tax evasion, sanctions evasion, money laundering, etc.</li><li>Unauthorized access to others\' private keys, seed phrases, or digital assets</li><li>Reverse engineering, hacking, or tampering with the Service\'s source code, security systems, or communication methods</li><li>Using the Service\'s name to spread false information or solicit investments in a manner that causes confusion</li><li>Automated scripts/bots/attacks that interfere with the normal operation of the Service</li></ul>',
+            "s7-title": "Service Provision and Changes",
+            "s7-content": "<p>The Service may include wallet creation, transaction signing, address management, asset viewing, and other blockchain network integration features.</p><p>Some or all of the Service may be changed or terminated without prior notice due to network policy changes, technical issues, or security reasons.</p><p>The Service does not guarantee continuous uninterrupted operation and may be temporarily restricted due to maintenance, updates, outages, network congestion, etc.</p>",
+            "s8-title": "Fees and Costs",
+            "s8-content": "<p>Transactions on blockchain networks (e.g., transfers, swaps) may incur network fees (gas fees, miner fees, etc.), which are borne directly by users.</p><p>When using third-party services (dApps, bridges, swap providers, etc.), separate fees or conditions imposed by those services may apply. Responsibility lies with those third parties.</p><p>The Service itself may introduce separate paid models for certain features (e.g., analytics, monitoring, advanced features), which will be announced in advance.</p>",
+            "s9-title": "Third-Party Services and Links",
+            "s9-content": "<p>The Service may enable interaction with external dApps, DeFi services, bridge services, or third-party contracts.</p><p>These third-party services are not directly operated by PRODAO Wallet, and we do not guarantee their stability, legality, safety, profitability, or continuity.</p><p>When using third-party services, users must verify and understand the terms, policies, fees, and risks of those services on their own.</p><p>PRODAO Wallet is not responsible for transactions, damages, or disputes that occur between users and third-party services.</p>",
+            "s10-title": "Disclaimer",
+            "s10-content": "<p>The Service provider is not responsible for any damages caused by user fault, including private key loss, phishing, malware infection, incorrect transfer addresses, inadequate device security, etc.</p><p>The Service provider is not responsible for losses due to technical defects in blockchain networks, forks, network outages, smart contract errors, market volatility, lack of liquidity, etc.</p><p>Investment losses such as price fluctuations, value depreciation, listing/delisting, fraudulent tokens, rug pulls, etc., are entirely the user's responsibility.</p><p>The Service is provided \"as is\" to the extent possible, and the Service provider makes no express or implied warranties regarding the accuracy, availability, integrity, fitness for a particular purpose, or non-infringement of the Service.</p><p>The Service provider is not liable for indirect, incidental, special, punitive, or consequential damages (e.g., loss of profits, data loss, asset loss, etc.).</p>",
+            "s11-title": "Limitation of Liability",
+            "s11-content": "<p>To the maximum extent permitted by applicable law, the Service provider's total liability is limited to the amount directly paid by the user in the course of using the Service (if any).</p><p>As the Service is not a custodial service, there is no liability for damages to users' digital assets themselves.</p>",
+            "s12-title": "Contact",
+            "s12-intro": "For inquiries or reports regarding phishing, fraud, or security breaches, please contact:",
+            "s12-email": "Email:",
+            "s12-note": "The Service provider may provide technical advice or guidance to the extent legally possible, but does not guarantee wallet recovery or asset return.",
+            footer: "PRODAO Wallet is a non-custodial wallet. You control your keys. Keys cannot be recovered if lost."
+        };
+
+        function getDefaultEnglishText(key) {
+            return defaultEnglish[key] || null;
+        }
+
+        function getDefaultEnglishHtml(key) {
+            return defaultEnglish[key] || null;
+        }
+
+        // Korean translation
+        const translations = {
+            ko: {
+                langName: "한국어",
+                title: "PRODAO Wallet 이용약관",
+                badge: "비수탁형 · 자기관리형",
+                intro: "본 이용약관은 비수탁형 탈중앙화 지갑인 PRODAO Wallet의 사용을 규정합니다. 서비스를 사용함으로써 귀하는 자신의 개인 키와 디지털 자산을 직접 관리하는 것에 동의합니다. 서비스 제공자는 귀하의 키나 자산을 통제, 저장 또는 접근하지 않습니다.",
+                "last-updated": "최종 수정일:",
+                "contact-label": "문의:",
+                date: "2025년 11월 2일",
+                "nav-title": "섹션으로 이동",
+                "nav-hint": "탭하여 스크롤",
+                "nav-1": "1. 목적",
+                "nav-2": "2. 정의",
+                "nav-3": "3. 약관의 효력 및 변경",
+                "nav-4": "4. 서비스의 성격",
+                "nav-5": "5. 이용자의 책임",
+                "nav-6": "6. 금지 행위",
+                "nav-7": "7. 서비스의 제공",
+                "nav-8": "8. 수수료 및 비용",
+                "nav-9": "9. 제3자 서비스",
+                "nav-10": "10. 면책조항",
+                "nav-11": "11. 책임의 한계",
+                "nav-12": "12. 문의",
+                "s1-title": "목적",
+                "s1-content": '<p>본 이용약관은 PRODAO Wallet(\"서비스\")의 이용과 관련하여, 서비스 제공자와 이용자 간의 권리, 의무 및 책임사항, 그리고 서비스 이용 조건을 규정함을 목적으로 합니다.</p><p>서비스는 비수탁형(Self-Custody) 전자 지갑으로, 블록체인 상의 디지털 자산을 사용자가 직접 관리할 수 있도록 지원합니다.</p>',
+                "s2-title": "정의",
+                "s2-content": '<ul class="bullet-list"><li><strong>\"서비스\"</strong>란 이용자가 디지털 자산 지갑을 생성·보유·사용하고 블록체인 네트워크와 상호작용할 수 있도록 하는 소프트웨어입니다.</li><li><strong>\"이용자\"</strong>란 본 약관에 동의하고 서비스를 사용하는 자를 의미합니다.</li><li><strong>\"지갑\" 또는 \"월렛\"</strong>이란, 개인 키(Private Key), 공개 키(Public Key), 블록체인 주소 등을 이용자가 직접 관리하고 트랜잭션을 서명·전송할 수 있도록 하는 기능을 의미합니다.</li><li><strong>\"개인 키\"</strong>란 디지털 자산 및 트랜잭션에 대한 권한을 증명하고 행사하는 비밀 키를 의미합니다.</li><li><strong>\"네트워크\"</strong>란 퍼블릭 블록체인 네트워크 및 그와 연동되는 스마트 컨트랙트, DApp 등을 의미합니다.</li></ul>',
+                "s3-title": "약관의 효력 및 변경",
+                "s3-content": "<p>본 약관은 이용자가 서비스를 설치 또는 사용하거나, 이용 과정에서 동의 버튼을 누르는 시점부터 효력이 발생합니다.</p><p>서비스 제공자는 관련 법령, 기술적 변경, 서비스 정책의 변동 등을 반영하기 위해 약관을 개정할 수 있습니다. 약관이 변경되는 경우, 변경 사항은 사전 공지 후 적용되며, 공지 이후에도 이용자가 서비스를 계속 사용할 경우 변경된 약관에 동의한 것으로 간주됩니다.</p><p>이용자는 변경된 약관에 동의하지 않는 경우 서비스 사용을 중단하고 앱을 삭제해야 합니다.</p>",
+                "s4-title": "서비스의 성격",
+                "s4-content": "<p>본 서비스는 <strong>비수탁형(Non-Custodial)</strong> 지갑입니다. 서비스 제공자는 이용자의 디지털 자산, 개인 키, 복구 문구(시드 문구, Seed Phrase) 또는 트랜잭션에 대한 통제권을 가지지 않습니다.</p><p>서비스 제공자는 이용자를 대신하여 디지털 자산을 보관, 관리, 운용하지 않으며, 은행, 가상자산거래소, 수탁업자(custodian)가 아닙니다.</p><p>서비스는 블록체인 네트워크에 대한 인터페이스(도구)일 뿐, 네트워크 자체를 운영하거나 보증하지 않습니다.</p><p>서비스는 특정 디지털 자산의 가치를 보장하거나, 투자 수익을 약속하거나, 법정통화에 상응하는 가치를 약속하지 않습니다.</p>",
+                "s5-title": "이용자의 책임",
+                "s5-content": '<ul class="bullet-list"><li>이용자는 자신의 개인 키, 비밀번호, 복구 문구(시드 문구)를 직접 생성·보관·백업할 책임이 있으며, 이를 제3자에게 공개해서는 안 됩니다.</li><li>이용자의 기기 분실, 해킹, 오입력(잘못된 주소로 전송 등), 키/시드 분실 등으로 발생하는 모든 손실은 전적으로 이용자 본인의 책임입니다.</li><li>서비스 제공자는 분실된 개인 키 또는 시드 문구를 복구할 수 없으며, 지갑 접근권 및 디지털 자산을 복구해 줄 수 없습니다.</li><li>이용자는 서비스를 이용하여 불법 행위(자금세탁, 제재 회피, 사기, 해킹, 피싱 등)를 해서는 안 됩니다.</li><li>이용자는 본인의 거주 국가 또는 지역에서 적용되는 법령을 준수해야 하며, 규제상 제한된 활동에 서비스를 사용해서는 안 됩니다.</li></ul>',
+                "s6-title": "금지 행위",
+                "s6-content": '<p>이용자는 다음 행위를 해서는 안 됩니다:</p><ul class="bullet-list"><li>서비스 또는 블록체인 네트워크를 이용한 불법 자금조달, 탈세, 제재 회피, 돈세탁 등 불법 행위</li><li>타인의 개인 키, 시드 문구, 디지털 자산에 무단으로 접근하려는 행위</li><li>서비스의 소스 코드, 보안 시스템, 통신 방식을 역설계, 해킹, 변조하려는 행위</li><li>서비스 명의를 사용하여 허위 정보 또는 투자 권유 등 혼동을 유발하는 행위</li><li>서비스의 정상적인 운영을 방해하는 자동화 스크립트/봇/공격 행위</li></ul>',
+                "s7-title": "서비스의 제공 및 변경",
+                "s7-content": "<p>서비스는 지갑 생성, 트랜잭션 서명, 주소 관리, 자산 조회, 기타 블록체인 네트워크 연동 기능 등을 포함할 수 있습니다.</p><p>서비스의 일부 또는 전부는 사전 통지 없이 변경되거나 종료될 수 있습니다. 이는 네트워크 정책 변경, 기술적 문제 또는 보안 상의 사유 등으로 인해 발생할 수 있습니다.</p><p>서비스는 상시적인 무중단 운영을 보장하지 않으며, 점검, 업데이트, 장애, 네트워크 혼잡 등으로 인하여 일시적으로 이용이 제한될 수 있습니다.</p>",
+                "s8-title": "수수료 및 비용",
+                "s8-content": "<p>블록체인 네트워크 상에서 발생하는 트랜잭션(예: 전송, 스왑 등)에는 네트워크 수수료(Gas fee, Miner fee 등)가 발생할 수 있으며, 이는 이용자가 직접 부담합니다.</p><p>제3자 서비스(DApp, 브리지, 스왑 제공자 등)를 이용하는 경우, 해당 서비스에 의한 별도의 수수료나 조건이 적용될 수 있습니다. 이 경우 책임은 해당 제3자에게 있습니다.</p><p>서비스 자체가 특정 기능(예: 분석, 모니터링, 고급 기능 등)에 대해 별도의 유료 모델을 도입할 수 있으며, 이 경우 사전 고지를 통해 조건을 안내합니다.</p>",
+                "s9-title": "제3자 서비스 및 링크",
+                "s9-content": "<p>서비스는 외부 DApp, 디파이(DeFi) 서비스, 브리지 서비스, 또는 제3자 컨트랙트와 상호작용할 수 있도록 할 수 있습니다.</p><p>이러한 제3자 서비스는 PRODAO Wallet이 직접 운영하지 않으며, 해당 서비스의 안정성, 합법성, 안전성, 수익성, 지속성 등에 대해 보증하지 않습니다.</p><p>이용자는 제3자 서비스를 사용할 경우, 해당 서비스의 약관, 정책, 수수료, 리스크를 스스로 확인하고 이용해야 합니다.</p><p>이용자와 제3자 서비스 간에 발생하는 거래, 손해, 분쟁 등에 대해 PRODAO Wallet은 책임지지 않습니다.</p>",
+                "s10-title": "면책조항",
+                "s10-content": "<p>이용자의 귀책 사유로 인해 발생한 손해에 대하여 서비스 제공자는 어떠한 책임도 지지 않습니다. 여기에는 개인 키 분실, 피싱 피해, 악성코드 감염, 잘못된 전송 주소 입력, 기기 보안 미비 등이 포함됩니다.</p><p>블록체인 네트워크의 기술적 결함, 포크(Fork), 네트워크 중단, 스마트 컨트랙트 오류, 시장 변동성, 유동성 부족 등으로 인한 손실에 대해 서비스 제공자는 책임지지 않습니다.</p><p>디지털 자산의 가격 변동, 가치 하락, 상장/상폐, 사기성 토큰, 러그풀(Rug pull) 등 투자 손실은 전적으로 이용자의 책임입니다.</p><p>서비스는 있는 그대로 가능한 범위에서 제공되며, 서비스 제공자는 서비스의 정확성, 가용성, 무결성, 특정 목적 적합성, 비침해성 등에 대해 명시적 또는 묵시적 보증을 제공하지 않습니다.</p><p>서비스 제공자는 간접적, 부수적, 특별, 징벌적 또는 결과적 손해에 대해 책임을 지지 않습니다. (예: 수익 상실, 데이터 상실, 자산 상실 등)</p>",
+                "s11-title": "책임의 한계",
+                "s11-content": "<p>관련 법령이 허용하는 최대 한도 내에서, 서비스 제공자의 총 책임 한도는 이용자가 서비스 사용 과정에서 직접 지불한 금액(있는 경우)에 한정됩니다.</p><p>서비스는 수탁 서비스(커스터디)가 아니므로, 이용자의 디지털 자산 자체에 대한 손해배상 책임은 발생하지 않습니다.</p>",
+                "s12-title": "문의",
+                "s12-intro": "피싱, 사기, 보안 침해가 의심될 경우 아래로 문의 또는 신고할 수 있습니다:",
+                "s12-email": "이메일:",
+                "s12-note": "서비스 제공자는 법적으로 가능한 범위 내에서 기술적 조언이나 안내는 제공할 수 있으나, 지갑 복구 또는 자산 반환을 보장하지 않습니다.",
+                footer: "PRODAO Wallet은 비수탁형 지갑입니다. 귀하가 키를 관리합니다. 키 분실 시 복구가 불가능합니다."
+            },
+            ja: {
+                langName: "日本語",
+                title: "PRODAO Wallet 利用規約",
+                badge: "非カストディアル型・自己管理型",
+                intro: "本利用規約は、非カストディアル型の分散型ウォレットであるPRODAO Walletの使用を規定します。本サービスを使用することにより、お客様は自身の秘密鍵とデジタル資産を直接管理することに同意します。サービス提供者はお客様の鍵や資産を管理、保存、またはアクセスしません。",
+                "last-updated": "最終更新日:",
+                "contact-label": "お問い合わせ:",
+                date: "2025年11月2日",
+                "nav-title": "セクションへジャンプ",
+                "nav-hint": "タップしてスクロール",
+                "nav-1": "1. 目的",
+                "nav-2": "2. 定義",
+                "nav-3": "3. 規約の変更",
+                "nav-4": "4. サービスの性質",
+                "nav-5": "5. ユーザーの責任",
+                "nav-6": "6. 禁止行為",
+                "nav-7": "7. サービスの提供",
+                "nav-8": "8. 手数料と費用",
+                "nav-9": "9. 第三者サービス",
+                "nav-10": "10. 免責事項",
+                "nav-11": "11. 責任の制限",
+                "nav-12": "12. お問い合わせ",
+                "s1-title": "目的",
+                "s1-content": '<p>本利用規約（「規約」）は、PRODAO Wallet（「本サービス」）の使用に関して、サービス提供者とユーザー間の関係（権利、義務、責任、および使用条件を含む）を規定します。</p><p>本サービスは、ユーザーがブロックチェーン上のデジタル資産を直接管理できるようにする自己管理型電子ウォレットです。</p>',
+                "s2-title": "定義",
+                "s2-content": '<ul class="bullet-list"><li><strong>「サービス」</strong>とは、ユーザーがデジタル資産ウォレットを作成、保持、使用し、ブロックチェーンネットワークと対話できるようにするソフトウェアを指します。</li><li><strong>「ユーザー」</strong>とは、本規約に同意し、本サービスを使用する者を指します。</li><li><strong>「ウォレット」</strong>とは、ユーザーが秘密鍵、公開鍵、ブロックチェーンアドレスを直接管理し、トランザクションに署名して送信できる機能を指します。</li><li><strong>「秘密鍵」</strong>とは、デジタル資産とトランザクションに対する権限を証明し行使する秘密鍵を指します。</li><li><strong>「ネットワーク」</strong>とは、パブリックブロックチェーンネットワークおよび関連するスマートコントラクトとdAppを指します。</li></ul>',
+                "s3-title": "規約の効力と変更",
+                "s3-content": "<p>本規約は、ユーザーが本サービスをインストールまたは使用するとき、または使用中に同意ボタンをクリックしたときに発効します。</p><p>サービス提供者は、適用法、技術、またはサービスポリシーの変更を反映するために本規約を改訂することができます。変更は事前に通知され、通知後もユーザーが本サービスの使用を継続する場合、改訂された規約に同意したものとみなされます。</p><p>ユーザーが改訂された規約に同意しない場合は、本サービスの使用を中止し、アプリを削除する必要があります。</p>",
+                "s4-title": "サービスの性質",
+                "s4-content": "<p>本サービスは<strong>非カストディアル型</strong>ウォレットです。サービス提供者は、ユーザーのデジタル資産、秘密鍵、リカバリーフレーズ（シードフレーズ）、またはトランザクションを管理しません。</p><p>サービス提供者は、ユーザーに代わってデジタル資産を保持、管理、または運用せず、銀行、仮想資産取引所、またはカストディアンではありません。</p><p>本サービスは、ブロックチェーンネットワークへのインターフェース（ツール）に過ぎず、ネットワーク自体を運営または保証するものではありません。</p><p>本サービスは、特定のデジタル資産の価値を保証せず、投資収益を約束せず、法定通貨と同等の価値を約束しません。</p>",
+                "s5-title": "ユーザーの責任",
+                "s5-content": '<ul class="bullet-list"><li>ユーザーは、自身の秘密鍵、パスワード、リカバリーフレーズ（シードフレーズ）を生成、保存、バックアップする責任があり、第三者に開示してはなりません。</li><li>デバイスの紛失、ハッキング、入力ミス（誤ったアドレスへの送信など）、鍵/シードの紛失などによるすべての損失は、完全にユーザーの責任です。</li><li>サービス提供者は、紛失した秘密鍵またはシードフレーズを復元できず、ウォレットアクセスまたはデジタル資産を復元できません。</li><li>ユーザーは、本サービスを違法行為（マネーロンダリング、制裁回避、詐欺、ハッキング、フィッシングなど）に使用してはなりません。</li><li>ユーザーは、居住国または地域で適用される法律を遵守し、規制により制限されている活動に本サービスを使用してはなりません。</li></ul>',
+                "s6-title": "禁止行為",
+                "s6-content": '<p>ユーザーは以下の行為を行ってはなりません：</p><ul class="bullet-list"><li>本サービスまたはブロックチェーンネットワークを使用した違法資金調達、脱税、制裁回避、マネーロンダリングなどの違法行為</li><li>他人の秘密鍵、シードフレーズ、またはデジタル資産への不正アクセス</li><li>本サービスのソースコード、セキュリティシステム、または通信方法のリバースエンジニアリング、ハッキング、改ざん</li><li>本サービスの名前を使用して虚偽の情報を広めたり、混乱を引き起こす方法で投資を勧誘したりすること</li><li>本サービスの正常な運用を妨害する自動化スクリプト/ボット/攻撃</li></ul>',
+                "s7-title": "サービスの提供と変更",
+                "s7-content": "<p>本サービスには、ウォレット作成、トランザクション署名、アドレス管理、資産表示、その他のブロックチェーンネットワーク統合機能が含まれる場合があります。</p><p>本サービスの一部または全部は、ネットワークポリシーの変更、技術的問題、またはセキュリティ上の理由により、事前通知なしに変更または終了される場合があります。</p><p>本サービスは、継続的な無停止運用を保証せず、メンテナンス、アップデート、障害、ネットワーク混雑などにより一時的に制限される場合があります。</p>",
+                "s8-title": "手数料と費用",
+                "s8-content": "<p>ブロックチェーンネットワーク上のトランザクション（送金、スワップなど）には、ネットワーク手数料（ガス料金、マイナー料金など）が発生する場合があり、これはユーザーが直接負担します。</p><p>第三者サービス（dApp、ブリッジ、スワッププロバイダーなど）を使用する場合、それらのサービスによって課される別個の手数料または条件が適用される場合があります。責任はそれらの第三者にあります。</p><p>本サービス自体は、特定の機能（分析、モニタリング、高度な機能など）に対して別個の有料モデルを導入する場合があり、その場合は事前に通知されます。</p>",
+                "s9-title": "第三者サービスとリンク",
+                "s9-content": "<p>本サービスは、外部のdApp、DeFiサービス、ブリッジサービス、または第三者契約との対話を可能にする場合があります。</p><p>これらの第三者サービスはPRODAO Walletが直接運営するものではなく、その安定性、合法性、安全性、収益性、継続性を保証しません。</p><p>第三者サービスを使用する場合、ユーザーは自らその サービスの規約、ポリシー、手数料、リスクを確認し理解する必要があります。</p><p>PRODAO Walletは、ユーザーと第三者サービス間で発生するトランザクション、損害、または紛争について責任を負いません。</p>",
+                "s10-title": "免責事項",
+                "s10-content": "<p>サービス提供者は、秘密鍵の紛失、フィッシング、マルウェア感染、誤った送信アドレス、不十分なデバイスセキュリティなど、ユーザーの過失によって引き起こされた損害について責任を負いません。</p><p>サービス提供者は、ブロックチェーンネットワークの技術的欠陥、フォーク、ネットワーク停止、スマートコントラクトエラー、市場のボラティリティ、流動性不足などによる損失について責任を負いません。</p><p>価格変動、価値の減価、上場/上場廃止、詐欺トークン、ラグプルなどの投資損失は、完全にユーザーの責任です。</p><p>本サービスは「現状有姿」で可能な範囲で提供され、サービス提供者は本サービスの正確性、可用性、完全性、特定目的への適合性、非侵害について明示的または黙示的な保証を行いません。</p><p>サービス提供者は、間接的、付随的、特別、懲罰的、または結果的損害（利益の損失、データの損失、資産の損失など）について責任を負いません。</p>",
+                "s11-title": "責任の制限",
+                "s11-content": "<p>適用法で許容される最大限の範囲で、サービス提供者の総責任は、ユーザーが本サービスの使用過程で直接支払った金額（ある場合）に限定されます。</p><p>本サービスはカストディアルサービスではないため、ユーザーのデジタル資産自体への損害に対する責任はありません。</p>",
+                "s12-title": "お問い合わせ",
+                "s12-intro": "フィッシング、詐欺、またはセキュリティ侵害に関するお問い合わせや報告については、以下にご連絡ください：",
+                "s12-email": "メール:",
+                "s12-note": "サービス提供者は、法的に可能な範囲で技術的助言またはガイダンスを提供する場合がありますが、ウォレットの復元または資産の返還を保証しません。",
+                footer: "PRODAO Walletは非カストディアル型ウォレットです。お客様が鍵を管理します。紛失した鍵は復元できません。"
+            },
+            th: {
+                langName: "ไทย",
+                title: "ข้อกำหนดการให้บริการ PRODAO Wallet",
+                badge: "ไม่เก็บรักษา · จัดการเอง",
+                intro: "ข้อกำหนดการให้บริการเหล่านี้ควบคุมการใช้งาน PRODAO Wallet ซึ่งเป็นกระเป๋าเงินแบบกระจายอำนาจที่ไม่เก็บรักษา การใช้บริการถือว่าคุณยอมรับที่จะจัดการคีย์ส่วนตัวและสินทรัพย์ดิจิทัลของคุณเอง ผู้ให้บริการไม่ควบคุม จัดเก็บ หรือเข้าถึงคีย์หรือสินทรัพย์ของคุณ",
+                "last-updated": "อัปเดตล่าสุด:",
+                "contact-label": "ติดต่อ:",
+                date: "2 พฤศจิกายน 2568",
+                "nav-title": "ข้ามไปยังส่วน",
+                "nav-hint": "แตะเพื่อเลื่อน",
+                "nav-1": "1. วัตถุประสงค์",
+                "nav-2": "2. คำจำกัดความ",
+                "nav-3": "3. การเปลี่ยนแปลงข้อตกลง",
+                "nav-4": "4. ลักษณะของบริการ",
+                "nav-5": "5. ความรับผิดชอบของผู้ใช้",
+                "nav-6": "6. กิจกรรมที่ห้าม",
+                "nav-7": "7. การให้บริการ",
+                "nav-8": "8. ค่าธรรมเนียมและค่าใช้จ่าย",
+                "nav-9": "9. บริการบุคคลที่สาม",
+                "nav-10": "10. ข้อจำกัดความรับผิด",
+                "nav-11": "11. การจำกัดความรับผิด",
+                "nav-12": "12. ติดต่อเรา",
+                "s1-title": "วัตถุประสงค์",
+                "s1-content": '<p>ข้อกำหนดการให้บริการ ("ข้อกำหนด") เหล่านี้ควบคุมความสัมพันธ์ระหว่างผู้ให้บริการและผู้ใช้เกี่ยวกับการใช้ PRODAO Wallet ("บริการ") รวมถึงสิทธิ์ หน้าที่ ความรับผิดชอบ และเงื่อนไขการใช้งาน</p><p>บริการเป็นกระเป๋าเงินอิเล็กทรอนิกส์แบบจัดการเองที่ช่วยให้ผู้ใช้จัดการสินทรัพย์ดิจิทัลบนบล็อกเชนได้โดยตรง</p>',
+                "s2-title": "คำจำกัดความ",
+                "s2-content": '<ul class="bullet-list"><li><strong>"บริการ"</strong> หมายถึงซอฟต์แวร์ที่ช่วยให้ผู้ใช้สร้าง ถือครอง และใช้กระเป๋าเงินสินทรัพย์ดิจิทัลและโต้ตอบกับเครือข่ายบล็อกเชน</li><li><strong>"ผู้ใช้"</strong> หมายถึงบุคคลใดๆ ที่ยอมรับข้อกำหนดเหล่านี้และใช้บริการ</li><li><strong>"กระเป๋าเงิน"</strong> หมายถึงฟังก์ชันที่อนุญาตให้ผู้ใช้จัดการคีย์ส่วนตัว คีย์สาธารณะ ที่อยู่บล็อกเชนโดยตรง และลงนามและส่งธุรกรรม</li><li><strong>"คีย์ส่วนตัว"</strong> หมายถึงคีย์ลับที่พิสูจน์และใช้อำนาจเหนือสินทรัพย์ดิจิทัลและธุรกรรม</li><li><strong>"เครือข่าย"</strong> หมายถึงเครือข่ายบล็อกเชนสาธารณะและสมาร์ทคอนแทร็คต์และ dApp ที่เกี่ยวข้อง</li></ul>',
+                "s3-title": "ผลบังคับใช้และการเปลี่ยนแปลงข้อตกลง",
+                "s3-content": "<p>ข้อกำหนดเหล่านี้มีผลบังคับใช้เมื่อผู้ใช้ติดตั้งหรือใช้บริการ หรือคลิกปุ่มยินยอมระหว่างการใช้งาน</p><p>ผู้ให้บริการอาจแก้ไขข้อกำหนดเหล่านี้เพื่อสะท้อนการเปลี่ยนแปลงในกฎหมายที่บังคับใช้ เทคโนโลยี หรือนโยบายบริการ การเปลี่ยนแปลงจะถูกประกาศล่วงหน้าและถือว่าได้รับการยอมรับหากผู้ใช้ยังคงใช้บริการหลังจากได้รับการแจ้งเตือน</p><p>หากผู้ใช้ไม่เห็นด้วยกับข้อกำหนดที่แก้ไข พวกเขาต้องหยุดใช้บริการและลบแอป</p>",
+                "s4-title": "ลักษณะของบริการ",
+                "s4-content": "<p>บริการนี้เป็นกระเป๋าเงิน<strong>ที่ไม่เก็บรักษา</strong> ผู้ให้บริการไม่มีการควบคุมสินทรัพย์ดิจิทัล คีย์ส่วนตัว วลีกู้คืน (วลีเมล็ดพันธุ์) หรือธุรกรรมของผู้ใช้</p><p>ผู้ให้บริการไม่ถือครอง จัดการ หรือดำเนินการสินทรัพย์ดิจิทัลของผู้ใช้แทนพวกเขา และไม่ใช่ธนาคาร ตลาดแลกเปลี่ยนสินทรัพย์เสมือน หรือผู้เก็บรักษา</p><p>บริการเป็นเพียงอินเทอร์เฟซ (เครื่องมือ) ไปยังเครือข่ายบล็อกเชนและไม่ได้ดำเนินการหรือรับประกันเครือข่ายเอง</p><p>บริการไม่รับประกันมูลค่าของสินทรัพย์ดิจิทัลใดๆ ไม่สัญญาผลตอบแทนการลงทุน หรือสัญญามูลค่าที่เทียบเท่ากับสกุลเงินตามกฎหมาย</p>",
+                "s5-title": "ความรับผิดชอบของผู้ใช้",
+                "s5-content": '<ul class="bullet-list"><li>ผู้ใช้มีหน้าที่รับผิดชอบในการสร้าง จัดเก็บ และสำรองคีย์ส่วนตัว รหัสผ่าน และวลีกู้คืน (วลีเมล็ดพันธุ์) ของตนเอง และต้องไม่เปิดเผยให้บุคคลที่สาม</li><li>การสูญเสียทั้งหมดที่เกิดจากการสูญหายของอุปกรณ์ การแฮก ข้อผิดพลาดในการป้อน (เช่น การส่งไปยังที่อยู่ผิด) การสูญหายของคีย์/เมล็ดพันธุ์ ฯลฯ เป็นความรับผิดชอบของผู้ใช้ทั้งหมด</li><li>ผู้ให้บริการไม่สามารถกู้คืนคีย์ส่วนตัวหรือวลีเมล็ดพันธุ์ที่สูญหายและไม่สามารถกู้คืนการเข้าถึงกระเป๋าเงินหรือสินทรัพย์ดิจิทัล</li><li>ผู้ใช้ต้องไม่ใช้บริการเพื่อกิจกรรมที่ผิดกฎหมาย (การฟอกเงิน การหลีกเลี่ยงการคว่ำบาตร การฉ้อโกง การแฮก ฟิชชิ่ง ฯลฯ)</li><li>ผู้ใช้ต้องปฏิบัติตามกฎหมายที่บังคับใช้ในประเทศหรือภูมิภาคที่อยู่อาศัยและต้องไม่ใช้บริการเพื่อกิจกรรมที่ถูกจำกัดโดยกฎระเบียบ</li></ul>',
+                "s6-title": "กิจกรรมที่ห้าม",
+                "s6-content": '<p>ผู้ใช้ต้องไม่ทำกิจกรรมต่อไปนี้:</p><ul class="bullet-list"><li>กิจกรรมที่ผิดกฎหมายโดยใช้บริการหรือเครือข่ายบล็อกเชน รวมถึงการระดมทุนที่ผิดกฎหมาย การหลีกเลี่ยงภาษี การหลีกเลี่ยงการคว่ำบาตร การฟอกเงิน ฯลฯ</li><li>การเข้าถึงคีย์ส่วนตัว วลีเมล็ดพันธุ์ หรือสินทรัพย์ดิจิทัลของผู้อื่นโดยไม่ได้รับอนุญาต</li><li>การวิศวกรรมย้อนกลับ แฮก หรือดัดแปลงซอร์สโค้ด ระบบรักษาความปลอดภัย หรือวิธีการสื่อสารของบริการ</li><li>การใช้ชื่อของบริการเพื่อเผยแพร่ข้อมูลเท็จหรือชักชวนการลงทุนในลักษณะที่ทำให้เกิดความสับสน</li><li>สคริปต์อัตโนมัติ/บอท/การโจมตีที่รบกวนการทำงานปกติของบริการ</li></ul>',
+                "s7-title": "การให้บริการและการเปลี่ยนแปลง",
+                "s7-content": "<p>บริการอาจรวมถึงการสร้างกระเป๋าเงิน การลงนามธุรกรรม การจัดการที่อยู่ การดูสินทรัพย์ และคุณสมบัติการผสานรวมเครือข่ายบล็อกเชนอื่นๆ</p><p>บางส่วนหรือทั้งหมดของบริการอาจถูกเปลี่ยนแปลงหรือยกเลิกโดยไม่ต้องแจ้งล่วงหน้าเนื่องจากการเปลี่ยนแปลงนโยบายเครือข่าย ปัญหาทางเทคนิค หรือเหตุผลด้านความปลอดภัย</p><p>บริการไม่รับประกันการดำเนินการอย่างต่อเนื่องไม่หยุดชะงักและอาจถูกจำกัดชั่วคราวเนื่องจากการบำรุงรักษา การอัปเดต ความขัดข้อง ความแออัดของเครือข่าย ฯลฯ</p>",
+                "s8-title": "ค่าธรรมเนียมและค่าใช้จ่าย",
+                "s8-content": "<p>ธุรกรรมบนเครือข่ายบล็อกเชน (เช่น การโอน การแลกเปลี่ยน) อาจมีค่าธรรมเนียมเครือข่าย (ค่าแก๊ส ค่าธรรมเนียมนักขุด ฯลฯ) ซึ่งผู้ใช้รับภาระโดยตรง</p><p>เมื่อใช้บริการบุคคลที่สาม (dApp บริดจ์ ผู้ให้บริการแลกเปลี่ยน ฯลฯ) อาจมีค่าธรรมเนียมหรือเงื่อนไขแยกต่างหากที่กำหนดโดยบริการเหล่านั้น ความรับผิดชอบอยู่กับบุคคลที่สามเหล่านั้น</p><p>บริการเองอาจแนะนำโมเดลที่มีค่าธรรมเนียมแยกต่างหากสำหรับคุณสมบัติบางอย่าง (เช่น การวิเคราะห์ การตรวจสอบ คุณสมบัติขั้นสูง) ซึ่งจะถูกประกาศล่วงหน้า</p>",
+                "s9-title": "บริการและลิงก์บุคคลที่สาม",
+                "s9-content": "<p>บริการอาจช่วยให้สามารถโต้ตอบกับ dApp ภายนอก บริการ DeFi บริการบริดจ์ หรือสัญญาบุคคลที่สาม</p><p>บริการบุคคลที่สามเหล่านี้ไม่ได้ดำเนินการโดยตรงโดย PRODAO Wallet และเราไม่รับประกันความเสถียร ความถูกต้องตามกฎหมาย ความปลอดภัย ความสามารถในการทำกำไร หรือความต่อเนื่อง</p><p>เมื่อใช้บริการบุคคลที่สาม ผู้ใช้ต้องตรวจสอบและเข้าใจข้อกำหนด นโยบาย ค่าธรรมเนียม และความเสี่ยงของบริการเหล่านั้นด้วยตนเอง</p><p>PRODAO Wallet ไม่รับผิดชอบต่อธุรกรรม ความเสียหาย หรือข้อพิพาทที่เกิดขึ้นระหว่างผู้ใช้และบริการบุคคลที่สาม</p>",
+                "s10-title": "ข้อจำกัดความรับผิด",
+                "s10-content": "<p>ผู้ให้บริการไม่รับผิดชอบต่อความเสียหายที่เกิดจากความผิดของผู้ใช้ รวมถึงการสูญหายของคีย์ส่วนตัว ฟิชชิ่ง การติดเชื้อมัลแวร์ ที่อยู่การโอนที่ไม่ถูกต้อง ความปลอดภัยของอุปกรณ์ที่ไม่เพียงพอ ฯลฯ</p><p>ผู้ให้บริการไม่รับผิดชอบต่อการสูญเสียเนื่องจากข้อบกพร่องทางเทคนิคในเครือข่ายบล็อกเชน ฟอร์ก การหยุดทำงานของเครือข่าย ข้อผิดพลาดของสมาร์ทคอนแทร็คต์ ความผันผวนของตลาด การขาดสภาพคล่อง ฯลฯ</p><p>การสูญเสียจากการลงทุน เช่น ความผันผวนของราคา การลดมูลค่า การขึ้น/ถอนจากตลาด โทเค็นฉ้อโกง รัก พูล ฯลฯ เป็นความรับผิดชอบของผู้ใช้ทั้งหมด</p><p>บริการให้บริการ \"ตามสภาพที่เป็นอยู่\" ในขอบเขตที่เป็นไปได้ และผู้ให้บริการไม่ให้การรับประกันโดยชัดแจ้งหรือโดยนัยเกี่ยวกับความถูกต้อง ความพร้อมใช้งาน ความสมบูรณ์ ความเหมาะสมสำหรับวัตถุประสงค์เฉพาะ หรือการไม่ละเมิดของบริการ</p><p>ผู้ให้บริการไม่รับผิดชอบต่อความเสียหายทางอ้อม พลอยได้ พิเศษ ลงโทษ หรือผลที่ตามมา (เช่น การสูญเสียผลกำไร การสูญเสียข้อมูล การสูญเสียสินทรัพย์ ฯลฯ)</p>",
+                "s11-title": "การจำกัดความรับผิด",
+                "s11-content": "<p>ในขอบเขตสูงสุดที่กฎหมายที่บังคับใช้อนุญาต ความรับผิดรวมของผู้ให้บริการจำกัดอยู่ที่จำนวนเงินที่ผู้ใช้จ่ายโดยตรงในระหว่างการใช้บริการ (ถ้ามี)</p><p>เนื่องจากบริการไม่ใช่บริการเก็บรักษา จึงไม่มีความรับผิดต่อความเสียหายต่อสินทรัพย์ดิจิทัลของผู้ใช้เอง</p>",
+                "s12-title": "ติดต่อเรา",
+                "s12-intro": "สำหรับคำถามหรือรายงานเกี่ยวกับฟิชชิ่ง การฉ้อโกง หรือการละเมิดความปลอดภัย โปรดติดต่อ:",
+                "s12-email": "อีเมล:",
+                "s12-note": "ผู้ให้บริการอาจให้คำแนะนำทางเทคนิคหรือคำแนะนำในขอบเขตที่กฎหมายเป็นไปได้ แต่ไม่รับประกันการกู้คืนกระเป๋าเงินหรือการคืนสินทรัพย์",
+                footer: "PRODAO Wallet เป็นกระเป๋าเงินที่ไม่เก็บรักษา คุณควบคุมคีย์ของคุณ ไม่สามารถกู้คืนคีย์ที่สูญหายได้"
+            },
+            hi: {
+                langName: "हिन्दी",
+                title: "PRODAO Wallet सेवा की शर्तें",
+                badge: "गैर-संरक्षक · स्व-प्रबंधित",
+                intro: "ये सेवा की शर्तें PRODAO Wallet के आपके उपयोग को नियंत्रित करती हैं, जो एक गैर-संरक्षक विकेंद्रीकृत वॉलेट है। सेवा का उपयोग करके, आप अपनी निजी कुंजियों और डिजिटल संपत्तियों को प्रबंधित करने के लिए सहमत होते हैं। सेवा प्रदाता आपकी कुंजियों या संपत्तियों को नियंत्रित, संग्रहीत या एक्सेस नहीं करता है।",
+                "last-updated": "अंतिम अपडेट:",
+                "contact-label": "संपर्क:",
+                date: "2 नवंबर, 2025",
+                "nav-title": "अनुभाग पर जाएं",
+                "nav-hint": "स्क्रॉल करने के लिए टैप करें",
+                "nav-1": "1. उद्देश्य",
+                "nav-2": "2. परिभाषाएं",
+                "nav-3": "3. समझौता परिवर्तन",
+                "nav-4": "4. सेवा की प्रकृति",
+                "nav-5": "5. उपयोगकर्ता की जिम्मेदारियां",
+                "nav-6": "6. निषिद्ध गतिविधियां",
+                "nav-7": "7. सेवा प्रावधान",
+                "nav-8": "8. शुल्क और लागत",
+                "nav-9": "9. तीसरे पक्ष की सेवाएं",
+                "nav-10": "10. अस्वीकरण",
+                "nav-11": "11. दायित्व की सीमा",
+                "nav-12": "12. संपर्क करें",
+                "s1-title": "उद्देश्य",
+                "s1-content": '<p>ये सेवा की शर्तें ("शर्तें") PRODAO Wallet ("सेवा") के उपयोग के संबंध में सेवा प्रदाता और उपयोगकर्ताओं के बीच संबंधों को नियंत्रित करती हैं, जिसमें अधिकार, दायित्व, जिम्मेदारियां और उपयोग की शर्तें शामिल हैं।</p><p>सेवा एक स्व-संरक्षक इलेक्ट्रॉनिक वॉलेट है जो उपयोगकर्ताओं को ब्लॉकचेन पर डिजिटल संपत्तियों को सीधे प्रबंधित करने में सक्षम बनाता है।</p>',
+                "s2-title": "परिभाषाएं",
+                "s2-content": '<ul class="bullet-list"><li><strong>"सेवा"</strong> सॉफ़्टवेयर को संदर्भित करता है जो उपयोगकर्ताओं को डिजिटल संपत्ति वॉलेट बनाने, रखने और उपयोग करने और ब्लॉकचेन नेटवर्क के साथ बातचीत करने में सक्षम बनाता है।</li><li><strong>"उपयोगकर्ता"</strong> किसी भी व्यक्ति को संदर्भित करता है जो इन शर्तों से सहमत है और सेवा का उपयोग करता है।</li><li><strong>"वॉलेट"</strong> उस कार्यक्षमता को संदर्भित करता है जो उपयोगकर्ताओं को निजी कुंजियों, सार्वजनिक कुंजियों, ब्लॉकचेन पतों को सीधे प्रबंधित करने और लेनदेन पर हस्ताक्षर और भेजने की अनुमति देता है।</li><li><strong>"निजी कुंजी"</strong> गुप्त कुंजी को संदर्भित करती है जो डिजिटल संपत्तियों और लेनदेन पर अधिकार साबित करती है और प्रयोग करती है।</li><li><strong>"नेटवर्क"</strong> सार्वजनिक ब्लॉकचेन नेटवर्क और संबंधित स्मार्ट अनुबंध और dApps को संदर्भित करता है।</li></ul>',
+                "s3-title": "समझौते की प्रभावशीलता और परिवर्तन",
+                "s3-content": "<p>ये शर्तें तब प्रभावी होती हैं जब कोई उपयोगकर्ता सेवा स्थापित या उपयोग करता है, या उपयोग के दौरान सहमति बटन पर क्लिक करता है।</p><p>सेवा प्रदाता लागू कानूनों, प्रौद्योगिकी, या सेवा नीतियों में परिवर्तनों को प्रतिबिंबित करने के लिए इन शर्तों को संशोधित कर सकता है। परिवर्तनों की अग्रिम सूचना दी जाएगी और यदि उपयोगकर्ता अधिसूचना के बाद सेवा का उपयोग जारी रखता है तो स्वीकृत माना जाएगा।</p><p>यदि कोई उपयोगकर्ता संशोधित शर्तों से सहमत नहीं है, तो उन्हें सेवा का उपयोग बंद करना होगा और ऐप को हटाना होगा।</p>",
+                "s4-title": "सेवा की प्रकृति",
+                "s4-content": "<p>यह सेवा एक <strong>गैर-संरक्षक</strong> वॉलेट है। सेवा प्रदाता के पास उपयोगकर्ताओं की डिजिटल संपत्ति, निजी कुंजियों, पुनर्प्राप्ति वाक्यांशों (बीज वाक्यांशों), या लेनदेन पर नियंत्रण नहीं है।</p><p>सेवा प्रदाता उपयोगकर्ताओं की ओर से डिजिटल संपत्तियों को धारण, प्रबंधित या संचालित नहीं करता है, और बैंक, आभासी संपत्ति विनिमय, या संरक्षक नहीं है।</p><p>सेवा केवल ब्लॉकचेन नेटवर्क के लिए एक इंटरफ़ेस (उपकरण) है और नेटवर्क को स्वयं संचालित या गारंटी नहीं देता है।</p><p>सेवा किसी भी डिजिटल संपत्ति के मूल्य की गारंटी नहीं देती है, निवेश रिटर्न का वादा नहीं करती है, या फिएट मुद्रा के बराबर मूल्य का वादा नहीं करती है।</p>",
+                "s5-title": "उपयोगकर्ता की जिम्मेदारियां",
+                "s5-content": '<ul class="bullet-list"><li>उपयोगकर्ता अपनी निजी कुंजियों, पासवर्ड और पुनर्प्राप्ति वाक्यांशों (बीज वाक्यांशों) को उत्पन्न करने, संग्रहीत करने और बैकअप लेने के लिए जिम्मेदार हैं, और उन्हें तीसरे पक्ष को प्रकट नहीं करना चाहिए।</li><li>डिवाइस हानि, हैकिंग, इनपुट त्रुटियों (जैसे गलत पतों पर भेजना), कुंजी/बीज हानि आदि के परिणामस्वरूप होने वाली सभी हानियां पूरी तरह से उपयोगकर्ता की जिम्मेदारी हैं।</li><li>सेवा प्रदाता खोई हुई निजी कुंजियों या बीज वाक्यांशों को पुनर्प्राप्त नहीं कर सकता है और वॉलेट एक्सेस या डिजिटल संपत्तियों को पुनर्स्थापित नहीं कर सकता है।</li><li>उपयोगकर्ताओं को अवैध गतिविधियों (मनी लॉन्ड्रिंग, प्रतिबंध चोरी, धोखाधड़ी, हैकिंग, फ़िशिंग आदि) के लिए सेवा का उपयोग नहीं करना चाहिए।</li><li>उपयोगकर्ताओं को अपने निवास देश या क्षेत्र में लागू कानूनों का पालन करना चाहिए और विनियमन द्वारा प्रतिबंधित गतिविधियों के लिए सेवा का उपयोग नहीं करना चाहिए।</li></ul>',
+                "s6-title": "निषिद्ध गतिविधियां",
+                "s6-content": '<p>उपयोगकर्ताओं को निम्नलिखित गतिविधियों में संलग्न नहीं होना चाहिए:</p><ul class="bullet-list"><li>सेवा या ब्लॉकचेन नेटवर्क का उपयोग करके अवैध गतिविधियां, जिसमें अवैध धन उगाही, कर चोरी, प्रतिबंध चोरी, मनी लॉन्ड्रिंग आदि शामिल हैं।</li><li>दूसरों की निजी कुंजियों, बीज वाक्यांशों, या डिजिटल संपत्तियों तक अनधिकृत पहुंच</li><li>सेवा के स्रोत कोड, सुरक्षा प्रणालियों, या संचार विधियों की रिवर्स इंजीनियरिंग, हैकिंग, या छेड़छाड़</li><li>सेवा के नाम का उपयोग करके झूठी जानकारी फैलाना या भ्रम पैदा करने वाले तरीके से निवेश के लिए प्रेरित करना</li><li>स्वचालित स्क्रिप्ट/बॉट्स/हमले जो सेवा के सामान्य संचालन में हस्तक्षेप करते हैं</li></ul>',
+                "s7-title": "सेवा प्रावधान और परिवर्तन",
+                "s7-content": "<p>सेवा में वॉलेट निर्माण, लेनदेन हस्ताक्षर, पता प्रबंधन, संपत्ति देखना, और अन्य ब्लॉकचेन नेटवर्क एकीकरण सुविधाएं शामिल हो सकती हैं।</p><p>सेवा के कुछ या सभी हिस्से नेटवर्क नीति परिवर्तनों, तकनीकी मुद्दों, या सुरक्षा कारणों के कारण बिना पूर्व सूचना के बदले या समाप्त किए जा सकते हैं।</p><p>सेवा निरंतर निर्बाध संचालन की गारंटी नहीं देती है और रखरखाव, अपडेट, आउटेज, नेटवर्क भीड़ आदि के कारण अस्थायी रूप से प्रतिबंधित हो सकती है।</p>",
+                "s8-title": "शुल्क और लागत",
+                "s8-content": "<p>ब्लॉकचेन नेटवर्क पर लेनदेन (जैसे स्थानांतरण, स्वैप) नेटवर्क शुल्क (गैस शुल्क, खनिक शुल्क आदि) लगा सकते हैं, जो सीधे उपयोगकर्ताओं द्वारा वहन किए जाते हैं।</p><p>तीसरे पक्ष की सेवाओं (dApps, पुल, स्वैप प्रदाता आदि) का उपयोग करते समय, उन सेवाओं द्वारा लगाए गए अलग शुल्क या शर्तें लागू हो सकती हैं। जिम्मेदारी उन तीसरे पक्षों की है।</p><p>सेवा स्वयं कुछ सुविधाओं (जैसे विश्लेषण, निगरानी, उन्नत सुविधाएं) के लिए अलग भुगतान मॉडल पेश कर सकती है, जिसे पहले से घोषित किया जाएगा।</p>",
+                "s9-title": "तीसरे पक्ष की सेवाएं और लिंक",
+                "s9-content": "<p>सेवा बाहरी dApps, DeFi सेवाओं, पुल सेवाओं, या तीसरे पक्ष के अनुबंधों के साथ बातचीत को सक्षम कर सकती है।</p><p>ये तीसरे पक्ष की सेवाएं सीधे PRODAO Wallet द्वारा संचालित नहीं हैं, और हम उनकी स्थिरता, वैधता, सुरक्षा, लाभप्रदता, या निरंतरता की गारंटी नहीं देते हैं।</p><p>तीसरे पक्ष की सेवाओं का उपयोग करते समय, उपयोगकर्ताओं को उन सेवाओं की शर्तों, नीतियों, शुल्क और जोखिमों को स्वयं सत्यापित और समझना चाहिए।</p><p>PRODAO Wallet उपयोगकर्ताओं और तीसरे पक्ष की सेवाओं के बीच होने वाले लेनदेन, नुकसान, या विवादों के लिए जिम्मेदार नहीं है।</p>",
+                "s10-title": "अस्वीकरण",
+                "s10-content": "<p>सेवा प्रदाता उपयोगकर्ता की गलती के कारण होने वाले किसी भी नुकसान के लिए जिम्मेदार नहीं है, जिसमें निजी कुंजी हानि, फ़िशिंग, मैलवेयर संक्रमण, गलत स्थानांतरण पते, अपर्याप्त डिवाइस सुरक्षा आदि शामिल हैं।</p><p>सेवा प्रदाता ब्लॉकचेन नेटवर्क में तकनीकी दोष, फोर्क, नेटवर्क आउटेज, स्मार्ट अनुबंध त्रुटियों, बाजार अस्थिरता, तरलता की कमी आदि के कारण होने वाली हानियों के लिए जिम्मेदार नहीं है।</p><p>निवेश हानियां जैसे मूल्य उतार-चढ़ाव, मूल्य मूल्यह्रास, लिस्टिंग/डीलिस्टिंग, धोखाधड़ी टोकन, रग पुल आदि, पूरी तरह से उपयोगकर्ता की जिम्मेदारी हैं।</p><p>सेवा \"जैसी ह\" संभव सीमा तक प्रदान की जाती है, और सेवा प्रदाता सेवा की सटीकता, उपलब्धता, अखंडता, विशेष उद्देश्य के लिए उपयुक्तता, या गैर-उल्लंघन के बारे में स्पष्ट या निहित वारंटी नहीं देता है।</p><p>सेवा प्रदाता अप्रत्यक्ष, आकस्मिक, विशेष, दंडात्मक, या परिणामी नुकसान (जैसे लाभ की हानि, डेटा हानि, संपत्ति हानि आदि) के लिए उत्तरदायी नहीं है।</p>",
+                "s11-title": "दायित्व की सीमा",
+                "s11-content": "<p>लागू कानून द्वारा अनुमत अधिकतम सीमा तक, सेवा प्रदाता की कुल देयता सेवा के उपयोग के दौरान उपयोगकर्ता द्वारा सीधे भुगतान की गई राशि (यदि कोई हो) तक सीमित है।</p><p>चूंकि सेवा एक संरक्षक सेवा नहीं है, उपयोगकर्ताओं की डिजिटल संपत्तियों को स्वयं नुकसान के लिए कोई देयता नहीं है।</p>",
+                "s12-title": "संपर्क करें",
+                "s12-intro": "फ़िशिंग, धोखाधड़ी, या सुरक्षा उल्लंघनों के संबंध में पूछताछ या रिपोर्ट के लिए, कृपया संपर्क करें:",
+                "s12-email": "ईमेल:",
+                "s12-note": "सेवा प्रदाता कानूनी रूप से संभव सीमा तक तकनीकी सलाह या मार्गदर्शन प्रदान कर सकता है, लेकिन वॉलेट पुनर्प्राप्ति या संपत्ति वापसी की गारंटी नहीं देता है।",
+                footer: "PRODAO Wallet एक गैर-संरक्षक वॉलेट है। आप अपनी कुंजियों को नियंत्रित करते हैं। खोई हुई कुंजियों को पुनर्प्राप्त नहीं किया जा सकता है।"
+            },
+            ru: {
+                langName: "Русский",
+                title: "Условия использования PRODAO Wallet",
+                badge: "Без хранения · Самоуправляемый",
+                intro: "Эти Условия использования регулируют ваше использование PRODAO Wallet, децентрализованного кошелька без хранения средств. Используя Сервис, вы соглашаетесь управлять своими приватными ключами и цифровыми активами. Поставщик услуг не контролирует, не хранит и не имеет доступа к вашим ключам или активам.",
+                "last-updated": "Последнее обновление:",
+                "contact-label": "Контакт:",
+                date: "2 ноября 2025 г.",
+                "nav-title": "Перейти к разделу",
+                "nav-hint": "Нажмите для прокрутки",
+                "nav-1": "1. Цель",
+                "nav-2": "2. Определения",
+                "nav-3": "3. Изменения соглашения",
+                "nav-4": "4. Характер сервиса",
+                "nav-5": "5. Обязанности пользователя",
+                "nav-6": "6. Запрещенные действия",
+                "nav-7": "7. Предоставление услуг",
+                "nav-8": "8. Комиссии и расходы",
+                "nav-9": "9. Сторонние сервисы",
+                "nav-10": "10. Отказ от ответственности",
+                "nav-11": "11. Ограничение ответственности",
+                "nav-12": "12. Контакты",
+                "s1-title": "Цель",
+                "s1-content": '<p>Эти Условия использования ("Условия") регулируют отношения между поставщиком услуг и пользователями в отношении использования PRODAO Wallet ("Сервис"), включая права, обязанности, ответственность и условия использования.</p><p>Сервис - это самоуправляемый электронный кошелек, который позволяет пользователям напрямую управлять цифровыми активами на блокчейне.</p>',
+                "s2-title": "Определения",
+                "s2-content": '<ul class="bullet-list"><li><strong>"Сервис"</strong> относится к программному обеспечению, которое позволяет пользователям создавать, хранить и использовать кошельки цифровых активов и взаимодействовать с сетями блокчейна.</li><li><strong>"Пользователь"</strong> относится к любому лицу, которое соглашается с этими Условиями и использует Сервис.</li><li><strong>"Кошелек"</strong> относится к функциональности, которая позволяет пользователям напрямую управлять приватными ключами, публичными ключами, адресами блокчейна и подписывать и отправлять транзакции.</li><li><strong>"Приватный ключ"</strong> относится к секретному ключу, который доказывает и осуществляет права на цифровые активы и транзакции.</li><li><strong>"Сеть"</strong> относится к публичным сетям блокчейна и связанным смарт-контрактам и dApp.</li></ul>',
+                "s3-title": "Действие и изменение соглашения",
+                "s3-content": "<p>Эти Условия вступают в силу, когда пользователь устанавливает или использует Сервис, или нажимает кнопку согласия во время использования.</p><p>Поставщик услуг может пересматривать эти Условия для отражения изменений в применимых законах, технологиях или политике услуг. Изменения будут объявлены заранее и будут считаться принятыми, если пользователь продолжает использовать Сервис после уведомления.</p><p>Если пользователь не согласен с пересмотренными Условиями, он должен прекратить использование Сервиса и удалить приложение.</p>",
+                "s4-title": "Характер сервиса",
+                "s4-content": "<p>Этот Сервис является кошельком <strong>без хранения средств</strong>. Поставщик услуг не имеет контроля над цифровыми активами пользователей, приватными ключами, фразами восстановления (seed-фразами) или транзакциями.</p><p>Поставщик услуг не хранит, не управляет и не оперирует цифровыми активами пользователей от их имени и не является банком, биржей виртуальных активов или хранителем.</p><p>Сервис - это всего лишь интерфейс (инструмент) к сетям блокчейна и не управляет и не гарантирует сами сети.</p><p>Сервис не гарантирует стоимость какого-либо цифрового актива, не обещает инвестиционную прибыль или стоимость, эквивалентную фиатной валюте.</p>",
+                "s5-title": "Обязанности пользователя",
+                "s5-content": '<ul class="bullet-list"><li>Пользователи несут ответственность за генерацию, хранение и резервное копирование своих приватных ключей, паролей и фраз восстановления (seed-фраз) и не должны раскрывать их третьим лицам.</li><li>Все потери в результате потери устройства, взлома, ошибок ввода (например, отправки на неправильные адреса), потери ключей/seed-фраз и т.д. полностью лежат на ответственности пользователя.</li><li>Поставщик услуг не может восстановить потерянные приватные ключи или seed-фразы и не может восстановить доступ к кошельку или цифровым активам.</li><li>Пользователи не должны использовать Сервис для незаконной деятельности (отмывание денег, уклонение от санкций, мошенничество, взлом, фишинг и т.д.).</li><li>Пользователи должны соблюдать применимые законы в стране или регионе проживания и не должны использовать Сервис для деятельности, ограниченной нормативными актами.</li></ul>',
+                "s6-title": "Запрещенные действия",
+                "s6-content": '<p>Пользователи не должны заниматься следующими действиями:</p><ul class="bullet-list"><li>Незаконная деятельность с использованием Сервиса или сетей блокчейна, включая незаконный сбор средств, уклонение от уплаты налогов, уклонение от санкций, отмывание денег и т.д.</li><li>Несанкционированный доступ к приватным ключам, seed-фразам или цифровым активам других лиц</li><li>Реверс-инжиниринг, взлом или вмешательство в исходный код, системы безопасности или методы связи Сервиса</li><li>Использование имени Сервиса для распространения ложной информации или привлечения инвестиций способом, вызывающим путаницу</li><li>Автоматизированные скрипты/боты/атаки, которые мешают нормальной работе Сервиса</li></ul>',
+                "s7-title": "Предоставление и изменение услуг",
+                "s7-content": "<p>Сервис может включать создание кошелька, подписание транзакций, управление адресами, просмотр активов и другие функции интеграции с сетью блокчейна.</p><p>Некоторые или все части Сервиса могут быть изменены или прекращены без предварительного уведомления из-за изменений сетевой политики, технических проблем или соображений безопасности.</p><p>Сервис не гарантирует непрерывную бесперебойную работу и может быть временно ограничен из-за обслуживания, обновлений, сбоев, перегрузки сети и т.д.</p>",
+                "s8-title": "Комиссии и расходы",
+                "s8-content": "<p>Транзакции в сетях блокчейна (например, переводы, свопы) могут включать сетевые комиссии (комиссии за газ, комиссии майнеров и т.д.), которые непосредственно несут пользователи.</p><p>При использовании сторонних сервисов (dApp, мосты, поставщики свопов и т.д.) могут применяться отдельные комиссии или условия, налагаемые этими сервисами. Ответственность лежит на этих третьих сторонах.</p><p>Сам Сервис может ввести отдельные платные модели для определенных функций (например, аналитика, мониторинг, расширенные функции), о чем будет объявлено заранее.</p>",
+                "s9-title": "Сторонние сервисы и ссылки",
+                "s9-content": "<p>Сервис может обеспечить взаимодействие с внешними dApp, DeFi-сервисами, услугами моста или сторонними контрактами.</p><p>Эти сторонние сервисы не управляются напрямую PRODAO Wallet, и мы не гарантируем их стабильность, законность, безопасность, прибыльность или непрерывность.</p><p>При использовании сторонних сервисов пользователи должны самостоятельно проверить и понять условия, политику, комиссии и риски этих сервисов.</p><p>PRODAO Wallet не несет ответственности за транзакции, ущерб или споры, возникающие между пользователями и сторонними сервисами.</p>",
+                "s10-title": "Отказ от ответственности",
+                "s10-content": "<p>Поставщик услуг не несет ответственности за любой ущерб, вызванный виной пользователя, включая потерю приватного ключа, фишинг, заражение вредоносным ПО, неправильные адреса перевода, недостаточную безопасность устройства и т.д.</p><p>Поставщик услуг не несет ответственности за потери из-за технических дефектов в сетях блокчейна, форков, отключений сети, ошибок смарт-контрактов, волатильности рынка, недостатка ликвидности и т.д.</p><p>Инвестиционные потери, такие как колебания цен, обесценивание стоимости, листинг/делистинг, мошеннические токены, рагпулы и т.д., полностью лежат на ответственности пользователя.</p><p>Сервис предоставляется \"как есть\" в максимально возможной степени, и поставщик услуг не дает явных или подразумеваемых гарантий относительно точности, доступности, целостности, пригодности для конкретной цели или отсутствия нарушений Сервиса.</p><p>Поставщик услуг не несет ответственности за косвенный, случайный, особый, штрафной или косвенный ущерб (например, потеря прибыли, потеря данных, потеря активов и т.д.).</p>",
+                "s11-title": "Ограничение ответственности",
+                "s11-content": "<p>В максимальной степени, разрешенной применимым законодательством, общая ответственность поставщика услуг ограничивается суммой, непосредственно уплаченной пользователем в процессе использования Сервиса (если таковая имеется).</p><p>Поскольку Сервис не является услугой хранения, нет ответственности за ущерб самим цифровым активам пользователей.</p>",
+                "s12-title": "Контакты",
+                "s12-intro": "По вопросам или сообщениям о фишинге, мошенничестве или нарушениях безопасности, пожалуйста, свяжитесь:",
+                "s12-email": "Электронная почта:",
+                "s12-note": "Поставщик услуг может предоставить технические консультации или руководство в пределах, разрешенных законом, но не гарантирует восстановление кошелька или возврат активов.",
+                footer: "PRODAO Wallet — это кошелек без хранения средств. Вы контролируете свои ключи. Потерянные ключи не могут быть восстановлены."
+            },
+            "zh-CN": {
+                langName: "简体中文",
+                title: "PRODAO钱包服务条款",
+                badge: "非托管型·自主管理型",
+                intro: "这些服务条款规定了您使用PRODAO钱包（一种非托管型去中心化钱包）的规则。通过使用本服务，您同意自行管理您的私钥和数字资产。服务提供者不控制、存储或访问您的密钥或资产。",
+                "last-updated": "最后更新：",
+                "contact-label": "联系方式：",
+                date: "2025年11月2日",
+                "nav-title": "跳转到部分",
+                "nav-hint": "点击滚动",
+                "nav-1": "1. 目的",
+                "nav-2": "2. 定义",
+                "nav-3": "3. 协议变更",
+                "nav-4": "4. 服务性质",
+                "nav-5": "5. 用户责任",
+                "nav-6": "6. 禁止活动",
+                "nav-7": "7. 服务提供",
+                "nav-8": "8. 费用和成本",
+                "nav-9": "9. 第三方服务",
+                "nav-10": "10. 免责声明",
+                "nav-11": "11. 责任限制",
+                "nav-12": "12. 联系我们",
+                "s1-title": "目的",
+                "s1-content": '<p>这些服务条款（"条款"）规定了服务提供者与用户之间关于使用PRODAO钱包（"服务"）的关系，包括权利、义务、责任和使用条件。</p><p>该服务是一款自主管理型电子钱包，使用户能够直接管理区块链上的数字资产。</p>',
+                "s2-title": "定义",
+                "s2-content": '<ul class="bullet-list"><li><strong>"服务"</strong>指使用户能够创建、持有和使用数字资产钱包并与区块链网络交互的软件。</li><li><strong>"用户"</strong>指同意这些条款并使用服务的任何人。</li><li><strong>"钱包"</strong>指允许用户直接管理私钥、公钥、区块链地址并签名和发送交易的功能。</li><li><strong>"私钥"</strong>指证明和行使数字资产和交易权限的秘密密钥。</li><li><strong>"网络"</strong>指公共区块链网络以及相关的智能合约和dApp。</li></ul>',
+                "s3-title": "协议生效和变更",
+                "s3-content": "<p>当用户安装或使用服务，或在使用期间点击同意按钮时，这些条款生效。</p><p>服务提供者可以修订这些条款以反映适用法律、技术或服务政策的变化。变更将提前通知，如果用户在通知后继续使用服务，将被视为接受。</p><p>如果用户不同意修订后的条款，则必须停止使用服务并删除应用程序。</p>",
+                "s4-title": "服务性质",
+                "s4-content": "<p>本服务是<strong>非托管型</strong>钱包。服务提供者不控制用户的数字资产、私钥、恢复短语（种子短语）或交易。</p><p>服务提供者不代表用户持有、管理或操作数字资产，也不是银行、虚拟资产交易所或托管人。</p><p>该服务仅仅是区块链网络的接口（工具），不运营或保证网络本身。</p><p>该服务不保证任何数字资产的价值，不承诺投资回报，也不承诺等同于法定货币的价值。</p>",
+                "s5-title": "用户责任",
+                "s5-content": '<ul class="bullet-list"><li>用户负责生成、存储和备份自己的私钥、密码和恢复短语（种子短语），并且不得向第三方披露。</li><li>因设备丢失、黑客攻击、输入错误（例如发送到错误地址）、密钥/种子丢失等导致的所有损失完全由用户承担。</li><li>服务提供者无法恢复丢失的私钥或种子短语，也无法恢复钱包访问权限或数字资产。</li><li>用户不得将服务用于非法活动（洗钱、规避制裁、欺诈、黑客攻击、网络钓鱼等）。</li><li>用户必须遵守其居住国家或地区的适用法律，不得将服务用于受监管限制的活动。</li></ul>',
+                "s6-title": "禁止活动",
+                "s6-content": '<p>用户不得从事以下活动：</p><ul class="bullet-list"><li>使用服务或区块链网络进行非法活动，包括非法筹资、逃税、规避制裁、洗钱等。</li><li>未经授权访问他人的私钥、种子短语或数字资产</li><li>对服务的源代码、安全系统或通信方法进行逆向工程、黑客攻击或篡改</li><li>使用服务的名称传播虚假信息或以引起混淆的方式招揽投资</li><li>干扰服务正常运行的自动化脚本/机器人/攻击</li></ul>',
+                "s7-title": "服务提供和变更",
+                "s7-content": "<p>服务可能包括钱包创建、交易签名、地址管理、资产查看以及其他区块链网络集成功能。</p><p>由于网络政策变更、技术问题或安全原因，服务的部分或全部可能在不事先通知的情况下更改或终止。</p><p>服务不保证持续不间断运行，可能由于维护、更新、故障、网络拥堵等原因暂时受限。</p>",
+                "s8-title": "费用和成本",
+                "s8-content": "<p>区块链网络上的交易（例如转账、兑换）可能产生网络费用（燃气费、矿工费等），这些费用由用户直接承担。</p><p>使用第三方服务（dApp、桥接、兑换提供商等）时，可能适用这些服务施加的单独费用或条件。责任在于这些第三方。</p><p>服务本身可能会针对某些功能（例如分析、监控、高级功能）引入单独的付费模式，并将提前通知。</p>",
+                "s9-title": "第三方服务和链接",
+                "s9-content": "<p>服务可能支持与外部dApp、DeFi服务、桥接服务或第三方合约的交互。</p><p>这些第三方服务不是由PRODAO钱包直接运营的，我们不保证它们的稳定性、合法性、安全性、盈利性或持续性。</p><p>使用第三方服务时，用户必须自行验证和理解这些服务的条款、政策、费用和风险。</p><p>PRODAO钱包对用户与第三方服务之间发生的交易、损害或争议不承担责任。</p>",
+                "s10-title": "免责声明",
+                "s10-content": "<p>服务提供者对因用户过错造成的任何损害不承担责任，包括私钥丢失、网络钓鱼、恶意软件感染、错误的转账地址、设备安全不足等。</p><p>服务提供者对区块链网络的技术缺陷、分叉、网络中断、智能合约错误、市场波动、流动性不足等造成的损失不承担责任。</p><p>投资损失，如价格波动、价值贬值、上市/退市、欺诈代币、跑路等，完全由用户承担。</p><p>服务在可能的范围内\"按原样\"提供，服务提供者对服务的准确性、可用性、完整性、特定目的适用性或不侵权不作任何明示或暗示的保证。</p><p>服务提供者对间接、附带、特殊、惩罚性或后果性损害（例如利润损失、数据损失、资产损失等）不承担责任。</p>",
+                "s11-title": "责任限制",
+                "s11-content": "<p>在适用法律允许的最大范围内，服务提供者的总责任仅限于用户在使用服务过程中直接支付的金额（如有）。</p><p>由于服务不是托管服务，因此对用户数字资产本身的损害不承担责任。</p>",
+                "s12-title": "联系我们",
+                "s12-intro": "如有关于网络钓鱼、欺诈或安全漏洞的咨询或报告，请联系：",
+                "s12-email": "电子邮件：",
+                "s12-note": "服务提供者可能在法律允许的范围内提供技术建议或指导，但不保证钱包恢复或资产返还。",
+                footer: "PRODAO钱包是非托管型钱包。您控制您的密钥。丢失的密钥无法恢复。"
+            },
+            "zh-TW": {
+                langName: "繁體中文",
+                title: "PRODAO錢包服務條款",
+                badge: "非託管型·自主管理型",
+                intro: "這些服務條款規定了您使用PRODAO錢包（一種非託管型去中心化錢包）的規則。透過使用本服務，您同意自行管理您的私鑰和數位資產。服務提供者不控制、儲存或存取您的金鑰或資產。",
+                "last-updated": "最後更新：",
+                "contact-label": "聯絡方式：",
+                date: "2025年11月2日",
+                "nav-title": "跳轉到部分",
+                "nav-hint": "點擊捲動",
+                "nav-1": "1. 目的",
+                "nav-2": "2. 定義",
+                "nav-3": "3. 協議變更",
+                "nav-4": "4. 服務性質",
+                "nav-5": "5. 使用者責任",
+                "nav-6": "6. 禁止活動",
+                "nav-7": "7. 服務提供",
+                "nav-8": "8. 費用和成本",
+                "nav-9": "9. 第三方服務",
+                "nav-10": "10. 免責聲明",
+                "nav-11": "11. 責任限制",
+                "nav-12": "12. 聯絡我們",
+                "s1-title": "目的",
+                "s1-content": '<p>這些服務條款（「條款」）規定了服務提供者與使用者之間關於使用PRODAO錢包（「服務」）的關係，包括權利、義務、責任和使用條件。</p><p>該服務是一款自主管理型電子錢包，使使用者能夠直接管理區塊鏈上的數位資產。</p>',
+                "s2-title": "定義",
+                "s2-content": '<ul class="bullet-list"><li><strong>「服務」</strong>指使使用者能夠建立、持有和使用數位資產錢包並與區塊鏈網路互動的軟體。</li><li><strong>「使用者」</strong>指同意這些條款並使用服務的任何人。</li><li><strong>「錢包」</strong>指允許使用者直接管理私鑰、公鑰、區塊鏈位址並簽署和傳送交易的功能。</li><li><strong>「私鑰」</strong>指證明和行使數位資產和交易權限的秘密金鑰。</li><li><strong>「網路」</strong>指公共區塊鏈網路以及相關的智慧合約和dApp。</li></ul>',
+                "s3-title": "協議生效和變更",
+                "s3-content": "<p>當使用者安裝或使用服務，或在使用期間點擊同意按鈕時，這些條款生效。</p><p>服務提供者可以修訂這些條款以反映適用法律、技術或服務政策的變化。變更將提前通知，如果使用者在通知後繼續使用服務，將被視為接受。</p><p>如果使用者不同意修訂後的條款，則必須停止使用服務並刪除應用程式。</p>",
+                "s4-title": "服務性質",
+                "s4-content": "<p>本服務是<strong>非託管型</strong>錢包。服務提供者不控制使用者的數位資產、私鑰、恢復短語（種子短語）或交易。</p><p>服務提供者不代表使用者持有、管理或操作數位資產，也不是銀行、虛擬資產交易所或託管人。</p><p>該服務僅僅是區塊鏈網路的介面（工具），不營運或保證網路本身。</p><p>該服務不保證任何數位資產的價值，不承諾投資回報，也不承諾等同於法定貨幣的價值。</p>",
+                "s5-title": "使用者責任",
+                "s5-content": '<ul class="bullet-list"><li>使用者負責生成、儲存和備份自己的私鑰、密碼和恢復短語（種子短語），並且不得向第三方披露。</li><li>因裝置遺失、駭客攻擊、輸入錯誤（例如傳送到錯誤位址）、金鑰/種子遺失等導致的所有損失完全由使用者承擔。</li><li>服務提供者無法恢復遺失的私鑰或種子短語，也無法恢復錢包存取權限或數位資產。</li><li>使用者不得將服務用於非法活動（洗錢、規避制裁、詐騙、駭客攻擊、網路釣魚等）。</li><li>使用者必須遵守其居住國家或地區的適用法律，不得將服務用於受監管限制的活動。</li></ul>',
+                "s6-title": "禁止活動",
+                "s6-content": '<p>使用者不得從事以下活動：</p><ul class="bullet-list"><li>使用服務或區塊鏈網路進行非法活動，包括非法籌資、逃稅、規避制裁、洗錢等。</li><li>未經授權存取他人的私鑰、種子短語或數位資產</li><li>對服務的原始碼、安全系統或通訊方法進行逆向工程、駭客攻擊或竄改</li><li>使用服務的名稱傳播虛假資訊或以引起混淆的方式招攬投資</li><li>干擾服務正常執行的自動化腳本/機器人/攻擊</li></ul>',
+                "s7-title": "服務提供和變更",
+                "s7-content": "<p>服務可能包括錢包建立、交易簽署、位址管理、資產檢視以及其他區塊鏈網路整合功能。</p><p>由於網路政策變更、技術問題或安全原因，服務的部分或全部可能在不事先通知的情況下更改或終止。</p><p>服務不保證持續不間斷執行，可能由於維護、更新、故障、網路壅塞等原因暫時受限。</p>",
+                "s8-title": "費用和成本",
+                "s8-content": "<p>區塊鏈網路上的交易（例如轉帳、兌換）可能產生網路費用（燃氣費、礦工費等），這些費用由使用者直接承擔。</p><p>使用第三方服務（dApp、橋接、兌換提供商等）時，可能適用這些服務施加的單獨費用或條件。責任在於這些第三方。</p><p>服務本身可能會針對某些功能（例如分析、監控、進階功能）引入單獨的付費模式，並將提前通知。</p>",
+                "s9-title": "第三方服務和連結",
+                "s9-content": "<p>服務可能支援與外部dApp、DeFi服務、橋接服務或第三方合約的互動。</p><p>這些第三方服務不是由PRODAO錢包直接營運的，我們不保證它們的穩定性、合法性、安全性、盈利性或持續性。</p><p>使用第三方服務時，使用者必須自行驗證和理解這些服務的條款、政策、費用和風險。</p><p>PRODAO錢包對使用者與第三方服務之間發生的交易、損害或爭議不承擔責任。</p>",
+                "s10-title": "免責聲明",
+                "s10-content": "<p>服務提供者對因使用者過錯造成的任何損害不承擔責任，包括私鑰遺失、網路釣魚、惡意軟體感染、錯誤的轉帳位址、裝置安全不足等。</p><p>服務提供者對區塊鏈網路的技術缺陷、分叉、網路中斷、智慧合約錯誤、市場波動、流動性不足等造成的損失不承擔責任。</p><p>投資損失，如價格波動、價值貶值、上市/下市、詐騙代幣、跑路等，完全由使用者承擔。</p><p>服務在可能的範圍內「按原樣」提供，服務提供者對服務的準確性、可用性、完整性、特定目的適用性或不侵權不作任何明示或暗示的保證。</p><p>服務提供者對間接、附帶、特殊、懲罰性或後果性損害（例如利潤損失、資料損失、資產損失等）不承擔責任。</p>",
+                "s11-title": "責任限制",
+                "s11-content": "<p>在適用法律允許的最大範圍內，服務提供者的總責任僅限於使用者在使用服務過程中直接支付的金額（如有）。</p><p>由於服務不是託管服務，因此對使用者數位資產本身的損害不承擔責任。</p>",
+                "s12-title": "聯絡我們",
+                "s12-intro": "如有關於網路釣魚、詐騙或安全漏洞的諮詢或報告，請聯絡：",
+                "s12-email": "電子郵件：",
+                "s12-note": "服務提供者可能在法律允許的範圍內提供技術建議或指導，但不保證錢包恢復或資產返還。",
+                footer: "PRODAO錢包是非託管型錢包。您控制您的金鑰。遺失的金鑰無法恢復。"
+            }
+        };
+
+        // Language management
+        const dropdown = document.querySelector('.lang-dropdown');
+        const dropdownBtn = dropdown.querySelector('.lang-btn');
+        const currentLangSpan = dropdown.querySelector('.current-lang');
+        const langMenu = dropdown.querySelector('.lang-menu');
+        const langOptions = dropdown.querySelectorAll('.lang-option');
+        const themeToggleBtn = document.querySelector('.theme-toggle-btn');
+        const htmlElement = document.documentElement;
+        const THEME_STORAGE_KEY = 'preferred-color-mode';
+        const colorSchemeMedia = window.matchMedia('(prefers-color-scheme: dark)');
+
+        const measurementSpan = document.createElement('span');
+        measurementSpan.style.position = 'absolute';
+        measurementSpan.style.visibility = 'hidden';
+        measurementSpan.style.pointerEvents = 'none';
+        measurementSpan.style.whiteSpace = 'nowrap';
+        measurementSpan.style.left = '0';
+        measurementSpan.style.top = '0';
+        measurementSpan.style.zIndex = '-1';
+        document.body.appendChild(measurementSpan);
+
+        const themeToggleLabels = {
+            en: { dark: "Dark", light: "Light" },
+            ko: { dark: "어둡게", light: "밝게" },
+            th: { dark: "มืด", light: "สว่าง" },
+            hi: { dark: "गहरा", light: "हल्का" },
+            ru: { dark: "Тёмная", light: "Светлая" },
+            "zh-CN": { dark: "深色", light: "浅色" },
+            "zh-TW": { dark: "深色", light: "淺色" },
+            ja: { dark: "ダーク", light: "ライト" }
+        };
+
+        let activeLanguage = 'en';
+        let savedTheme = null;
+
+        const getThemeActionLabel = (lang, targetMode) => {
+            const labels = themeToggleLabels[lang] || themeToggleLabels.en;
+            return targetMode === 'dark' ? labels.dark : labels.light;
+        };
+
+        const getCurrentTheme = () => {
+            const systemTheme = colorSchemeMedia.matches ? 'dark' : 'light';
+            return htmlElement.getAttribute('data-theme') || savedTheme || systemTheme;
+        };
+
+        function setLanguage(lang) {
+            // For English, restore to default content
+            if (lang === 'en') {
+                document.querySelectorAll('[data-i18n]').forEach(el => {
+                    const key = el.getAttribute('data-i18n');
+                    const defaultText = getDefaultEnglishText(key);
+                    if (defaultText) el.textContent = defaultText;
+                });
+
+                document.querySelectorAll('[data-i18n-html]').forEach(el => {
+                    const key = el.getAttribute('data-i18n-html');
+                    const defaultHtml = getDefaultEnglishHtml(key);
+                    if (defaultHtml) el.innerHTML = defaultHtml;
+                });
+
+                currentLangSpan.textContent = 'English';
+                langOptions.forEach(opt => {
+                    opt.classList.toggle('active', opt.dataset.lang === 'en');
+                });
+                localStorage.setItem('preferred-language-terms', 'en');
+                dropdown.classList.remove('open');
+                dropdownBtn.setAttribute('aria-expanded', 'false');
+                activeLanguage = 'en';
+                updateThemeToggleText(getCurrentTheme());
+                return;
+            }
+
+            const t = translations[lang];
+            if (!t) return;
+
+            // Update text content
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (t[key]) el.textContent = t[key];
+            });
+
+            // Update HTML content
+            document.querySelectorAll('[data-i18n-html]').forEach(el => {
+                const key = el.getAttribute('data-i18n-html');
+                if (t[key]) el.innerHTML = t[key];
+            });
+
+            // Update current language display
+            currentLangSpan.textContent = t.langName;
+
+            // Update active option
+            langOptions.forEach(opt => {
+                opt.classList.toggle('active', opt.dataset.lang === lang);
+            });
+
+            // Save preference
+            localStorage.setItem('preferred-language-terms', lang);
+
+            // Close dropdown
+            dropdown.classList.remove('open');
+            dropdownBtn.setAttribute('aria-expanded', 'false');
+            activeLanguage = lang;
+            updateThemeToggleText(getCurrentTheme());
+        }
+
+        // Toggle dropdown
+        dropdownBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const isOpen = dropdown.classList.toggle('open');
+            dropdownBtn.setAttribute('aria-expanded', isOpen);
+        });
+
+        // Close dropdown when clicking outside
+        document.addEventListener('click', () => {
+            dropdown.classList.remove('open');
+            dropdownBtn.setAttribute('aria-expanded', 'false');
+        });
+
+        // Prevent dropdown close when clicking inside menu
+        langMenu.addEventListener('click', (e) => {
+            e.stopPropagation();
+        });
+
+        // Language selection
+        langOptions.forEach(option => {
+            option.addEventListener('click', () => {
+                setLanguage(option.dataset.lang);
+            });
+        });
+
+        const measureLabelWidth = (text) => {
+            if (!themeToggleBtn) return 0;
+            const style = window.getComputedStyle(themeToggleBtn);
+            measurementSpan.style.fontFamily = style.fontFamily;
+            measurementSpan.style.fontSize = style.fontSize;
+            measurementSpan.style.fontWeight = style.fontWeight;
+            measurementSpan.textContent = text;
+            return Math.ceil(measurementSpan.getBoundingClientRect().width);
+        };
+
+        const updateThemeToggleText = (theme) => {
+            if (!themeToggleBtn) return;
+            const labels = themeToggleLabels[activeLanguage] || themeToggleLabels.en;
+            const longestWidth = Math.max(measureLabelWidth(labels.dark), measureLabelWidth(labels.light));
+            const computedStyle = window.getComputedStyle(themeToggleBtn);
+            const horizontalPadding = parseFloat(computedStyle.paddingLeft) + parseFloat(computedStyle.paddingRight) +
+                parseFloat(computedStyle.borderLeftWidth) + parseFloat(computedStyle.borderRightWidth);
+            const availableWidth = Math.max(0, document.documentElement.clientWidth - 32);
+            const minWidth = Math.min(longestWidth + horizontalPadding, availableWidth);
+            themeToggleBtn.style.minWidth = `${Math.ceil(minWidth)}px`;
+
+            const nextMode = theme === 'dark' ? 'light' : 'dark';
+            themeToggleBtn.textContent = getThemeActionLabel(activeLanguage, nextMode);
+            themeToggleBtn.setAttribute('aria-pressed', theme === 'dark' ? 'true' : 'false');
+        };
+
+        const setThemeAttribute = (theme) => {
+            if (theme === 'light' || theme === 'dark') {
+                htmlElement.setAttribute('data-theme', theme);
+            } else {
+                htmlElement.removeAttribute('data-theme');
+            }
+        };
+
+        const getSystemTheme = () => (colorSchemeMedia.matches ? 'dark' : 'light');
+
+        savedTheme = localStorage.getItem(THEME_STORAGE_KEY);
+        if (savedTheme !== 'light' && savedTheme !== 'dark') {
+            savedTheme = null;
+        }
+
+        if (savedTheme) {
+            setThemeAttribute(savedTheme);
+            updateThemeToggleText(savedTheme);
+        } else {
+            updateThemeToggleText(getSystemTheme());
+        }
+
+        themeToggleBtn?.addEventListener('click', () => {
+            const currentTheme = htmlElement.getAttribute('data-theme') || savedTheme || getSystemTheme();
+            const nextTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            savedTheme = nextTheme;
+            setThemeAttribute(nextTheme);
+            localStorage.setItem(THEME_STORAGE_KEY, nextTheme);
+            updateThemeToggleText(nextTheme);
+        });
+
+        const handleSystemThemeChange = (event) => {
+            if (savedTheme) return;
+            updateThemeToggleText(event.matches ? 'dark' : 'light');
+        };
+
+        if (colorSchemeMedia.addEventListener) {
+            colorSchemeMedia.addEventListener('change', handleSystemThemeChange);
+        } else if (colorSchemeMedia.addListener) {
+            colorSchemeMedia.addListener(handleSystemThemeChange);
+        }
+
+        // Keyboard navigation
+        dropdownBtn.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                const isOpen = dropdown.classList.toggle('open');
+                dropdownBtn.setAttribute('aria-expanded', isOpen);
+            }
+        });
+
+        const initSectionAccordions = () => {
+            const sectionCards = document.querySelectorAll('.section-card.collapsible');
+            const partsMap = new Map();
+
+            const getParts = (card) => {
+                const cached = partsMap.get(card);
+                if (cached) return cached;
+                const trigger = card.querySelector('.section-title');
+                const body = card.querySelector('.section-body');
+                if (!trigger || !body) return null;
+                const parts = { trigger, body };
+                partsMap.set(card, parts);
+                return parts;
+            };
+
+            const expandCard = (card, parts) => {
+                if (card.classList.contains('expanded')) return;
+                const { trigger, body } = parts;
+
+                body.style.height = `${body.scrollHeight}px`;
+
+                const handleTransitionEnd = (event) => {
+                    if (event.propertyName !== 'height') return;
+                    body.style.height = 'auto';
+                    body.removeEventListener('transitionend', handleTransitionEnd);
+                };
+
+                body.addEventListener('transitionend', handleTransitionEnd);
+
+                card.classList.add('expanded');
+                trigger.setAttribute('aria-expanded', 'true');
+                body.setAttribute('aria-hidden', 'false');
+            };
+
+            const collapseCard = (card, parts) => {
+                if (!card.classList.contains('expanded')) return;
+                const { trigger, body } = parts;
+
+                body.style.height = `${body.scrollHeight}px`;
+                requestAnimationFrame(() => {
+                    body.style.height = '0px';
+                });
+
+                const handleTransitionEnd = (event) => {
+                    if (event.propertyName !== 'height') return;
+                    body.style.height = '';
+                    body.removeEventListener('transitionend', handleTransitionEnd);
+                };
+
+                body.addEventListener('transitionend', handleTransitionEnd);
+
+                card.classList.remove('expanded');
+                trigger.setAttribute('aria-expanded', 'false');
+                body.setAttribute('aria-hidden', 'true');
+            };
+
+            sectionCards.forEach((card) => {
+                const parts = getParts(card);
+                if (!parts) return;
+                const { trigger, body } = parts;
+
+                trigger.setAttribute('role', 'button');
+                trigger.setAttribute('tabindex', '0');
+                trigger.setAttribute('aria-expanded', 'false');
+                body.setAttribute('aria-hidden', 'true');
+
+                const toggleCard = () => {
+                    const willExpand = !card.classList.contains('expanded');
+
+                    if (willExpand) {
+                        sectionCards.forEach((other) => {
+                            if (other === card) return;
+                            const otherParts = getParts(other);
+                            if (!otherParts) return;
+                            collapseCard(other, otherParts);
+                        });
+                        expandCard(card, parts);
+                    } else {
+                        collapseCard(card, parts);
+                    }
+                };
+
+                trigger.addEventListener('click', toggleCard);
+                trigger.addEventListener('keydown', (event) => {
+                    if (event.key === 'Enter' || event.key === ' ') {
+                        event.preventDefault();
+                        toggleCard();
+                    }
+                });
+            });
+        };
+
+        // Initialize on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            initSectionAccordions();
+            const savedLang = localStorage.getItem('preferred-language-terms');
+
+            if (savedLang) {
+                if (savedLang !== 'en') {
+                    setLanguage(savedLang);
+                }
+            } else {
+                // Detect browser language as initial default
+                const browserLang = navigator.language.toLowerCase();
+                if (browserLang.startsWith('ko')) {
+                    setLanguage('ko');
+                } else if (browserLang.startsWith('ja')) {
+                    setLanguage('ja');
+                } else if (browserLang.startsWith('th')) {
+                    setLanguage('th');
+                } else if (browserLang.startsWith('hi')) {
+                    setLanguage('hi');
+                } else if (browserLang === 'zh-cn' || browserLang.startsWith('zh-hans')) {
+                    setLanguage('zh-CN');
+                } else if (browserLang === 'zh-tw' || browserLang === 'zh-hk' || browserLang.startsWith('zh-hant')) {
+                    setLanguage('zh-TW');
+                } else if (browserLang.startsWith('ru')) {
+                    setLanguage('ru');
+                }
+            }
+        });
+    </script>
+
+</html>
