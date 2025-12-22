@@ -1,6 +1,6 @@
 <p align="center">
   <img src="./logo/Prodao_logo_text.png" alt="PRODAO" height="16">
-</p> # Wallet 
+</p># Wallet  
 A DID-first personal digital wallet that brings the Web3 experience into everyday life.
 
 Prodao Wallet is built around decentralized identity (DID) — a way to own and control your digital identity without relying on centralized providers. Within a single wallet, users can create and manage multiple DID-based profiles and use them to hold assets, connect across compatible Web3 networks, and have end-to-end encrypted, blockchain-backed private conversations and social interactions.
@@ -163,6 +163,7 @@ As the project evolves, this repository may be expanded with:
 - Branding and communication assets that are safe to share externally
 
 All content in this repository is intended for external audiences and reflects the official public positioning of PRODAO and the Prodao Wallet project.
+
 
 
 
