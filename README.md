@@ -1,9 +1,9 @@
-# <span style="color:#FF9212;">PRODAO</span> Wallet 
+#PRODAO Wallet 
 A DID-first personal digital wallet that brings the Web3 experience into everyday life.
 
 Prodao Wallet is built around decentralized identity (DID) — a way to own and control your digital identity without relying on centralized providers. Within a single wallet, users can create and manage multiple DID-based profiles and use them to hold assets, connect across compatible Web3 networks, and have end-to-end encrypted, blockchain-backed private conversations and social interactions.
 
-Developed by <span style="color:#FF9212;">PRODAO</span> on the Prodao mainnet and compatible Web3 networks, Prodao Wallet focuses on trust, real data ownership, and a secure, familiar experience, bringing Web3-powered finance and communication into everyday life. It is currently under active development and will be released publicly soon.
+Developed by PRODAO on the Prodao mainnet and compatible Web3 networks, Prodao Wallet focuses on trust, real data ownership, and a secure, familiar experience, bringing Web3-powered finance and communication into everyday life. It is currently under active development and will be released publicly soon.
 
 ---
 
@@ -45,7 +45,7 @@ Prodao Wallet is designed to highlight both technical advantages (E2EE, Layer 1)
 
 ### Integrated asset & swap
 
-- Manage PROD, the native token of the <span style="color:#FF9212;">PRODAO</span> mainnet, alongside assets from compatible networks.  
+- Manage PROD, the native token of the PRODAO mainnet, alongside assets from compatible networks.  
 - Provides an integrated view of holdings and on-chain activity, with swap capabilities aligned with the Prodao Wallet roadmap and compliance requirements.
 
 ### High-performance Layer 1 foundation
@@ -57,7 +57,7 @@ Prodao Wallet is designed to highlight both technical advantages (E2EE, Layer 1)
 
 ## Repository Overview
 
-This repository is the official public-facing home of Prodao Wallet by <span style="color:#FF9212;">PRODAO</span>.
+This repository is the official public-facing home of Prodao Wallet by PRODAO.
 
 It is intended to:
 
@@ -78,4 +78,5 @@ As the project evolves, this repository may be expanded with:
 - Public-facing specifications for identity, messaging, and verifiable credentials
 - Branding and communication assets that are safe to share externally
 
-All content in this repository is intended for external audiences and reflects the official public positioning of <span style="color:#FF9212;">PRODAO</span> and the Prodao Wallet project.
+All content in this repository is intended for external audiences and reflects the official public positioning of PRODAO and the Prodao Wallet project.
+
