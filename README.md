@@ -67,9 +67,9 @@ It is intended to:
 
 At this stage, the repository includes:
 
-- [`privacy-policy.html`](./privacy-policy.html) – the official privacy policy governing how user data is collected, used, and protected within Prodao Wallet.
-- [`terms-of-service.html`](./terms-of-service.html) – the official terms and conditions for using Prodao Wallet and related services.
-- [`versioning.json`](./versioning.json) – a machine-readable manifest that tracks current and/or latest application versions, enabling clients and services to reference the most up-to-date builds.
+- [`privacy-policy.html`](./apps/prodao-wallet/policies/privacy-policy.html) – the official privacy policy governing how user data is collected, used, and protected within Prodao Wallet.
+- [`terms-of-service.html`](./apps/prodao-wallet/policies/terms-of-service.html) – the official terms and conditions for using Prodao Wallet and related services.
+- [`versioning.json`](./apps/prodao-wallet/policies/versioning.json) – a machine-readable manifest that tracks current and/or latest application versions, enabling clients and services to reference the most up-to-date builds.
 
 As the project evolves, this repository may be expanded with:
 
@@ -88,4 +88,5 @@ Prodao Wallet is built around decentralized identity (DID) — a way to own and 
 Developed by PRODAO on the Prodao mainnet and compatible Web3 networks, Prodao Wallet focuses on trust, real data ownership, and a secure, familiar experience, bringing Web3-powered finance and communication into everyday life. It is currently under active development and will be released publicly soon.
 
 ---
+
 
