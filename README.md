@@ -1,4 +1,4 @@
-# <img src="./logo/Prodao_logo_text.png" alt="PRODAO" height="24"> Wallet  
+# PRODAO Wallet 
 A DID-first personal digital wallet that brings the Web3 experience into everyday life.
 
 Prodao Wallet is built around decentralized identity (DID) — a way to own and control your digital identity without relying on centralized providers. Within a single wallet, users can create and manage multiple DID-based profiles and use them to hold assets, connect across compatible Web3 networks, and have end-to-end encrypted, blockchain-backed private conversations and social interactions.
@@ -65,13 +65,15 @@ It is intended to:
 - Provide public, user-facing documents such as legal policies and version information.
 - Serve as a stable reference point for external users, developers, and partners who want to understand how Prodao Wallet works and evolves.
 
-  
 At this stage, the repository includes:
 
-- [privacy-policy.html](https://github.com/prodao-Inc/prodao-public-resources/raw/main/apps/prodao-wallet/policies/privacy-policy.html) – the official privacy policy governing how user data is collected, used, and protected within Prodao Wallet.
-- [terms-of-service.html](https://github.com/prodao-Inc/prodao-public-resources/raw/main/apps/prodao-wallet/policies/terms-of-service.html) – the official terms and conditions for using Prodao Wallet and related services.
-- [versioning.json](https://github.com/prodao-Inc/prodao-public-resources/raw/main/apps/prodao-wallet/policies/versioning.json) – a machine-readable manifest that tracks current and/or latest application versions, enabling clients and services to reference the most up-to-date builds.
-
+- [`privacy-policy.html`](./apps/prodao-wallet/policies/privacy-policy.html) – the official privacy policy governing how user data is collected, used, and protected within Prodao Wallet.
+- [`terms-of-service.html`](./apps/prodao-wallet/policies/terms-of-service.html) – the official terms and conditions for using Prodao Wallet and related services.
+- [`versioning.json`](./apps/prodao-wallet/policies/versioning.json) – a machine-readable manifest that tracks current and/or latest application versions, enabling clients and services to reference the most up-to-date builds.
+- [`logo/`](./logo/) – a small set of official PRODAO logo images (PNG) available for external reference.
+> All logo files in the `logo/` directory are copyrighted by PRODAO.  
+> They may be used to reference PRODAO in external materials, but must not be altered, resold, or used in a misleading way.
+  
 As the project evolves, this repository may be expanded with:
 
 - Additional public product and technical documentation (e.g., `docs/`)
@@ -81,14 +83,6 @@ As the project evolves, this repository may be expanded with:
 
 All content in this repository is intended for external audiences and reflects the official public positioning of PRODAO and the Prodao Wallet project.
 
- Wallet 
-A DID-first personal digital wallet that brings the Web3 experience into everyday life.
-
-Prodao Wallet is built around decentralized identity (DID) — a way to own and control your digital identity without relying on centralized providers. Within a single wallet, users can create and manage multiple DID-based profiles and use them to hold assets, connect across compatible Web3 networks, and have end-to-end encrypted, blockchain-backed private conversations and social interactions.
-
-Developed by PRODAO on the Prodao mainnet and compatible Web3 networks, Prodao Wallet focuses on trust, real data ownership, and a secure, familiar experience, bringing Web3-powered finance and communication into everyday life. It is currently under active development and will be released publicly soon.
-
----
 
 
 
