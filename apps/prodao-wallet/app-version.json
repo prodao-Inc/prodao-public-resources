@@ -1,0 +1,10 @@
+{
+  "android": {
+    "version": "1.0.4",
+    "buildNumber": 11,
+    "required": true,
+    "apkUrl": "",
+    "aabVersion": "1.0.4+11",
+    "message": "A new version is required."
+  }
+}
