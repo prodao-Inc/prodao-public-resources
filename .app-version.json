@@ -1,0 +1,12 @@
+{
+  "android": {
+    "version": "1.0.5",
+    "buildNumber": 12,
+    "required": true,
+    "ipfsGateway": "https://ipfs.prodao.org/ipfs/",
+    "apkCid": "",
+    "apkUrl": "",
+    "aabVersion": "1.0.5+12",
+    "message": "A new version is required."
+  }
+}
