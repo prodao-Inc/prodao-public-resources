@@ -1,13 +1,13 @@
 {
   "android": {
-    "version": "1.0.5",
-    "buildNumber": 12,
+    "version": "1.0.4",
+    "buildNumber": 11,
     "required": true,
     "ipfsGateway": "https://ipfs.prodao.org/ipfs/",
     "apkCid": "Qmc58hL1m2QC7BEHmNLjhdZy1GbDAdfoyq2weZDi5QLCfi",
     "apkUrl": "https://ipfs.prodao.org/ipfs/Qmc58hL1m2QC7BEHmNLjhdZy1GbDAdfoyq2weZDi5QLCfi",
     "apkSizeBytes": 71386408,
-    "aabVersion": "1.0.5+12",
+    "aabVersion": "1.0.4+11",
     "message": "A new version is required."
   }
 }
