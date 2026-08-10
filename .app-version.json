@@ -6,6 +6,7 @@
     "ipfsGateway": "https://ipfs.prodao.org/ipfs/",
     "apkCid": "",
     "apkUrl": "",
+    "apkSizeBytes": 71386408,
     "aabVersion": "1.0.5+12",
     "message": "A new version is required."
   }
