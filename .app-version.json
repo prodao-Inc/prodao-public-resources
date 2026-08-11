@@ -1,13 +1,13 @@
 {
   "android": {
-    "version": "1.0.4",
-    "buildNumber": 11,
+    "version": "1.0.5",
+    "buildNumber": 12,
     "required": true,
     "ipfsGateway": "https://ipfs.prodao.org/ipfs/",
-    "apkCid": "Qmc58hL1m2QC7BEHmNLjhdZy1GbDAdfoyq2weZDi5QLCfi",
-    "apkUrl": "https://ipfs.prodao.org/ipfs/Qmc58hL1m2QC7BEHmNLjhdZy1GbDAdfoyq2weZDi5QLCfi",
-    "apkSizeBytes": 71386408,
-    "aabVersion": "1.0.4+11",
+    "apkCid": "QmTAvnyddy2MGtbzqtsLXkDoGQJ571koT17oTBAcryDQp3",
+    "apkUrl": "https://ipfs.prodao.org/ipfs/QmTAvnyddy2MGtbzqtsLXkDoGQJ571koT17oTBAcryDQp3",
+    "apkSizeBytes": 71386704,
+    "aabVersion": "1.0.5+12",
     "message": "A new version is required."
   }
 }
